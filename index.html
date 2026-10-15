@@ -1,0 +1,1492 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Veille technologique quotidienne : IA, ServiceNow, cloud, cybersécurité et marché du logiciel.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2322409A'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Georgia,serif' font-size='38' fill='%23fff'%3EV%E2%80%99%3C/text%3E%3C/svg%3E">
+<title>Veille tech’</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400..700&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&display=swap">
+<style>
+/* Veille tech’ : trois colonnes (navigation, liste des actus, lecture) dans l'esprit d'une lettre du matin.
+   Serif pour ce qui se lit, sans-serif pour ce qui se manipule. Les six couleurs servent uniquement aux catégories. */
+:root {
+  /* Thème clair : gris doux, sans blanc pur, pour ne pas éblouir. */
+  --table: #C6CAD0; --list: #D9DCE0; --day: #CBCFD4; --paper: #DCDFE2; --ink: #20242A; --ink-2: #3A4048; --muted: #4E545B; --faint: #868C95;
+  --rule: #C2C7CD; --rule-2: #CDD1D6; --accent: #22409A; --sel: #CCD3E0; --hover: rgba(34, 38, 44, .055); --focus: #22409A;
+  --lift: 0 1px 0 rgba(34, 38, 44, .07); --shadow: 0 1px 0 rgba(34, 38, 44, .07), 0 24px 44px -34px rgba(34, 38, 44, .35); --fab-shadow: 0 10px 24px -8px rgba(34, 64, 154, .45);
+  --mark-bg: #F2D877; --mark-ink: #22262C;
+  --c-esm: #09614E; --c-agents: #5B3CB2; --c-securite: #99351F; --c-modeles: #1F519E; --c-cloud: #774C08; --c-marche: #922F60;
+  --serif: "Newsreader", Georgia, "Times New Roman", serif;
+  --sans: "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --table: #18191B; --list: #1F2022; --day: #1A1B1D; --paper: #26272A; --ink: #ECECED; --ink-2: #C3C4C7; --muted: #95969B; --faint: #606166;
+    --rule: #36373B; --rule-2: #2D2E31; --accent: #AFBDE0; --sel: #323337; --hover: rgba(255, 255, 255, .045); --focus: #AFBDE0;
+    --lift: 0 0 0 1px #313236; --shadow: 0 0 0 1px #2F3034, 0 24px 44px -30px rgba(0, 0, 0, .75); --fab-shadow: 0 10px 24px -8px rgba(0, 0, 0, .75);
+    --mark-bg: #6E5A12; --mark-ink: #FFF5D6;
+    --c-esm: #4CC7A4; --c-agents: #AE95F5; --c-securite: #F08A74; --c-modeles: #7FB0F5; --c-cloud: #DDA650; --c-marche: #EA86B6;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --table: #18191B; --list: #1F2022; --day: #1A1B1D; --paper: #26272A; --ink: #ECECED; --ink-2: #C3C4C7; --muted: #95969B; --faint: #606166;
+  --rule: #36373B; --rule-2: #2D2E31; --accent: #AFBDE0; --sel: #323337; --hover: rgba(255, 255, 255, .045); --focus: #AFBDE0;
+  --lift: 0 0 0 1px #313236; --shadow: 0 0 0 1px #2F3034, 0 24px 44px -30px rgba(0, 0, 0, .75); --fab-shadow: 0 10px 24px -8px rgba(0, 0, 0, .75);
+  --mark-bg: #6E5A12; --mark-ink: #FFF5D6;
+  --c-esm: #4CC7A4; --c-agents: #AE95F5; --c-securite: #F08A74; --c-modeles: #7FB0F5; --c-cloud: #DDA650; --c-marche: #EA86B6;
+  color-scheme: dark;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html, body { height: 100%; }
+body { margin: 0; background: var(--table); color: var(--ink); font-family: var(--sans); font-size: 14px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; text-align: inherit; }
+button:disabled { cursor: default; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 6px; }
+[hidden] { display: none !important; }
+svg.i { width: 18px; height: 18px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+mark { background: var(--mark-bg); color: var(--mark-ink); border-radius: 3px; padding: 0 1px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Cadre */
+/* Colonnes fluides : elles s'élargissent avec l'écran, jusqu'à 2100 px de large au total. */
+.app { --navw: clamp(240px, 14vw, 290px); --listw: clamp(380px, 23vw, 500px);
+  height: 100vh; height: 100dvh; display: grid; grid-template-rows: 64px minmax(0, 1fr); max-width: 2100px; margin: 0 auto; }
+.bar { display: grid; grid-template-columns: var(--navw) minmax(0, 1fr) auto; align-items: center; gap: 14px; padding: 0 14px 0 0; }
+.brand { padding-left: 24px; font-family: var(--serif); font-size: 27px; font-weight: 500; font-variation-settings: "opsz" 72; letter-spacing: -.01em; line-height: 1; margin: 0; white-space: nowrap; }
+.brand:focus { outline: none; }
+.brand-btn { font: inherit; color: inherit; letter-spacing: inherit; line-height: inherit; }
+.brand-btn:hover { color: var(--accent); }
+.q { position: relative; max-width: 520px; display: block; }
+.q svg.i { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: var(--muted); pointer-events: none; }
+.q input { width: 100%; height: 38px; border: 0; border-radius: 19px; background: var(--paper); box-shadow: var(--lift); color: var(--ink);
+  font: inherit; font-size: 14px; padding: 0 44px 0 42px; }
+.q input::placeholder { color: var(--muted); }
+.q input::-webkit-search-cancel-button { display: none; }
+.q kbd { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); font-family: var(--sans); font-size: 12px; color: var(--faint);
+  border: 1px solid var(--rule); border-radius: 5px; padding: 0 6px; line-height: 18px; pointer-events: none; }
+.q input:focus + kbd, .q input:not(:placeholder-shown) + kbd { display: none; }
+.tools { display: flex; gap: 4px; align-items: center; }
+.tool { height: 38px; display: inline-flex; align-items: center; gap: 8px; padding: 0 13px; border-radius: 19px; color: var(--ink-2); font-size: 14px; }
+.tool:hover { background: var(--hover); color: var(--ink); }
+.tool.icon { width: 38px; padding: 0; justify-content: center; }
+.main { display: grid; grid-template-columns: var(--navw) var(--listw) minmax(0, 1fr); gap: 0 14px; padding: 0 14px 14px 0; min-height: 0; }
+.mtop { display: none; }
+
+/* Navigation */
+.nav { padding: 6px 4px 24px 20px; overflow: auto; min-height: 0; }
+.views { display: flex; flex-direction: column; gap: 2px; }
+.nv { display: flex; align-items: center; gap: 10px; width: 100%; height: 36px; padding: 0 12px; border-radius: 18px; color: var(--ink-2); font-size: 14.5px; white-space: nowrap; }
+.nv:hover { background: var(--hover); color: var(--ink); }
+.nv[aria-selected="true"] { background: var(--paper); color: var(--ink); font-weight: 600; box-shadow: var(--lift); }
+.nv .n { margin-left: auto; color: var(--muted); font-weight: 400; font-size: 13px; font-variant-numeric: tabular-nums; }
+.cal-h { display: flex; justify-content: space-between; align-items: center; margin: 26px 0 8px 4px; }
+.cal-h h2 { font-family: var(--serif); font-size: 18px; font-weight: 500; margin: 0; }
+.cal-nav { display: flex; }
+.round { width: 30px; height: 30px; border-radius: 15px; display: inline-grid; place-items: center; color: var(--ink-2); }
+.round:hover:not(:disabled) { background: var(--hover); color: var(--ink); }
+.round:disabled { opacity: .3; }
+.cal { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 1px; text-align: center; font-size: 12.5px; font-variant-numeric: tabular-nums; }
+.cal .wd { color: var(--faint); font-size: 11px; padding-bottom: 4px; }
+.cal-day { height: 29px; width: 29px; margin: 0 auto; display: grid; place-items: center; border-radius: 50%; color: var(--faint); text-align: center; }
+button.cal-day { color: var(--ink); font-weight: 600; }
+button.cal-day:hover { background: var(--hover); }
+button.cal-day.nomatch { color: var(--faint); font-weight: 400; }
+.cal-day.today { box-shadow: inset 0 0 0 1.5px var(--faint); }
+button.cal-day[aria-pressed="true"] { background: var(--ink); color: var(--paper); box-shadow: none; }
+.all { margin: 8px 0 0 4px; font-size: 13px; color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+.th-h { font-family: var(--serif); font-style: italic; font-size: 16px; font-weight: 500; color: var(--ink-2); margin: 26px 4px 6px; }
+.themes { display: flex; flex-direction: column; gap: 1px; }
+.theme { display: grid; grid-template-columns: 12px minmax(0, 1fr) auto; gap: 10px; align-items: center; width: 100%; height: 34px; padding: 0 12px;
+  border-radius: 17px; font-size: 14px; color: var(--ink-2); white-space: nowrap; }
+.theme:hover { background: var(--hover); color: var(--ink); }
+.theme i { width: 12px; height: 3px; border-radius: 2px; background: var(--c); }
+.theme span:nth-child(2) { overflow: hidden; text-overflow: ellipsis; }
+.theme .n { color: var(--muted); font-weight: 400; font-size: 13px; font-variant-numeric: tabular-nums; }
+.theme[aria-pressed="true"] { background: var(--paper); color: var(--ink); font-weight: 600; box-shadow: var(--lift); }
+.theme.allt { grid-template-columns: minmax(0, 1fr) auto; }
+
+/* Liste */
+.list { background: var(--list); border-radius: 6px; overflow: auto; box-shadow: var(--shadow); min-height: 0; overscroll-behavior: contain; }
+/* Le jour reste en haut de la liste pendant le défilement ; l'essentiel du jour s'affiche en entier dessous. */
+.grp-t { position: sticky; top: 0; z-index: 1; background: var(--day); display: flex; justify-content: space-between; align-items: baseline; gap: 10px;
+  padding: 16px 20px 8px; }
+.grp-l { display: flex; align-items: center; gap: 6px; min-width: 0; }
+.day-btn { font: inherit; color: inherit; text-align: left; }
+.day-btn:hover:not(:disabled) { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 5px; }
+.grp-p.go { cursor: pointer; }
+.pdf-ic { width: 30px; height: 30px; border-radius: 8px; display: inline-grid; place-items: center; color: var(--muted); flex: none; }
+.pdf-ic:hover { background: var(--hover); color: var(--accent); }
+.pdf-ic svg.i { width: 18px; height: 18px; }
+.pdf-ic.busy { cursor: progress; color: var(--accent); }
+.pdf-ic.busy svg.i { animation: pdfpulse 1s ease-in-out infinite; }
+@keyframes pdfpulse { 50% { opacity: .3; } }
+.per-wrap { position: relative; }
+.per-wrap .row.per { padding-right: 52px; }
+.per-wrap .pdf-ic { position: absolute; top: 12px; right: 14px; }
+.toast { position: fixed; left: 50%; bottom: calc(26px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); z-index: 20; max-width: calc(100vw - 140px);
+  background: var(--ink); color: var(--paper); font-size: 13.5px; padding: 10px 16px; border-radius: 10px; box-shadow: 0 12px 28px -12px rgba(0, 0, 0, .5); }
+.grp-t h2 { font-family: var(--serif); font-size: 20px; font-weight: 500; font-variation-settings: "opsz" 36; margin: 0; line-height: 1.2; }
+.grp-t .n { color: var(--muted); font-size: 12.5px; white-space: nowrap; }
+.grp-p { margin: 0; padding: 0 20px 14px; background: var(--day); border-bottom: 1px solid var(--rule); color: var(--ink-2); font-size: 13.5px; line-height: 1.55; }
+.grp-p.empty { padding-bottom: 6px; }
+.row { display: grid; grid-template-columns: 26px minmax(0, 1fr); gap: 6px; width: 100%; padding: 14px 20px 15px 16px; border-bottom: 1px solid var(--rule-2); position: relative; }
+.row:hover { background: var(--hover); }
+.row[aria-current="true"] { background: var(--sel); }
+.row[aria-current="true"]::before { content: ""; position: absolute; left: 0; top: 10px; bottom: 10px; width: 3px; border-radius: 0 2px 2px 0; background: var(--accent); }
+.row:focus-visible { outline-offset: -2px; border-radius: 0; }
+.row .r { font-family: var(--serif); font-size: 22px; font-weight: 300; color: var(--faint); line-height: 1; padding-top: 1px; font-variation-settings: "opsz" 72; }
+.row .rb { display: block; min-width: 0; }
+.k { display: flex; gap: 4px 10px; align-items: center; flex-wrap: wrap; font-size: 12.5px; color: var(--muted); margin-bottom: 4px; }
+.k b { display: inline-flex; align-items: center; gap: 6px; color: var(--c); font-weight: 600; }
+.k b::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--c); flex: none; }
+.k i { font-style: italic; font-family: var(--serif); font-size: 13.5px; color: var(--ink-2); }
+.row .t { display: block; font-family: var(--serif); font-size: 17px; line-height: 1.32; font-weight: 500; color: var(--ink); font-variation-settings: "opsz" 24; }
+.row.bref .r { padding-top: 0; color: var(--faint); }
+.row.bref .r svg.i { width: 17px; height: 17px; }
+.row.bref .k b { color: var(--ink-2); }
+.row .t.tb { font-size: 15px; line-height: 1.45; color: var(--ink-2); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.row.per { grid-template-columns: minmax(0, 1fr); padding-left: 20px; }
+.row.per .pt { display: block; font-family: var(--serif); font-size: 20px; font-weight: 500; line-height: 1.2; margin-bottom: 4px; font-variation-settings: "opsz" 36; }
+.row.per .t { font-size: 15px; font-weight: 400; color: var(--ink-2); margin-top: 6px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.msg { padding: 28px 24px; }
+.msg b { display: block; font-family: var(--serif); font-size: 20px; font-weight: 500; margin-bottom: 6px; }
+.msg span { color: var(--muted); }
+.msg button { margin-top: 12px; color: var(--accent); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+
+/* Lecture */
+.detail { container-type: inline-size; background: var(--paper); border-radius: 6px; overflow: auto; box-shadow: var(--shadow); padding: 40px clamp(36px, 5%, 72px) 140px; min-height: 0; overscroll-behavior: contain; }
+.back { display: none; }
+.d-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 22px; font-size: 13.5px; color: var(--muted); }
+.d-top .l { display: flex; gap: 6px 14px; align-items: center; flex-wrap: wrap; }
+.d-top .vd { font-size: 12.5px; color: var(--muted); }
+.d-top .cat { display: inline-flex; align-items: center; gap: 7px; color: var(--c); font-weight: 600; }
+.d-top .cat::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--c); }
+.d-top .suite { font-family: var(--serif); font-style: italic; font-size: 15px; color: var(--ink-2); }
+.pos { display: flex; gap: 2px; }
+.d-title { font-family: var(--serif); font-size: 34px; line-height: 1.16; font-weight: 480; letter-spacing: -.012em; margin: 0 0 16px; max-width: 22em;
+  font-variation-settings: "opsz" 60; text-wrap: balance; }
+.d-title:focus { outline: none; }
+.d-meta { display: flex; align-items: center; gap: 6px 18px; flex-wrap: wrap; color: var(--muted); font-size: 14px; margin-bottom: 26px; }
+.open { display: inline-flex; align-items: center; gap: 6px; color: var(--accent); font-weight: 600; text-decoration: none; }
+.open:hover { text-decoration: underline; text-underline-offset: 3px; }
+.open svg.i { width: 15px; height: 15px; }
+.read { max-width: 620px; }
+.read p { font-family: var(--serif); font-size: 19px; line-height: 1.62; margin: 0 0 16px; font-variation-settings: "opsz" 16; }
+.runin { font-style: italic; font-weight: 600; color: var(--accent); }
+.note { margin: 26px 0 0; padding: 2px 0 2px 18px; border-left: 2px solid var(--rule); font-size: 14.5px; line-height: 1.6; color: var(--ink-2); max-width: 620px; }
+.note h3 { font-family: var(--serif); font-style: italic; font-weight: 500; font-size: 17px; margin: 0 0 4px; color: var(--ink); }
+.note p { margin: 0; }
+.kw { margin-top: 14px; color: var(--muted); font-size: 13px; }
+.brief { margin-top: 40px; border-top: 1px solid var(--ink); padding-top: 18px; max-width: 620px; }
+.brief h3, .sec h3 { font-family: var(--serif); font-style: italic; font-weight: 500; font-size: 21px; margin: 0 0 10px; }
+.brief ul, .sec ul { margin: 0; padding-left: 18px; }
+.brief li, .sec li { font-family: var(--serif); font-size: 16.5px; line-height: 1.55; margin: 0 0 9px; color: var(--ink-2); }
+.brief li::marker, .sec li::marker { color: var(--faint); }
+.src-link { font-family: var(--sans); font-size: 13px; color: var(--muted); }
+.d-foot { margin-top: 32px; display: flex; gap: 8px 14px; align-items: center; flex-wrap: wrap; }
+.btn { display: inline-flex; align-items: center; gap: 8px; height: 38px; padding: 0 16px; border-radius: 19px; border: 1px solid var(--rule); color: var(--ink-2); font-size: 14px; background: var(--paper); }
+.btn:hover:not(:disabled) { border-color: var(--faint); color: var(--ink); }
+.btn:disabled { opacity: .6; cursor: progress; }
+.btn.solid { background: var(--ink); border-color: var(--ink); color: var(--paper); font-weight: 600; }
+.btn.solid:hover:not(:disabled) { opacity: .88; color: var(--paper); }
+.d-note { font-size: 13px; color: var(--muted); }
+.next-nav { margin-top: 40px; padding-top: 22px; border-top: 1px solid var(--rule); max-width: 620px; display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
+.next-card { width: 100%; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 3px 18px; align-items: center; padding: 15px 18px 17px;
+  border-radius: 10px; background: var(--list); box-shadow: inset 0 0 0 1px var(--rule); }
+.next-card:hover { background: var(--sel); }
+.next-card .nl { grid-column: 1; font-size: 12.5px; color: var(--muted); }
+.next-card .k { grid-column: 1; margin: 3px 0 0; }
+.next-card .nt { grid-column: 1; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; font-family: var(--serif); font-size: 20px; line-height: 1.3; font-weight: 500; color: var(--ink); font-variation-settings: "opsz" 24; }
+.next-card > svg.i { grid-column: 2; grid-row: 1 / 4; width: 22px; height: 22px; color: var(--accent); transition: transform .15s ease; }
+.next-card:hover > svg.i { transform: translateX(3px); }
+.prev-link { display: inline-flex; align-items: center; gap: 6px; font-size: 13.5px; color: var(--muted); padding: 4px 2px; }
+.prev-link:hover { color: var(--ink); }
+.prev-link svg.i { width: 16px; height: 16px; }
+.end-note { font-family: var(--serif); font-style: italic; font-size: 17px; color: var(--muted); margin: 0; }
+.d-empty { color: var(--muted); font-family: var(--serif); font-style: italic; font-size: 19px; padding-top: 12px; }
+
+/* Lecture large : « Pourquoi ça compte » passe dans la marge et suit la lecture */
+@container (min-width: 780px) {
+  .d-body { display: grid; grid-template-columns: minmax(0, 740px) clamp(220px, 26cqi, 340px); column-gap: clamp(32px, 5cqi, 72px); align-items: start; }
+  .d-body > * { grid-column: 1; max-width: none; }
+  .d-body > .note { grid-column: 2; grid-row: 1 / span 4; margin-top: 6px; position: sticky; top: 0; }
+}
+
+.briefs { max-width: 620px; margin-top: 8px; }
+.bf { padding: 20px 0; border-top: 1px solid var(--rule); }
+.bf:first-child { border-top: 0; padding-top: 4px; }
+.bf-t { font-family: var(--serif); font-size: 19px; line-height: 1.58; margin: 0 0 8px; font-variation-settings: "opsz" 16; }
+.bf-m { display: flex; align-items: center; gap: 4px 18px; flex-wrap: wrap; font-size: 13.5px; color: var(--muted); }
+
+@container (min-width: 1000px) {
+  .d-title { font-size: 38px; }
+  .read p, .bf-t { font-size: 20px; }
+  .note { font-size: 15px; }
+  .lede { font-size: 23px; }
+}
+@media (min-width: 1800px) {
+  .row .t { font-size: 18px; }
+  .grp-t h2 { font-size: 21px; }
+  .grp-p { font-size: 14px; }
+  .nv, .theme { font-size: 15px; }
+}
+
+/* Synthèses */
+.kind { font-size: 13.5px; color: var(--muted); margin-bottom: 14px; }
+.lede { font-family: var(--serif); font-size: 22px; line-height: 1.48; color: var(--ink-2); margin: 0 0 22px; max-width: 32em; font-variation-settings: "opsz" 24; }
+.stats { margin: 26px 0 0; max-width: 660px; font-size: 13.5px; color: var(--ink-2); }
+.stats .bars { display: flex; height: 6px; gap: 2px; border-radius: 3px; overflow: hidden; margin: 8px 0 10px; }
+.stats .bars i { display: block; height: 100%; min-width: 3px; }
+.legend { display: flex; flex-wrap: wrap; gap: 4px 16px; color: var(--ink-2); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+.legend .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--c); }
+.stats .srcs { color: var(--muted); margin-top: 8px; }
+.sec { margin-top: 38px; border-top: 1px solid var(--ink); padding-top: 18px; max-width: 660px; }
+.th { padding: 16px 0 18px; border-top: 1px solid var(--rule); }
+.th:first-of-type { border-top: 0; padding-top: 4px; }
+.th h4 { font-family: var(--serif); font-size: 22px; font-weight: 500; line-height: 1.25; margin: 6px 0 8px; font-variation-settings: "opsz" 36; }
+.th p { font-family: var(--serif); font-size: 17px; line-height: 1.6; margin: 0 0 10px; }
+.refs { display: grid; gap: 4px; font-size: 13.5px; color: var(--ink-2); }
+.refs div { display: grid; grid-template-columns: 4.4rem minmax(0, 1fr); gap: 8px; }
+.refs .d { color: var(--muted); font-variant-numeric: tabular-nums; }
+.refs a { text-decoration-color: var(--rule); text-underline-offset: 3px; }
+.refs a:hover { text-decoration-color: currentColor; }
+.top-it { display: grid; grid-template-columns: 30px minmax(0, 1fr); gap: 6px; padding: 14px 0; border-top: 1px solid var(--rule); }
+.top-it:first-of-type { border-top: 0; padding-top: 4px; }
+.top-it .r { font-family: var(--serif); font-size: 24px; font-weight: 300; color: var(--faint); line-height: 1; }
+.top-it h4 { font-family: var(--serif); font-size: 18px; font-weight: 500; line-height: 1.3; margin: 2px 0 4px; }
+.top-it h4 a { text-decoration: none; }
+.top-it h4 a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.top-it p { margin: 4px 0 0; font-size: 14.5px; color: var(--ink-2); line-height: 1.55; }
+
+/* Boutons flottants */
+.ask-fab { position: fixed; right: calc(26px + env(safe-area-inset-right, 0px)); bottom: calc(26px + env(safe-area-inset-bottom, 0px)); z-index: 11;
+  width: 54px; height: 54px; border-radius: 50%; background: var(--accent); color: var(--paper); display: grid; place-items: center;
+  box-shadow: var(--fab-shadow); transition: transform .15s ease; }
+.ask-fab:hover { transform: scale(1.05); }
+svg.spark { fill: currentColor; stroke: none; flex: none; }
+.ask-fab svg.spark { width: 24px; height: 24px; }
+.to-top { position: fixed; right: calc(26px + env(safe-area-inset-right, 0px)); bottom: calc(26px + env(safe-area-inset-bottom, 0px)); z-index: 10;
+  width: 42px; height: 42px; border-radius: 50%; background: var(--paper); color: var(--ink-2); display: grid; place-items: center;
+  box-shadow: 0 0 0 1px var(--rule), 0 6px 16px -8px rgba(34, 38, 44, .4);
+  opacity: 0; visibility: hidden; transform: translateY(8px); transition: opacity .18s ease, transform .18s ease, visibility .18s; }
+.to-top.show { opacity: 1; visibility: visible; transform: none; }
+.to-top:hover { color: var(--ink); }
+.has-ask .to-top { right: calc(32px + env(safe-area-inset-right, 0px)); bottom: calc(92px + env(safe-area-inset-bottom, 0px)); }
+
+/* Sources */
+dialog.src { width: min(760px, calc(100vw - 32px)); max-height: min(86vh, 900px); padding: 0; border: 0; border-radius: 8px;
+  background: var(--paper); color: var(--ink); box-shadow: 0 30px 70px -20px rgba(16, 20, 29, .45); }
+dialog.src::backdrop { background: rgba(16, 20, 29, .45); }
+.src-head { position: sticky; top: 0; background: var(--paper); display: flex; justify-content: space-between; align-items: flex-start; gap: 16px;
+  padding: 24px 24px 16px; border-bottom: 1px solid var(--rule); z-index: 1; }
+.src-head h2 { font-family: var(--serif); font-size: 28px; font-weight: 500; margin: 0 0 6px; font-variation-settings: "opsz" 60; }
+.src-head p { margin: 0; font-size: 14px; color: var(--muted); max-width: 60ch; }
+.src-body { padding: 4px 24px 26px; display: flex; flex-direction: column; gap: 18px; }
+.src-sec h3 { font-family: var(--serif); font-style: italic; font-size: 19px; font-weight: 500; margin: 18px 0 6px; }
+.src-group { padding: 10px 0 12px; border-top: 1px solid var(--rule-2); }
+.src-group:first-of-type { border-top: 0; }
+.src-group b { display: flex; justify-content: space-between; gap: 12px; font-size: 14px; font-weight: 600; margin-bottom: 8px; }
+.src-group b span { font-size: 12.5px; font-weight: 400; color: var(--muted); white-space: nowrap; }
+.domains { display: flex; flex-wrap: wrap; gap: 5px; }
+.domains a { display: inline-flex; align-items: center; gap: 4px; font-size: 13px; padding: 3px 10px; border-radius: 14px; background: var(--list);
+  box-shadow: inset 0 0 0 1px var(--rule); color: var(--ink-2); text-decoration: none; }
+.domains a::after { content: "\2197"; font-size: 10px; color: var(--faint); }
+.domains a:hover { background: var(--sel); color: var(--ink); text-decoration: underline; text-underline-offset: 2px; }
+.domains a:focus-visible { border-radius: 14px; }
+.src-note { font-size: 14px; color: var(--ink-2); margin: 0; line-height: 1.55; }
+.src-note + .src-note { margin-top: 8px; }
+
+/* Assistant */
+.ask { position: fixed; right: calc(20px + env(safe-area-inset-right, 0px)); bottom: calc(20px + env(safe-area-inset-bottom, 0px)); z-index: 12;
+  width: min(clamp(520px, 34vw, 680px), calc(100vw - 32px)); height: min(820px, calc(100vh - 40px)); display: flex; flex-direction: column;
+  background: var(--paper); border-radius: 10px; box-shadow: 0 0 0 1px var(--rule), 0 30px 60px -24px rgba(16, 20, 29, .5); overflow: hidden; }
+.ask-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 14px 16px 26px; border-bottom: 1px solid var(--rule); }
+.ask-head b { font-family: var(--serif); font-size: 21px; font-weight: 500; display: flex; align-items: center; gap: 8px; }
+.ask-head b svg.spark { width: 17px; height: 17px; color: var(--accent); }
+.ask-head span { font-size: 12.5px; color: var(--muted); }
+.ask-log { flex: 1; overflow-y: auto; padding: 24px 26px; display: flex; flex-direction: column; gap: 18px; min-height: 0; }
+.ask-greet { margin: 0; font-family: var(--serif); font-size: 30px; font-weight: 500; line-height: 1.2; font-variation-settings: "opsz" 60; }
+.ask-sub { margin: 4px 0 0; font-family: var(--serif); font-style: italic; font-size: 19px; color: var(--ink-2); }
+.ask-grp { margin-top: 18px; }
+.ask-grp h3 { margin: 0 0 8px; font-family: var(--serif); font-style: italic; font-size: 16px; font-weight: 500; color: var(--muted); }
+.ask-sugg { display: flex; flex-wrap: wrap; gap: 6px; }
+.ask-sugg button { border-radius: 18px; padding: 8px 14px; font-size: 14.5px; color: var(--ink-2); background: var(--list); box-shadow: inset 0 0 0 1px var(--rule); }
+.ask-sugg button:hover { background: var(--sel); color: var(--ink); }
+.msg-user { align-self: flex-end; max-width: 85%; background: var(--sel); color: var(--ink); border-radius: 14px 14px 4px 14px; padding: 10px 15px; font-size: 15.5px; line-height: 1.5; white-space: pre-wrap; overflow-wrap: anywhere; }
+.msg-bot { align-self: stretch; font-family: var(--serif); font-size: 18.5px; line-height: 1.62; font-variation-settings: "opsz" 16; color: var(--ink); overflow-wrap: anywhere; }
+.msg-bot p { margin: 0 0 14px; }
+.msg-bot p:last-child { margin-bottom: 0; }
+.msg-bot ul, .msg-bot ol { margin: 0 0 10px; padding-left: 20px; }
+.msg-bot li { margin: 6px 0; }
+.msg-bot a { color: var(--accent); text-underline-offset: 2px; }
+.msg-wait { display: flex; align-items: center; gap: 10px; font-family: var(--sans); font-size: 13px; color: var(--muted); }
+.dots { display: inline-flex; align-items: center; gap: 4px; padding: 11px 13px; background: var(--list); box-shadow: inset 0 0 0 1px var(--rule); border-radius: 14px 14px 14px 4px; }
+.dots i { width: 6px; height: 6px; border-radius: 50%; background: var(--muted); animation: askdot 1.2s ease-in-out infinite; }
+.dots i:nth-child(2) { animation-delay: .15s; }
+.dots i:nth-child(3) { animation-delay: .3s; }
+@keyframes askdot { 0%, 60%, 100% { transform: translateY(0); opacity: .4; } 30% { transform: translateY(-3px); opacity: 1; } }
+.msg-bot.fresh { animation: askfade .25s ease-out; }
+@keyframes askfade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+.msg-note { font-size: 12.5px; color: var(--muted); }
+.ask-form { display: flex; gap: 10px; align-items: flex-end; padding: 14px 18px 18px; border-top: 1px solid var(--rule); }
+.ask-form textarea { flex: 1; min-width: 0; resize: none; font: inherit; font-size: 15.5px; color: var(--ink); background: var(--list);
+  border: 0; box-shadow: inset 0 0 0 1px var(--rule); border-radius: 12px; padding: 11px 14px; max-height: 160px; }
+.ask-form .btn { height: 40px; }
+
+@media (min-width: 2100px) {
+  .ask-fab, .to-top { right: calc((100vw - 2100px) / 2 + 26px); }
+  .has-ask .to-top { right: calc((100vw - 2100px) / 2 + 32px); }
+  .ask { right: calc((100vw - 2100px) / 2 + 20px); }
+}
+@media (min-width: 1100px) and (max-width: 1279px) {
+  .app { --navw: 232px; --listw: 340px; }
+  .detail { padding: 32px 36px 140px; }
+  .d-title { font-size: 30px; }
+  .theme { font-size: 13.5px; padding: 0 10px; gap: 8px; }
+}
+/* Écran étroit : une colonne, la liste puis l'actu ouverte en plein écran */
+@media (max-width: 1099px) {
+  html, body { height: auto; }
+  .app { height: auto; display: block; }
+  .bar { grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "brand tools" "q q"; gap: 10px 8px; padding: 14px 12px 8px 18px; }
+  .brand { grid-area: brand; padding-left: 0; }
+  .tools { grid-area: tools; }
+  .q { grid-area: q; max-width: none; }
+  .q kbd { display: none; }
+  .tool .lbl { display: none; }
+  .tool { width: 38px; padding: 0; justify-content: center; }
+  .mtop { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; padding: 6px 16px 12px; }
+  .mtabs { display: flex; gap: 22px; font-size: 15px; }
+  .mtabs button { color: var(--muted); padding-bottom: 6px; border-bottom: 2px solid transparent; white-space: nowrap; }
+  .mtabs button[aria-selected="true"] { color: var(--ink); border-color: var(--ink); font-weight: 600; }
+  .ftoggle { position: relative; display: inline-flex; align-items: center; gap: 7px; height: 36px; padding: 0 13px; border-radius: 18px; background: var(--paper);
+    box-shadow: var(--lift); font-size: 14px; color: var(--ink-2); white-space: nowrap; }
+  .ftoggle[aria-expanded="true"] { background: var(--ink); color: var(--paper); }
+  .ftoggle .on-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+  .main { display: block; padding: 0; max-width: 760px; margin: 0 auto; }
+  .bar, .mtop { max-width: 760px; margin: 0 auto; }
+  .nav { display: none; padding: 4px 16px 18px; overflow: visible; }
+  .nav.open { display: block; }
+  .nav .views { display: none; }
+  .nav .cal-h { margin-top: 4px; }
+  .nav .cal { max-width: 340px; }
+  .list { border-radius: 0; box-shadow: none; overflow: visible; }
+  .grp-t { position: static; }
+  .row[aria-current="true"] { background: none; }
+  .row[aria-current="true"]::before { display: none; }
+  .row:active { background: var(--sel); }
+  .detail { display: none; border-radius: 0; box-shadow: none; overflow: visible; padding: 18px 20px 110px; }
+  body.show-detail .mtop, body.show-detail .nav, body.show-detail .list { display: none; }
+  body.show-detail .detail { display: block; }
+  .back { display: inline-flex; align-items: center; gap: 6px; color: var(--accent); font-weight: 600; font-size: 14.5px; margin: 0 0 18px -4px; padding: 6px 4px; }
+  .d-title { font-size: 28px; }
+  .read p { font-size: 18px; }
+  .bf-t { font-size: 17.5px; }
+  .lede { font-size: 20px; }
+}
+@media (max-width: 600px) {
+  .ask-fab { right: calc(16px + env(safe-area-inset-right, 0px)); bottom: calc(16px + env(safe-area-inset-bottom, 0px)); }
+  .to-top { right: calc(16px + env(safe-area-inset-right, 0px)); bottom: calc(16px + env(safe-area-inset-bottom, 0px)); }
+  .has-ask .to-top { right: calc(22px + env(safe-area-inset-right, 0px)); bottom: calc(82px + env(safe-area-inset-bottom, 0px)); }
+  .ask { right: 8px; left: 8px; bottom: calc(8px + env(safe-area-inset-bottom, 0px)); width: auto; height: min(80vh, calc(100vh - 24px)); }
+  .mtabs { gap: 18px; }
+  .detail { padding: 14px 18px 110px; }
+  .refs div { grid-template-columns: 3.8rem minmax(0, 1fr); }
+}
+@media (max-width: 420px) {
+  .mtabs { gap: 14px; font-size: 14.5px; }
+  .ftoggle { padding: 0 11px; gap: 6px; font-size: 13.5px; }
+}
+@media (max-width: 380px) {
+  .ftoggle span { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { .pdf-ic.busy svg.i { animation: none; } .to-top, .ask-fab, .next-card > svg.i { transition: none; } .dots i, .msg-bot.fresh { animation: none; } }
+</style>
+<script>
+(function () { try { var t = localStorage.getItem("veille-techno-theme"); if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t); } catch (e) { /* stockage indisponible */ } })();
+</script>
+
+</head>
+<body>
+<div class="app">
+  <header class="bar">
+    <h1 class="brand" tabindex="-1"><button type="button" class="brand-btn" id="home" title="Revenir à l'accueil">Veille tech’</button></h1>
+    <label class="q">
+      <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="M16 16l4.5 4.5"></path></svg>
+      <input id="search" type="search" placeholder="Chercher une actu, un éditeur, un mot-clé" aria-label="Chercher dans les actus" autocomplete="off">
+      <kbd aria-hidden="true">/</kbd>
+    </label>
+    <div class="tools">
+      <button type="button" class="tool" id="src-open" aria-haspopup="dialog">
+        <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H10v16H5.5A1.5 1.5 0 0 1 4 18.5z"></path><path d="M10 4h8.5A1.5 1.5 0 0 1 20 5.5v13a1.5 1.5 0 0 1-1.5 1.5H10"></path><path d="M13 8.5h4M13 12h4"></path></svg>
+        <span class="lbl">Sources</span>
+      </button>
+      <button type="button" class="tool icon" id="theme-toggle"></button>
+    </div>
+  </header>
+  <div class="mtop">
+    <div class="mtabs" role="tablist" aria-label="Type de rapport">
+      <button type="button" role="tab" data-tab="quotidien" aria-selected="true">Quotidien</button>
+      <button type="button" role="tab" data-tab="hebdo" aria-selected="false">Hebdo</button>
+      <button type="button" role="tab" data-tab="mensuel" aria-selected="false">Mensuel</button>
+    </div>
+    <button type="button" class="ftoggle" id="ftoggle" aria-expanded="false" aria-controls="nav" aria-label="Jour et thèmes" title="Jour et thèmes">
+      <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5.5h14a1 1 0 0 1 1 1V19a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6.5a1 1 0 0 1 1-1z"></path><path d="M4 10h16M8.5 3.5v4M15.5 3.5v4"></path></svg>
+      <span>Jour et thèmes</span>
+    </button>
+  </div>
+  <div class="main">
+    <nav class="nav" id="nav" aria-label="Navigation de la veille">
+      <div class="views" role="tablist" aria-label="Type de rapport">
+        <button type="button" class="nv" role="tab" data-tab="quotidien" aria-selected="true">Quotidien <span class="n" id="n-quotidien"></span></button>
+        <button type="button" class="nv" role="tab" data-tab="hebdo" aria-selected="false">Hebdo <span class="n" id="n-hebdo"></span></button>
+        <button type="button" class="nv" role="tab" data-tab="mensuel" aria-selected="false">Mensuel <span class="n" id="n-mensuel"></span></button>
+      </div>
+      <div id="nav-filters"></div>
+    </nav>
+    <section class="list" id="list" aria-label="Liste des actus"></section>
+    <article class="detail" id="detail" aria-label="Lecture"></article>
+  </div>
+</div>
+<dialog class="src" id="src-dialog" aria-labelledby="src-title">
+  <div class="src-head">
+    <div>
+      <h2 id="src-title">Sources de la veille</h2>
+      <p>Les sites sur lesquels la tâche du matin cherche, et les seuls qu'elle accepte comme source d'une actu. Clique sur un site pour l'ouvrir.</p>
+    </div>
+    <button class="round" id="src-close" type="button" aria-label="Fermer"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+  </div>
+  <div class="src-body" id="src-body"></div>
+</dialog>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+<button type="button" class="to-top" id="to-top" aria-label="Revenir en haut" title="Revenir en haut">
+  <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5.5 11.5L12 5l6.5 6.5"></path></svg>
+</button>
+
+<script>
+(function () {
+  "use strict";
+  var CATS = {
+    esm: { label: "ESM", hint: "ServiceNow, ITSM, CSM, RH" },
+    agents: { label: "Agents IA", hint: "Déploiements, orchestration, MCP" },
+    securite: { label: "Gouvernance & sécurité", hint: "AI Act, NIS2, CNIL, failles" },
+    modeles: { label: "Modèles IA", hint: "Sorties, prix d'API, open source" },
+    cloud: { label: "Cloud & souveraineté", hint: "SecNumCloud, data centers, GPU" },
+    marche: { label: "Marché & adoption", hint: "Études, budgets DSI, ESN" }
+  };
+  var CAT_ORDER = Object.keys(CATS);
+  var LEGACY = { servicenow: "esm", gouvernance: "securite", adoption: "marche" };
+  var MOIS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
+  var MOIS_C = ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."];
+  var JOURS = ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"];
+  var THEME_KEY = "veille-techno-theme";
+
+  var now = new Date();
+  function pad(n) { return String(n).padStart(2, "0"); }
+  var thisMonth = now.getFullYear() + "-" + pad(now.getMonth() + 1);
+  var today = thisMonth + "-" + pad(now.getDate());
+  var state = {
+    tab: "quotidien", month: thisMonth, cat: null, q: "", day: null,
+    daily: [], weekly: [], monthly: [],
+    loaded: { daily: false, weekly: false, monthly: false }, failed: { daily: false, weekly: false, monthly: false },
+    available: null, busy: {}, notes: {},
+    sel: null, selPeriod: { weekly: null, monthly: null }, navOpen: false, detailOpen: false, reveal: false
+  };
+  var db = null, downloads = null, unsubDaily = null;
+  var listBox = document.getElementById("list");
+  var detailBox = document.getElementById("detail");
+  var navBox = document.getElementById("nav");
+  var navFilters = document.getElementById("nav-filters");
+  var compactMq = window.matchMedia ? window.matchMedia("(max-width: 1099px)") : null;
+  function compact() { return !!(compactMq && compactMq.matches); }
+
+  // ---------- petits outils
+  function el(tag, attrs) {
+    var node = document.createElement(tag);
+    if (attrs) Object.keys(attrs).forEach(function (k) {
+      var v = attrs[k];
+      if (v === null || v === undefined || v === false) return;
+      if (k === "class") node.className = v;
+      else if (k === "text") node.textContent = v;
+      else if (k === "style") node.setAttribute("style", v);
+      else if (k.slice(0, 2) === "on") node.addEventListener(k.slice(2), v);
+      else node.setAttribute(k, v === true ? "" : v);
+    });
+    for (var i = 2; i < arguments.length; i++) {
+      var c = arguments[i];
+      if (c === null || c === undefined || c === false) continue;
+      node.appendChild(typeof c === "string" ? document.createTextNode(c) : c);
+    }
+    return node;
+  }
+  function svg(d) {
+    var ns = "http://www.w3.org/2000/svg";
+    var s = document.createElementNS(ns, "svg"); s.setAttribute("viewBox", "0 0 24 24"); s.setAttribute("class", "i"); s.setAttribute("aria-hidden", "true");
+    var p = document.createElementNS(ns, "path"); p.setAttribute("d", d); s.appendChild(p);
+    return s;
+  }
+  function str(v) { return typeof v === "string" ? v : (v === null || v === undefined ? "" : String(v)); }
+  function arr(v) { return Array.isArray(v) ? v : []; }
+  function okUrl(u) { return typeof u === "string" && /^https?:\/\/[^\s<>"']+$/i.test(u); }
+  function link(url, text) {
+    if (!okUrl(url)) return el("span", { text: str(text) });
+    return el("a", { href: url, target: "_blank", rel: "noopener noreferrer", text: str(text) });
+  }
+  function parts(iso) {
+    var m = /^(\d{4})-(\d{2})-(\d{2})/.exec(str(iso));
+    return m ? { y: +m[1], m: +m[2], d: +m[3] } : null;
+  }
+  function dayNum(p) { return p.d === 1 ? "1er" : String(p.d); }
+  function weekday(iso) { var p = parts(iso); return p ? new Date(Date.UTC(p.y, p.m - 1, p.d)).getUTCDay() : 0; }
+  function frLong(iso) {
+    var p = parts(iso); if (!p) return str(iso);
+    var wd = JOURS[weekday(iso)];
+    return wd.charAt(0).toUpperCase() + wd.slice(1) + " " + dayNum(p) + " " + MOIS[p.m - 1];
+  }
+  function frShort(iso) { var p = parts(iso); return p ? dayNum(p) + " " + MOIS_C[p.m - 1] : str(iso); }
+  function frRange(a, b) {
+    var pa = parts(a), pb = parts(b); if (!pa || !pb) return str(a) + " au " + str(b);
+    if (pa.m === pb.m && pa.y === pb.y) return "du " + dayNum(pa) + " au " + dayNum(pb) + " " + MOIS_C[pb.m - 1];
+    return "du " + dayNum(pa) + " " + MOIS_C[pa.m - 1] + " au " + dayNum(pb) + " " + MOIS_C[pb.m - 1];
+  }
+  function monthLabel(ym) { var p = /^(\d{4})-(\d{2})$/.exec(ym); return p ? MOIS[+p[2] - 1].charAt(0).toUpperCase() + MOIS[+p[2] - 1].slice(1) + " " + p[1] : ym; }
+  function shiftMonth(ym, delta) {
+    var p = /^(\d{4})-(\d{2})$/.exec(ym); var d = new Date(Date.UTC(+p[1], +p[2] - 1 + delta, 1));
+    return d.getUTCFullYear() + "-" + pad(d.getUTCMonth() + 1);
+  }
+  function daysIn(ym) { var p = ym.split("-"); return new Date(Date.UTC(+p[0], +p[1], 0)).getUTCDate(); }
+  function catOf(c) { c = LEGACY[c] || c; return CATS[c] ? c : null; }
+  function catVar(c) { c = catOf(c); return c ? "var(--c-" + c + ")" : "var(--faint)"; }
+  function plural(n, one, many) { return n + " " + (n > 1 ? many : one); }
+  function pill(c, suite) {
+    var k = catOf(c);
+    return el("div", { class: "tagline" },
+      el("span", { class: "pill", style: "--c:" + catVar(k) }, el("span", { class: "dot" }), el("span", { text: k ? CATS[k].label : "Autre" })),
+      suite ? el("span", { class: "suite", text: "Suite" }) : null);
+  }
+  function fold(s) { return str(s).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, ""); }
+  function normDoc(frozen) {
+    var doc;
+    try { doc = JSON.parse(JSON.stringify(frozen || {})); } catch (e) { doc = {}; }
+    arr(doc.items).forEach(function (it) { if (it) it.category = catOf(it.category) || it.category; });
+    arr(doc.themes).forEach(function (t) { if (t) t.category = catOf(t.category) || t.category; });
+    arr(doc.top).forEach(function (t) { if (t) t.category = catOf(t.category) || t.category; });
+    if (doc.stats && doc.stats.by_category) {
+      var by = {};
+      Object.keys(doc.stats.by_category).forEach(function (k) { var c = catOf(k) || k; by[c] = (by[c] || 0) + (+doc.stats.by_category[k] || 0); });
+      doc.stats.by_category = by;
+    }
+    return doc;
+  }
+
+  // ---------- thème clair ou sombre (un seul bouton qui bascule)
+  var root = document.documentElement;
+  var mq = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
+  var themePref = null;
+  try { var saved = localStorage.getItem(THEME_KEY); if (saved === "light" || saved === "dark") themePref = saved; } catch (e) { themePref = null; }
+  var themeBtn = document.getElementById("theme-toggle");
+  var SUN = "M12 8a4 4 0 1 0 0 8a4 4 0 1 0 0-8zM12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4L6 18M18 6l1.4-1.4";
+  var MOON = "M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z";
+  function effectiveTheme() {
+    var a = root.getAttribute("data-theme");
+    if (a === "light" || a === "dark") return a;
+    return mq && mq.matches ? "dark" : "light";
+  }
+  function syncTheme() {
+    var dark = effectiveTheme() === "dark";
+    var label = dark ? "Passer en thème clair" : "Passer en thème sombre";
+    themeBtn.textContent = "";
+    themeBtn.appendChild(svg(dark ? SUN : MOON));
+    themeBtn.setAttribute("aria-label", label);
+    themeBtn.title = label;
+  }
+  function applyTheme() {
+    if (themePref && root.getAttribute("data-theme") !== themePref) root.setAttribute("data-theme", themePref);
+    syncTheme();
+  }
+  themeBtn.addEventListener("click", function () {
+    themePref = effectiveTheme() === "dark" ? "light" : "dark";
+    try { localStorage.setItem(THEME_KEY, themePref); } catch (e) { /* le choix vaut pour cette visite */ }
+    applyTheme();
+  });
+  if (mq) { if (mq.addEventListener) mq.addEventListener("change", syncTheme); else if (mq.addListener) mq.addListener(syncTheme); }
+  if (window.MutationObserver) new MutationObserver(applyTheme).observe(root, { attributes: true, attributeFilter: ["data-theme"] });
+  applyTheme();
+
+  // ---------- PDF fabriqué dans la page, à partir des données du rapport
+  var PDF_LIBS = ["https://cdn.jsdelivr.net/npm/pdfmake@0.2.10/build/pdfmake.min.js",
+                  "https://cdn.jsdelivr.net/npm/pdfmake@0.2.10/build/vfs_fonts.js"];
+  var PDF_CAT = { esm: "#0E7C66", agents: "#6B46D6", securite: "#C2412D", modeles: "#2563C9", cloud: "#9A5F05", marche: "#B8357A" };
+  var P_INK = "#111621", P_INK2 = "#363E4E", P_MUTED = "#5A6374", P_FAINT = "#8891A1", P_LINE = "#D5DAE2";
+  var pdfLib = null;
+  function loadScript(src) {
+    return new Promise(function (ok, ko) {
+      var tag = document.createElement("script");
+      tag.src = src; tag.async = false;
+      tag.onload = function () { ok(); };
+      tag.onerror = function () { ko({ code: "lib" }); };
+      document.head.appendChild(tag);
+    });
+  }
+  function ensurePdf() {
+    if (!pdfLib) {
+      pdfLib = loadScript(PDF_LIBS[0]).then(function () { return loadScript(PDF_LIBS[1]); }).then(function () {
+        if (!window.pdfMake || !window.pdfMake.vfs) throw { code: "lib" };
+        return window.pdfMake;
+      });
+      pdfLib.catch(function () { pdfLib = null; });
+    }
+    return pdfLib;
+  }
+  function pRule() { return { canvas: [{ type: "line", x1: 0, y1: 0, x2: 515, y2: 0, lineWidth: 0.6, lineColor: P_LINE }], margin: [0, 2, 0, 2] }; }
+  function pCat(c, extra) {
+    var k = catOf(c);
+    return { text: [{ text: (k ? CATS[k].label : "Autre").toUpperCase(), color: k ? PDF_CAT[k] : P_MUTED, bold: true }].concat(extra || []), fontSize: 7.5, characterSpacing: 0.8 };
+  }
+  function pSection(title) { return { text: title.toUpperCase(), style: "kicker", margin: [0, 14, 0, 4] }; }
+  function pYear(iso) { var p = parts(iso); return p ? " " + p.y : ""; }
+  function pdfDaily(doc) {
+    var body = [
+      { text: "VEILLE QUOTIDIENNE", style: "kicker" },
+      { text: frLong(doc.date) + pYear(doc.date), style: "title" },
+      { text: str(doc.headline), style: "headline" },
+      pRule()
+    ];
+    arr(doc.items).forEach(function (it, i) {
+      var when = parts(it.published) ? " · publié le " + frShort(it.published) : "";
+      var tags = arr(it.tags).filter(Boolean).map(function (x) { return "#" + str(x).replace(/^#+/, "").replace(/\s+/g, ""); }).join("  ");
+      if (i) body.push(pRule());
+      body.push({ unbreakable: true, margin: [0, 8, 0, 8], stack: [
+        pCat(it.category, it.follow_up ? [{ text: "  ·  SUITE", color: P_MUTED }] : []),
+        { text: str(it.title), style: "itemTitle", link: okUrl(it.url) ? it.url : undefined },
+        { text: str(it.source) + when, style: "meta" },
+        { text: str(it.summary), style: "body", margin: [0, 0, 0, 6] },
+        { columnGap: 16, columns: [
+          { stack: [{ text: "POURQUOI ÇA COMPTE", style: "label" }, { text: str(it.why), style: "small" }] },
+          { stack: [{ text: "À FAIRE", style: "label" }, { text: str(it.action), style: "small" }] }
+        ] },
+        tags ? { text: tags, style: "meta", margin: [0, 5, 0, 0] } : { text: "" }
+      ] });
+    });
+    var ctx = arr(doc.context);
+    if (ctx.length) {
+      body.push(pSection("En bref"));
+      body.push({ ul: ctx.map(function (c) {
+        return { text: [str(c.text) + " ", { text: "(" + str(c.source) + ")", color: P_MUTED, link: okUrl(c.url) ? c.url : undefined }], style: "small", margin: [0, 0, 0, 4] };
+      }) });
+    }
+    return { label: frShort(doc.date) + pYear(doc.date), content: body };
+  }
+  function pdfPeriod(doc, kind) {
+    var weekly = kind === "weekly";
+    var p = parts(doc.start);
+    var wk = /W(\d+)$/.exec(str(doc.week));
+    var title = weekly ? "Semaine " + (wk ? +wk[1] : str(doc.week)) : (p ? monthLabel(p.y + "-" + pad(p.m)) : str(doc.month));
+    var body = [
+      { text: weekly ? "SYNTHÈSE HEBDOMADAIRE" : "SYNTHÈSE MENSUELLE", style: "kicker" },
+      { text: title, style: "title" },
+      { text: frRange(doc.start, doc.end) + pYear(doc.end), style: "meta" },
+      { text: str(doc.headline), style: "headline" },
+      pRule(),
+      { text: str(doc.summary), style: "body", margin: [0, 8, 0, 6] }
+    ];
+    var st = doc.stats || {};
+    if (st.items) {
+      var by = st.by_category || {};
+      var cats = CAT_ORDER.filter(function (c) { return +by[c]; }).map(function (c) { return CATS[c].label + " " + by[c]; }).join(" · ");
+      body.push({ text: plural(st.items, "actu", "actus") + " archivées sur " + plural(st.days || 0, "jour", "jours") + (cats ? " · " + cats : ""), style: "meta" });
+    }
+    var themes = arr(doc.themes);
+    if (themes.length) {
+      body.push(pSection(weekly ? "Thèmes de la semaine" : "Tendances du mois"));
+      themes.forEach(function (th, i) {
+        if (i) body.push(pRule());
+        body.push({ unbreakable: true, margin: [0, 6, 0, 6], stack: [
+          pCat(th.category),
+          { text: str(th.title), style: "itemTitle" },
+          { text: str(th.analysis), style: "body", margin: [0, 0, 0, 4] },
+          { stack: arr(th.refs).map(function (r) {
+            return { text: [{ text: frShort(r.date) + "   ", color: P_FAINT }, { text: str(r.title), link: okUrl(r.url) ? r.url : undefined }, { text: " · " + str(r.source), color: P_MUTED }], style: "small", margin: [0, 1, 0, 1] };
+          }) }
+        ] });
+      });
+    }
+    var shifts = arr(doc.shifts);
+    if (shifts.length) {
+      body.push(pSection("Ce qui a changé"));
+      body.push({ ul: shifts.map(function (x) { return { text: str(x.text), style: "small", margin: [0, 0, 0, 3] }; }) });
+    }
+    var top = arr(doc.top);
+    if (top.length) {
+      body.push(pSection(weekly ? "À retenir" : "Les actus qui ont compté"));
+      top.forEach(function (t, i) {
+        body.push({ unbreakable: true, margin: [0, 4, 0, 6], stack: [
+          pCat(t.category, [{ text: "   " + pad(i + 1), color: P_FAINT }]),
+          { text: str(t.title), style: "itemTitle", fontSize: 11.5, link: okUrl(t.url) ? t.url : undefined },
+          { text: str(t.source) + " · " + frShort(t.date), style: "meta" },
+          { text: str(t.why), style: "small" }
+        ] });
+      });
+    }
+    var watch = arr(doc.watch);
+    if (watch.length) {
+      body.push(pSection("À surveiller"));
+      body.push({ ul: watch.map(function (w) { return { text: str(w.text), style: "small", margin: [0, 0, 0, 3] }; }) });
+    }
+    return { label: title, content: body };
+  }
+  function pdfDefinition(doc, kind) {
+    var made = kind === "daily" ? pdfDaily(doc) : pdfPeriod(doc, kind);
+    return {
+      pageSize: "A4", pageMargins: [40, 40, 40, 46],
+      info: { title: "Veille tech' · " + made.label },
+      content: made.content,
+      footer: function (page, count) {
+        return { margin: [40, 14, 40, 0], columns: [
+          { text: "Veille tech' · " + made.label, fontSize: 7, color: P_MUTED },
+          { text: page + " / " + count, alignment: "right", fontSize: 7, color: P_MUTED }
+        ] };
+      },
+      defaultStyle: { font: "Roboto", fontSize: 10, color: P_INK, lineHeight: 1.25 },
+      styles: {
+        kicker: { fontSize: 7.5, bold: true, characterSpacing: 1.4, color: P_MUTED },
+        title: { fontSize: 24, bold: true, margin: [0, 4, 0, 4] },
+        headline: { fontSize: 12, color: P_INK2, margin: [0, 2, 0, 10] },
+        itemTitle: { fontSize: 13, bold: true, margin: [0, 3, 0, 2] },
+        meta: { fontSize: 8.5, color: P_MUTED, margin: [0, 0, 0, 5] },
+        body: { fontSize: 10 },
+        small: { fontSize: 9, color: P_INK2 },
+        label: { fontSize: 7, bold: true, characterSpacing: 0.9, color: P_MUTED, margin: [0, 0, 0, 2] }
+      }
+    };
+  }
+  function pdfName(doc, kind) {
+    if (kind === "daily") return "veille-" + str(doc.date).slice(0, 10) + ".pdf";
+    return kind === "weekly" ? "veille-hebdo-" + str(doc.week) + ".pdf" : "veille-mensuelle-" + str(doc.month) + ".pdf";
+  }
+  var toastBox = document.getElementById("toast"), toastTimer = null;
+  function toast(msg) {
+    if (!msg) return;
+    toastBox.textContent = msg; toastBox.hidden = false;
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { toastBox.hidden = true; }, 3800);
+  }
+  function runPdf(key, doc, kind) {
+    if (state.busy[key]) return;
+    var done = function (msg) { state.busy[key] = false; render(); toast(msg); };
+    state.busy[key] = true; render();
+    ensurePdf().then(function (pdfMake) {
+      // Hors de Claude (site public), le navigateur télécharge directement le fichier.
+      if (!downloads) {
+        try { pdfMake.createPdf(pdfDefinition(doc, kind)).download(pdfName(doc, kind)); } catch (e) { throw { code: "build" }; }
+        return "direct";
+      }
+      return new Promise(function (ok, ko) {
+        try { pdfMake.createPdf(pdfDefinition(doc, kind)).getBlob(function (blob) { ok(blob); }); } catch (e) { ko({ code: "build" }); }
+      }).then(function (blob) { return downloads.save({ filename: pdfName(doc, kind), data: blob }); });
+    }).then(function (how) { done(how === "direct" ? "PDF téléchargé : " + pdfName(doc, kind) : "PDF enregistré : " + pdfName(doc, kind)); })
+      .catch(function (e) {
+        var code = e && e.code;
+        if (code === "declined") done("");
+        else if (code === "lib") done("Impossible de charger le générateur de PDF. Vérifie ta connexion et réessaie.");
+        else if (code === "rate_limited") done("Une demande d'enregistrement est déjà ouverte.");
+        else if (code === "unavailable" || code === "not_granted" || code === "capability_disabled") done("Le téléchargement n'est pas disponible dans cette vue.");
+        else done("Le PDF n'a pas pu être préparé. Réessaie.");
+      });
+  }
+  // Petite icône « document + flèche » : un clic télécharge le PDF du jour ou de la synthèse.
+  var PDF_ICON = "M13.5 3.5H7.5A1.5 1.5 0 0 0 6 5v14a1.5 1.5 0 0 0 1.5 1.5h9A1.5 1.5 0 0 0 18 19V8zM13.5 3.5V8H18M12 11v5.5M9.5 14l2.5 2.5 2.5-2.5";
+  function pdfIcon(key, doc, kind, label) {
+    var busy = !!state.busy[key];
+    var b = el("button", { class: "pdf-ic" + (busy ? " busy" : ""), type: "button", "data-fk": "pdf:" + key, "aria-label": busy ? "Préparation du PDF…" : label,
+      title: busy ? "Préparation du PDF…" : label, "aria-busy": busy ? "true" : null }, svg(PDF_ICON));
+    b.addEventListener("click", function (ev) { ev.preventDefault(); ev.stopPropagation(); runPdf(key, doc, kind); });
+    return b;
+  }
+
+  // ---------- recherche et surlignage
+  function searchTerms() {
+    return fold(state.q).split(/\s+/).filter(function (t) { return t.length > 0; });
+  }
+  // Découpe un texte en morceaux, avec <mark> autour de chaque mot cherché (sans tenir compte des accents ni des majuscules).
+  function hl(text) {
+    text = str(text);
+    var terms = state.q ? searchTerms() : [];
+    if (!terms.length || !text) return [text];
+    var folded = "", map = [];
+    for (var i = 0; i < text.length; i++) {
+      var f = fold(text.charAt(i));
+      for (var k = 0; k < f.length; k++) { folded += f.charAt(k); map.push(i); }
+    }
+    var ranges = [];
+    terms.forEach(function (t) {
+      var from = 0, at;
+      while ((at = folded.indexOf(t, from)) !== -1) { ranges.push([map[at], map[at + t.length - 1] + 1]); from = at + t.length; }
+    });
+    if (!ranges.length) return [text];
+    ranges.sort(function (a, b) { return a[0] - b[0]; });
+    var merged = [ranges[0]];
+    ranges.slice(1).forEach(function (r) { var last = merged[merged.length - 1]; if (r[0] <= last[1]) last[1] = Math.max(last[1], r[1]); else merged.push(r); });
+    var out = [], pos = 0;
+    merged.forEach(function (r) {
+      if (r[0] > pos) out.push(text.slice(pos, r[0]));
+      out.push(el("mark", { text: text.slice(r[0], r[1]) }));
+      pos = r[1];
+    });
+    if (pos < text.length) out.push(text.slice(pos));
+    return out;
+  }
+  function hlNode(tag, attrs, text) {
+    var node = el(tag, attrs);
+    hl(text).forEach(function (part) { node.appendChild(typeof part === "string" ? document.createTextNode(part) : part); });
+    return node;
+  }
+  function hlLink(url, text) {
+    if (!okUrl(url)) return hlNode("span", null, text);
+    return hlNode("a", { href: url, target: "_blank", rel: "noopener noreferrer" }, text);
+  }
+  function matches(it) {
+    if (state.cat && catOf(it.category) !== state.cat) return false;
+    if (state.q) {
+      var hay = fold([it.title, it.summary, it.why, it.action, it.source, arr(it.tags).join(" ")].join(" "));
+      var terms = searchTerms();
+      for (var i = 0; i < terms.length; i++) if (hay.indexOf(terms[i]) === -1) return false;
+    }
+    return true;
+  }
+  function reduceMotion() { return !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches); }
+  var searchInput = document.getElementById("search");
+  var lastDetail = null, listScroll = 0, resetList = false;
+  var EXT = "M14 5h5v5M19 5l-8 8M18 14v4.5A1.5 1.5 0 0 1 16.5 20h-11A1.5 1.5 0 0 1 4 18.5v-11A1.5 1.5 0 0 1 5.5 6H10";
+  function catLabel(c) { var k = catOf(c); return k ? CATS[k].label : "Autre"; }
+  function dayLong(iso) { var p = parts(iso); return p ? dayNum(p) + " " + MOIS[p.m - 1] : str(iso); }
+  function pubText(iso) {
+    var p = parts(iso); if (!p) return "";
+    var s = "publié le " + dayNum(p) + " " + MOIS[p.m - 1];
+    var t = /T(\d{2}):(\d{2})/.exec(str(iso)); if (t) s += " à " + t[1] + " h " + t[2];
+    return s;
+  }
+  function appendAll(node, list) { list.forEach(function (x) { node.appendChild(typeof x === "string" ? document.createTextNode(x) : x); }); return node; }
+  function clearFilters() { state.cat = null; state.day = null; state.q = ""; state.sel = null; searchInput.value = ""; resetList = true; render(); }
+
+  // ---------- navigation : vues, calendrier, thèmes
+  function setCounts() {
+    document.getElementById("n-quotidien").textContent = state.loaded.daily && state.daily.length ? plural(state.daily.length, "matin", "matins") : "";
+    document.getElementById("n-hebdo").textContent = state.weekly.length ? String(state.weekly.length) : "";
+    document.getElementById("n-mensuel").textContent = state.monthly.length ? String(state.monthly.length) : "";
+    document.querySelectorAll("[data-tab]").forEach(function (b) { b.setAttribute("aria-selected", b.getAttribute("data-tab") === state.tab ? "true" : "false"); });
+  }
+  function selectDay(iso) {
+    state.day = state.day === iso ? null : iso; state.sel = null;
+    if (compact()) state.navOpen = false;
+    resetList = true; render();
+  }
+  function calendarNode() {
+    var byDate = {};
+    state.daily.forEach(function (d) { byDate[str(d.date).slice(0, 10)] = d; });
+    var cal = el("div", { class: "cal", role: "group", "aria-label": "Choisir un jour de " + monthLabel(state.month).toLowerCase() });
+    ["L", "M", "M", "J", "V", "S", "D"].forEach(function (w) { cal.appendChild(el("span", { class: "wd", "aria-hidden": "true", text: w })); });
+    var lead = (weekday(state.month + "-01") + 6) % 7;
+    for (var i = 0; i < lead; i++) cal.appendChild(el("span", { "aria-hidden": "true" }));
+    var n = daysIn(state.month);
+    for (var day = 1; day <= n; day++) {
+      var iso = state.month + "-" + pad(day);
+      var doc = byDate[iso];
+      var cls = "cal-day" + (iso === today ? " today" : "");
+      if (doc) {
+        var cnt = arr(doc.items).length;
+        var hit = arr(doc.items).some(function (it) { return it && matches(it); });
+        var b = el("button", { class: cls + (hit ? "" : " nomatch"), type: "button", "aria-pressed": state.day === iso ? "true" : "false", "data-fk": "day:" + iso,
+          title: frLong(iso) + " : " + plural(cnt, "actu", "actus"), "aria-label": frLong(iso) + ", " + plural(cnt, "actu", "actus") }, String(day));
+        b.addEventListener("click", selectDay.bind(null, iso));
+        cal.appendChild(b);
+      } else {
+        cal.appendChild(el("span", { class: cls, text: String(day) }));
+      }
+    }
+    return cal;
+  }
+  function renderNav() {
+    setCounts();
+    navFilters.textContent = "";
+    var daily = state.tab === "quotidien";
+    var ft = document.getElementById("ftoggle");
+    ft.hidden = !daily;
+    ft.setAttribute("aria-expanded", state.navOpen && daily ? "true" : "false");
+    var active = !!(state.day || state.cat), dot = ft.querySelector(".on-dot");
+    if (active && !dot) ft.appendChild(el("i", { class: "on-dot", "aria-hidden": "true" }));
+    if (!active && dot) ft.removeChild(dot);
+    navBox.classList.toggle("open", state.navOpen && daily);
+    if (!daily) return;
+    var prev = el("button", { class: "round", type: "button", "aria-label": "Mois précédent", "data-fk": "m-prev" }, svg("M15 6l-6 6 6 6"));
+    var next = el("button", { class: "round", type: "button", "aria-label": "Mois suivant", "data-fk": "m-next", disabled: state.month >= thisMonth }, svg("M9 6l6 6-6 6"));
+    prev.addEventListener("click", function () { state.month = shiftMonth(state.month, -1); state.sel = null; resetList = true; subDaily(); });
+    next.addEventListener("click", function () { if (state.month < thisMonth) { state.month = shiftMonth(state.month, 1); state.sel = null; resetList = true; subDaily(); } });
+    navFilters.appendChild(el("div", { class: "cal-h" }, el("h2", { text: monthLabel(state.month) }), el("span", { class: "cal-nav" }, prev, next)));
+    navFilters.appendChild(calendarNode());
+    if (state.day) {
+      var all = el("button", { class: "all", type: "button", "data-fk": "all-month", text: "Voir tout le mois" });
+      all.addEventListener("click", function () { state.day = null; state.sel = null; resetList = true; render(); });
+      navFilters.appendChild(all);
+    }
+    var total = 0, counts = {};
+    state.daily.forEach(function (d) { arr(d.items).forEach(function (it) { var c = it && catOf(it.category); total++; if (c) counts[c] = (counts[c] || 0) + 1; }); });
+    navFilters.appendChild(el("h2", { class: "th-h", text: "Thèmes du mois" }));
+    var box = el("div", { class: "themes", role: "group", "aria-label": "Filtrer par thème" });
+    var allBtn = el("button", { class: "theme allt", type: "button", "aria-pressed": state.cat ? "false" : "true", "data-fk": "cat:all" },
+      el("span", { text: "Tous les thèmes" }), el("span", { class: "n", text: String(total) }));
+    allBtn.addEventListener("click", function () { state.cat = null; state.sel = null; if (compact()) state.navOpen = false; resetList = true; render(); });
+    box.appendChild(allBtn);
+    CAT_ORDER.forEach(function (c) {
+      var k = counts[c] || 0;
+      var b = el("button", { class: "theme", type: "button", style: "--c:" + catVar(c), "aria-pressed": state.cat === c ? "true" : "false", "data-fk": "cat:" + c,
+        "aria-label": CATS[c].label + ", " + plural(k, "actu", "actus"), title: CATS[c].hint },
+        el("i", { "aria-hidden": "true" }), el("span", { text: CATS[c].label }), el("span", { class: "n", text: String(k) }));
+      b.addEventListener("click", function () { state.cat = state.cat === c ? null : c; state.sel = null; if (compact()) state.navOpen = false; resetList = true; render(); });
+      box.appendChild(b);
+    });
+    navFilters.appendChild(box);
+  }
+
+  // ---------- quotidien : liste des actus et lecture
+  function itemKey(x) { return x.date + "#" + (x.bref ? "bref" : x.rank); }
+  function briefMatches(c) {
+    if (!state.q) return true;
+    var hay = fold(str(c.text) + " " + str(c.source));
+    return searchTerms().every(function (t) { return hay.indexOf(t) > -1; });
+  }
+  function dailyGroups() {
+    var filtering = !!(state.cat || state.q), out = [];
+    state.daily.forEach(function (doc) {
+      var date = str(doc.date).slice(0, 10);
+      if (state.day && date !== state.day) return;
+      var items = arr(doc.items), kept = [];
+      items.forEach(function (it, i) { if (it && matches(it)) kept.push({ it: it, rank: i + 1, date: date, doc: doc, total: items.length }); });
+      var nItems = kept.length;
+      var ctx = arr(doc.context).filter(function (c) { return c && c.text; });
+      if (ctx.length && !state.cat && ctx.some(briefMatches)) kept.push({ bref: true, ctx: ctx, date: date, doc: doc, total: items.length });
+      if (filtering && !kept.length) return;
+      out.push({ doc: doc, date: date, kept: kept, total: items.length, nItems: nItems });
+    });
+    return out;
+  }
+  function listMsg(title, text, action) {
+    var box = el("div", { class: "msg" }, el("b", { text: title }), el("span", { text: text }));
+    if (action) {
+      var b = el("button", { type: "button", "data-fk": "msg-act", text: action[0] });
+      b.addEventListener("click", action[1]);
+      box.appendChild(el("div", null, b));
+    }
+    listBox.appendChild(box);
+  }
+  function focusTitle() { var t = detailBox.querySelector(".d-title"); if (t) t.focus({ preventScroll: true }); }
+  function openItem(key, opts) {
+    opts = opts || {};
+    state.sel = key;
+    if (compact()) {
+      if (!state.detailOpen) listScroll = window.scrollY || document.documentElement.scrollTop || 0;
+      state.detailOpen = true; render();
+      window.scrollTo(0, 0);
+      focusTitle();
+    } else {
+      state.reveal = !!opts.reveal;
+      render();
+      if (opts.focusTitle) focusTitle();
+    }
+  }
+  function closeDetail() {
+    state.detailOpen = false; render();
+    window.scrollTo(0, listScroll);
+    var r = listBox.querySelector('[aria-current="true"]');
+    if (r) {
+      var box = r.getBoundingClientRect();
+      if ((box.top < 0 || box.bottom > window.innerHeight) && r.scrollIntoView) r.scrollIntoView({ block: "center" });
+      r.focus({ preventScroll: true });
+    }
+  }
+  // Bas de lecture : la suite dans la liste, sans remonter chercher les flèches.
+  function nextNav(next, prev, opts) {
+    if (!next && !prev) return null;
+    var nav = el("nav", { class: "next-nav", "aria-label": opts.aria });
+    if (next) {
+      var card = el("button", { class: "next-card", type: "button", style: next.color ? "--c:" + next.color : null },
+        el("span", { class: "nl", text: next.label }),
+        next.cat || next.source ? el("span", { class: "k" }, next.cat ? el("b", { text: next.cat }) : null, next.source ? el("span", { text: next.source }) : null) : null,
+        hlNode("span", { class: "nt" }, next.title),
+        svg("M5 12h14M13 6l6 6-6 6"));
+      card.addEventListener("click", next.go);
+      nav.appendChild(card);
+    } else if (opts.end) {
+      nav.appendChild(el("p", { class: "end-note", text: opts.end }));
+    }
+    if (prev) {
+      var back = el("button", { class: "prev-link", type: "button" }, svg("M15 6l-6 6 6 6"), el("span", { text: prev.label }));
+      back.addEventListener("click", prev.go);
+      nav.appendChild(back);
+    }
+    return nav;
+  }
+  function renderDailyList(groups, cur) {
+    if (state.available === false) return listMsg("Archive indisponible dans cette vue", "Ouvre cette page en étant connecté à ton compte Claude pour charger les briefings.");
+    if (!state.loaded.daily) return listMsg("Chargement de " + monthLabel(state.month).toLowerCase() + "…", "Lecture de l'archive en cours.");
+    if (state.failed.daily) return listMsg("Lecture de l'archive impossible", "Recharge la page dans quelques instants.");
+    if (!state.daily.length) {
+      return listMsg("Aucun briefing archivé en " + monthLabel(state.month).toLowerCase(),
+        state.month === thisMonth ? "Le prochain briefing s'ajoutera ici dès que la tâche du matin aura tourné." : "L'archivage n'avait pas encore commencé, ou la tâche n'a pas tourné ce mois-là.");
+    }
+    if (!groups.length) {
+      return listMsg(state.day ? "Aucune actu ne correspond ce jour-là" : "Aucune actu ne correspond", "Change de thème ou de jour, ou modifie ta recherche.", ["Effacer les filtres", clearFilters]);
+    }
+    var filtering = !!(state.cat || state.q);
+    groups.forEach(function (g) {
+      var sec = el("section", { "aria-label": frLong(g.date) });
+      var count = !filtering ? plural(g.total, "actu", "actus") : g.nItems ? g.nItems + " sur " + g.total : "en bref";
+      // Un clic sur le jour (titre ou résumé) ouvre sa première actu.
+      var firstOfDay = g.kept[0];
+      var goDay = firstOfDay ? function () { openItem(itemKey(firstOfDay), { reveal: true }); } : null;
+      var dayBtn = el("button", { class: "day-btn", type: "button", "data-fk": "day-h:" + g.date, disabled: !goDay,
+        title: goDay ? "Ouvrir la première actu du " + dayLong(g.date) : null }, frLong(g.date));
+      if (goDay) dayBtn.addEventListener("click", goDay);
+      sec.appendChild(el("div", { class: "grp-t" },
+        el("div", { class: "grp-l" }, el("h2", null, dayBtn), pdfIcon("d:" + g.date, g.doc, "daily", "Télécharger le briefing du " + dayLong(g.date) + " en PDF")),
+        el("span", { class: "n", text: count })));
+      var dayP = g.doc.headline ? hlNode("p", { class: "grp-p" + (goDay ? " go" : "") }, g.doc.headline) : el("div", { class: "grp-p empty" });
+      if (goDay && g.doc.headline) dayP.addEventListener("click", goDay);
+      sec.appendChild(dayP);
+      if (!g.kept.length) sec.appendChild(el("div", { class: "msg" }, el("span", { text: "Aucune actu ce jour-là." })));
+      g.kept.forEach(function (x) {
+        var key = itemKey(x), on = !!(cur && itemKey(cur) === key);
+        if (x.bref) {
+          var first = x.ctx.filter(briefMatches)[0] || x.ctx[0];
+          var br = el("button", { class: "row bref", type: "button", style: "--c:var(--muted)", "aria-current": on ? "true" : null, "data-fk": "row:" + key },
+            el("span", { class: "r", "aria-hidden": "true" }, svg("M8 7h11M8 12h11M8 17h11M4.5 7h.01M4.5 12h.01M4.5 17h.01")),
+            el("span", { class: "rb" },
+              el("span", { class: "k" }, el("b", { text: "En bref" }), el("span", { text: plural(x.ctx.length, "brève", "brèves") })),
+              hlNode("span", { class: "t tb" }, first.text)));
+          br.addEventListener("click", function () { openItem(key); });
+          sec.appendChild(br);
+          return;
+        }
+        var row = el("button", { class: "row", type: "button", style: "--c:" + catVar(x.it.category), "aria-current": on ? "true" : null, "data-fk": "row:" + key },
+          el("span", { class: "r", "aria-hidden": "true", text: String(x.rank) }),
+          el("span", { class: "rb" },
+            el("span", { class: "k" }, el("b", { text: catLabel(x.it.category) }), x.it.follow_up ? el("i", { text: "suite" }) : null, hlNode("span", null, x.it.source)),
+            hlNode("span", { class: "t" }, x.it.title)));
+        row.addEventListener("click", function () { openItem(key); });
+        sec.appendChild(row);
+      });
+      listBox.appendChild(sec);
+    });
+  }
+  function nextSpec(nx, cur) {
+    if (!nx) return null;
+    var when = ", veille du " + dayLong(nx.date);
+    var go = function () { openItem(itemKey(nx), { reveal: true, focusTitle: true }); };
+    if (nx.bref) return { label: "Ensuite" + when, source: plural(nx.ctx.length, "brève", "brèves"), title: "En bref, " + frLong(nx.date).toLowerCase(), go: go };
+    return { label: "Actu suivante" + when, cat: catLabel(nx.it.category), color: catVar(nx.it.category), source: str(nx.it.source), title: nx.it.title, go: go };
+  }
+  function prevSpec(pv) {
+    if (!pv) return null;
+    return { label: pv.bref ? "Revenir aux brèves du " + dayLong(pv.date) : "Actu précédente", go: function () { openItem(itemKey(pv), { reveal: true, focusTitle: true }); } };
+  }
+  function renderDailyDetail(groups, cur) {
+    if (!cur) {
+      detailBox.appendChild(el("p", { class: "d-empty", text: state.loaded.daily && state.daily.length ? "Aucune actu à afficher avec ces filtres." : "" }));
+      return;
+    }
+    var flat = [], idx = -1;
+    groups.forEach(function (g) { g.kept.forEach(function (x) { if (itemKey(x) === itemKey(cur)) idx = flat.length; flat.push(x); }); });
+    var doc = cur.doc;
+    var nx = idx >= 0 && idx < flat.length - 1 ? flat[idx + 1] : null, pv = idx > 0 ? flat[idx - 1] : null;
+    var back = el("button", { class: "back", type: "button", "data-fk": "back" }, svg("M15 6l-6 6 6 6"), el("span", { text: frLong(cur.date) }));
+    back.addEventListener("click", closeDetail);
+    var prev = el("button", { class: "round", type: "button", "aria-label": "Précédent", "data-fk": "it-prev", disabled: !pv }, svg("M15 6l-6 6 6 6"));
+    var next = el("button", { class: "round", type: "button", "aria-label": "Suivant", "data-fk": "it-next", disabled: !nx }, svg("M9 6l6 6-6 6"));
+    prev.addEventListener("click", function () { if (pv) openItem(itemKey(pv), { reveal: true }); });
+    next.addEventListener("click", function () { if (nx) openItem(itemKey(nx), { reveal: true }); });
+    var endNav = nextNav(nextSpec(nx, cur), prevSpec(pv), { aria: "Lecture suivante", end: flat.length > 1 ? "C'était la dernière actu de la liste." : "" });
+    var body = el("div", { class: "d-body" });
+    detailBox.appendChild(back);
+
+    if (cur.bref) {
+      detailBox.appendChild(el("div", { class: "d-top", style: "--c:var(--muted)" },
+        el("div", { class: "l" }, el("span", { class: "cat", text: "En bref" }), el("span", { class: "vd", text: "Veille du " + dayLong(cur.date) }), el("span", { text: plural(cur.ctx.length, "brève", "brèves") })),
+        el("div", { class: "pos" }, prev, next)));
+      detailBox.appendChild(el("h2", { class: "d-title", tabindex: "-1", text: "En bref, " + frLong(cur.date).toLowerCase() }));
+      detailBox.appendChild(body);
+      var list = el("div", { class: "briefs" });
+      cur.ctx.forEach(function (c) {
+        var pub = pubText(c.published);
+        list.appendChild(el("article", { class: "bf" }, hlNode("p", { class: "bf-t" }, c.text),
+          el("div", { class: "bf-m" }, hlNode("span", null, str(c.source) + (pub ? ", " + pub : "")),
+            okUrl(c.url) ? el("a", { class: "open", href: c.url, target: "_blank", rel: "noopener noreferrer" }, "Lire l'article", svg(EXT)) : null)));
+      });
+      body.appendChild(list);
+      if (endNav) body.appendChild(endNav);
+      return;
+    }
+
+    var it = cur.it;
+    detailBox.appendChild(el("div", { class: "d-top", style: "--c:" + catVar(it.category) },
+      el("div", { class: "l" }, el("span", { class: "cat", text: catLabel(it.category) }), el("span", { class: "vd", text: "Veille du " + dayLong(cur.date) }),
+        it.follow_up ? el("span", { class: "suite", text: "suite d'un sujet déjà traité" }) : null,
+        el("span", { text: "Actu " + cur.rank + " sur " + cur.total })),
+      el("div", { class: "pos" }, prev, next)));
+    detailBox.appendChild(hlNode("h2", { class: "d-title", tabindex: "-1" }, it.title));
+    var meta = hlNode("span", null, it.source);
+    var pubIt = pubText(it.published); if (pubIt) meta.appendChild(document.createTextNode(", " + pubIt));
+    detailBox.appendChild(el("div", { class: "d-meta" }, meta,
+      okUrl(it.url) ? el("a", { class: "open", href: it.url, target: "_blank", rel: "noopener noreferrer" }, "Lire l'article", svg(EXT)) : null));
+    var action = el("p", null, el("span", { class: "runin", text: "À faire." }), " ");
+    appendAll(action, hl(it.action));
+    detailBox.appendChild(body);
+    body.appendChild(el("div", { class: "read" }, hlNode("p", null, it.summary), it.action ? action : null));
+    var tags = arr(it.tags).filter(Boolean).map(str).join(", ");
+    if (it.why || tags) {
+      body.appendChild(el("aside", { class: "note" }, el("h3", { text: "Pourquoi ça compte" }), hlNode("p", null, it.why), tags ? hlNode("div", { class: "kw" }, tags) : null));
+    }
+    if (endNav) body.appendChild(endNav);
+  }
+
+  // ---------- hebdo et mensuel
+  function periodId(doc, kind) { return kind === "weekly" ? str(doc.week) : str(doc.month); }
+  function periodTitle(doc, kind) {
+    var id = periodId(doc, kind), wk = /W(\d+)$/.exec(id), p = parts(doc.start);
+    return kind === "weekly" ? "Semaine " + (wk ? +wk[1] : id) : (p ? monthLabel(p.y + "-" + pad(p.m)) : id);
+  }
+  function periodMatches(doc) {
+    if (!state.q) return true;
+    var bits = [doc.headline, doc.summary];
+    arr(doc.themes).forEach(function (t) { bits.push(t.title, t.analysis); });
+    arr(doc.top).forEach(function (t) { bits.push(t.title, t.source, t.why); });
+    arr(doc.shifts).forEach(function (t) { bits.push(t.text); });
+    arr(doc.watch).forEach(function (t) { bits.push(t.text); });
+    var hay = fold(bits.map(str).join(" "));
+    return searchTerms().every(function (t) { return hay.indexOf(t) > -1; });
+  }
+  function renderPeriodList(kind, docs, cur) {
+    var isWeek = kind === "weekly";
+    if (state.available === false) return listMsg("Archive indisponible dans cette vue", "Ouvre cette page en étant connecté à ton compte Claude pour charger les synthèses.");
+    if (!state.loaded[kind]) return listMsg("Chargement des synthèses…", "Lecture de l'archive en cours.");
+    if (state.failed[kind]) return listMsg("Lecture de l'archive impossible", "Recharge la page dans quelques instants.");
+    if (!state[kind].length) {
+      return isWeek
+        ? listMsg("Pas encore de synthèse hebdo", "Elle paraît chaque lundi matin, à partir des briefings de la semaine précédente.")
+        : listMsg("Pas encore de synthèse mensuelle", "La première paraîtra le 1er du mois prochain, à partir des briefings archivés ce mois-ci.");
+    }
+    if (!docs.length) return listMsg("Aucune synthèse ne correspond", "Modifie ta recherche pour revoir toutes les synthèses.", ["Effacer la recherche", clearFilters]);
+    docs.forEach(function (doc) {
+      var id = periodId(doc, kind), on = !!(cur && periodId(cur, kind) === id);
+      var row = el("button", { class: "row per", type: "button", "aria-current": on ? "true" : null, "data-fk": "per:" + id },
+        el("span", { class: "rb" },
+          el("span", { class: "pt", text: periodTitle(doc, kind) }),
+          el("span", { class: "k" }, el("span", { text: frRange(doc.start, doc.end) + pYear(doc.end) })),
+          doc.headline ? hlNode("span", { class: "t" }, doc.headline) : null));
+      row.addEventListener("click", function () { openPeriod(kind, id); });
+      listBox.appendChild(el("div", { class: "per-wrap" }, row,
+        pdfIcon((isWeek ? "w:" : "m:") + id, doc, kind, "Télécharger la synthèse " + (isWeek ? "de la " + periodTitle(doc, kind).toLowerCase() : "de " + periodTitle(doc, kind).toLowerCase()) + " en PDF")));
+    });
+  }
+  function openPeriod(kind, id, opts) {
+    state.selPeriod[kind] = id;
+    if (compact()) {
+      if (!state.detailOpen) listScroll = window.scrollY || document.documentElement.scrollTop || 0;
+      state.detailOpen = true; render(); window.scrollTo(0, 0);
+      focusTitle();
+    } else {
+      state.reveal = true; render();
+      if (opts && opts.focusTitle) focusTitle();
+    }
+  }
+  function statsBlock(stats, unit) {
+    if (!stats || !stats.items) return null;
+    var by = stats.by_category || {};
+    var box = el("div", { class: "stats" }, el("div", null, el("b", { text: plural(stats.items, "actu", "actus") }), " archivées sur ",
+      el("b", { text: plural(stats.days || 0, "jour", "jours") }), " " + unit));
+    var bars = el("div", { class: "bars", role: "img", "aria-label": "Répartition des actus par thème" });
+    var legend = el("div", { class: "legend" });
+    CAT_ORDER.forEach(function (c) {
+      var n = +by[c] || 0; if (!n) return;
+      bars.appendChild(el("i", { style: "flex:" + n + ";background:" + catVar(c) }));
+      legend.appendChild(el("span", null, el("i", { class: "dot", style: "--c:" + catVar(c) }), CATS[c].label + " " + n));
+    });
+    box.appendChild(bars); box.appendChild(legend);
+    var srcs = arr(stats.top_sources).slice(0, 5).map(function (s) { return str(s.source) + " (" + (+s.count || 0) + ")"; });
+    if (srcs.length) box.appendChild(el("div", { class: "srcs", text: "Sources les plus citées : " + srcs.join(", ") }));
+    return box;
+  }
+  function renderPeriodDetail(kind, doc, docs) {
+    var isWeek = kind === "weekly";
+    if (!doc) {
+      detailBox.appendChild(el("p", { class: "d-empty", text: state.loaded[kind] && state[kind].length ? "Aucune synthèse à afficher." : "" }));
+      return;
+    }
+    var id = periodId(doc, kind);
+    var back = el("button", { class: "back", type: "button", "data-fk": "back" }, svg("M15 6l-6 6 6 6"), el("span", { text: isWeek ? "Synthèses hebdo" : "Synthèses mensuelles" }));
+    back.addEventListener("click", closeDetail);
+    detailBox.appendChild(back);
+    detailBox.appendChild(el("div", { class: "kind", text: (isWeek ? "Synthèse hebdomadaire, " : "Synthèse mensuelle, ") + frRange(doc.start, doc.end) + pYear(doc.end) }));
+    detailBox.appendChild(el("h2", { class: "d-title", tabindex: "-1", text: periodTitle(doc, kind) }));
+    if (doc.headline) detailBox.appendChild(hlNode("p", { class: "lede" }, doc.headline));
+    if (doc.summary) detailBox.appendChild(el("div", { class: "read" }, hlNode("p", null, doc.summary)));
+    var st = statsBlock(doc.stats, isWeek ? "cette semaine" : "ce mois-ci");
+    if (st) detailBox.appendChild(st);
+    var themes = arr(doc.themes);
+    if (themes.length) {
+      var sec = el("section", { class: "sec" }, el("h3", { text: isWeek ? "Thèmes de la semaine" : "Tendances du mois" }));
+      themes.forEach(function (th) {
+        var refs = el("div", { class: "refs" });
+        arr(th.refs).forEach(function (r) {
+          refs.appendChild(el("div", null, el("span", { class: "d", text: frShort(r.date) }),
+            el("span", null, link(r.url, r.title), el("span", { class: "src-link", text: ", " + str(r.source) }))));
+        });
+        sec.appendChild(el("article", { class: "th" }, el("div", { class: "k", style: "--c:" + catVar(th.category) }, el("b", { text: catLabel(th.category) })),
+          hlNode("h4", null, th.title), hlNode("p", null, th.analysis), refs));
+      });
+      detailBox.appendChild(sec);
+    }
+    var shifts = arr(doc.shifts);
+    if (shifts.length) {
+      var ul = el("ul");
+      shifts.forEach(function (s) { ul.appendChild(hlNode("li", null, s.text)); });
+      detailBox.appendChild(el("section", { class: "sec" }, el("h3", { text: "Ce qui a changé" }), ul));
+    }
+    var top = arr(doc.top);
+    if (top.length) {
+      var s3 = el("section", { class: "sec" }, el("h3", { text: isWeek ? "À retenir" : "Les actus qui ont compté" }));
+      top.forEach(function (t, i) {
+        s3.appendChild(el("article", { class: "top-it" }, el("span", { class: "r", "aria-hidden": "true", text: String(i + 1) }),
+          el("div", null,
+            el("div", { class: "k", style: "--c:" + catVar(t.category) }, el("b", { text: catLabel(t.category) }), el("span", { text: str(t.source) + ", " + frShort(t.date) })),
+            el("h4", null, hlLink(t.url, t.title)), hlNode("p", null, t.why))));
+      });
+      detailBox.appendChild(s3);
+    }
+    var watch = arr(doc.watch);
+    if (watch.length) {
+      var ul2 = el("ul");
+      watch.forEach(function (w) {
+        var host = ""; try { host = okUrl(w.url) ? new URL(w.url).hostname.replace(/^www\./, "") : ""; } catch (e) { host = ""; }
+        var li = hlNode("li", null, w.text);
+        if (host) { li.appendChild(document.createTextNode(" ")); li.appendChild(el("span", { class: "src-link" }, link(w.url, host))); }
+        ul2.appendChild(li);
+      });
+      detailBox.appendChild(el("section", { class: "sec" }, el("h3", { text: "À surveiller" }), ul2));
+    }
+    var at = -1; arr(docs).forEach(function (d, i) { if (periodId(d, kind) === id) at = i; });
+    var older = at > -1 && at < docs.length - 1 ? docs[at + 1] : null, newer = at > 0 ? docs[at - 1] : null;
+    var endNav = nextNav(
+      older ? { label: isWeek ? "Semaine d'avant" : "Mois d'avant", title: periodTitle(older, kind) + (older.headline ? " : " + str(older.headline) : ""),
+        go: function () { openPeriod(kind, periodId(older, kind), { focusTitle: true }); } } : null,
+      newer ? { label: isWeek ? "Semaine d'après" : "Mois d'après", go: function () { openPeriod(kind, periodId(newer, kind), { focusTitle: true }); } } : null,
+      { aria: "Synthèses voisines" });
+    if (endNav) detailBox.appendChild(endNav);
+  }
+
+  // ---------- rendu général
+  function render() {
+    var ae = document.activeElement;
+    var fk = ae && ae !== document.body && ae.getAttribute ? ae.getAttribute("data-fk") : null;
+    var lt = listBox.scrollTop, dt = detailBox.scrollTop;
+    if (!compact()) state.detailOpen = false;
+    document.body.classList.toggle("show-detail", compact() && state.detailOpen);
+    renderNav();
+    listBox.textContent = "";
+    detailBox.textContent = "";
+    var dkey;
+    if (state.tab === "quotidien") {
+      var groups = dailyGroups(), cur = null, first = null;
+      groups.forEach(function (g) { g.kept.forEach(function (x) { if (!first) first = x; if (state.sel === itemKey(x)) cur = x; }); });
+      if (!cur) cur = first;
+      if (cur) state.sel = itemKey(cur);
+      listBox.setAttribute("aria-label", "Actus de " + monthLabel(state.month).toLowerCase());
+      renderDailyList(groups, cur);
+      renderDailyDetail(groups, cur);
+      dkey = "d|" + (cur ? itemKey(cur) : "");
+    } else {
+      var kind = state.tab === "hebdo" ? "weekly" : "monthly";
+      var docs = state[kind].filter(periodMatches), pc = null;
+      docs.forEach(function (d) { if (state.selPeriod[kind] === periodId(d, kind)) pc = d; });
+      if (!pc) pc = docs[0] || null;
+      if (pc) state.selPeriod[kind] = periodId(pc, kind);
+      listBox.setAttribute("aria-label", kind === "weekly" ? "Synthèses hebdo" : "Synthèses mensuelles");
+      renderPeriodList(kind, docs, pc);
+      renderPeriodDetail(kind, pc, docs);
+      dkey = kind + "|" + (pc ? periodId(pc, kind) : "");
+    }
+    listBox.scrollTop = resetList ? 0 : lt;
+    if (resetList && compact() && !state.detailOpen) {
+      var topList = listBox.getBoundingClientRect().top + (window.scrollY || 0) - 8;
+      if ((window.scrollY || 0) > topList) window.scrollTo(0, topList);
+    }
+    resetList = false;
+    detailBox.scrollTop = dkey === lastDetail ? dt : 0;
+    lastDetail = dkey;
+    if (state.reveal) {
+      state.reveal = false;
+      var sel = listBox.querySelector('[aria-current="true"]');
+      if (sel && sel.scrollIntoView) sel.scrollIntoView({ block: "nearest" });
+    }
+    if (fk) {
+      var again = null;
+      document.querySelectorAll("[data-fk]").forEach(function (n) { if (!again && n.getAttribute("data-fk") === fk) again = n; });
+      if (again && !again.disabled) again.focus({ preventScroll: true });
+    }
+    syncToTop();
+  }
+  function setTab(t, fromHash) {
+    if (["quotidien", "hebdo", "mensuel"].indexOf(t) === -1) return;
+    if (state.tab !== t) { state.detailOpen = false; resetList = true; }
+    state.tab = t;
+    if (!fromHash) { try { history.replaceState(null, "", "#" + t); } catch (e) { /* sans importance */ } }
+    render();
+  }
+  // ---------- chargement (site public : l'archive est publiée en fichiers JSON à côté de la page)
+  function onErr(kind) {
+    return function () { state.loaded[kind] = true; state.failed[kind] = true; render(); };
+  }
+  function keep(field) {
+    return function (d) { return d && parts(d[field]) && typeof d.seal === "string"; };
+  }
+  function getJson(path) {
+    return fetch("data/" + path, { cache: "no-cache" }).then(function (r) {
+      if (r.status === 404) return null;
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      return r.json();
+    });
+  }
+  function newestFirst(field) {
+    return function (a, b) { return a[field] < b[field] ? 1 : a[field] > b[field] ? -1 : 0; };
+  }
+  var monthToken = 0;
+  function subDaily() {
+    var tok = ++monthToken;
+    state.daily = []; state.day = null; state.loaded.daily = false; state.failed.daily = false; render();
+    getJson("daily-" + state.month + ".json").then(function (docs) {
+      if (tok !== monthToken) return;
+      try { state.daily = arr(docs).filter(keep("date")).map(normDoc).sort(newestFirst("date")); }
+      catch (e) { state.daily = []; state.failed.daily = true; }
+      state.loaded.daily = true; render();
+    }).catch(function () { if (tok === monthToken) onErr("daily")(); });
+  }
+  function loadPeriods(kind, file, field) {
+    getJson(file).then(function (docs) {
+      try { state[kind] = arr(docs).filter(keep("start")).map(normDoc).sort(newestFirst(field)); }
+      catch (e) { state[kind] = []; state.failed[kind] = true; }
+      state.loaded[kind] = true; render();
+    }).catch(onErr(kind));
+  }
+
+  // ---------- sources de la veille (copie fixe de la liste utilisée par les tâches planifiées)
+  var VEILLE_SOURCES = {"packs": [["A. Presse IT française (premier passage, requêtes en français)", ["lemagit.fr", "lemondeinformatique.fr", "silicon.fr", "usine-digitale.fr", "next.ink"]], ["B. Presse tech internationale (premier passage, requêtes en anglais)", ["theregister.com", "techcrunch.com", "venturebeat.com", "siliconangle.com", "computerweekly.com", "diginomica.com", "itpro.com", "thestack.technology"]], ["C. Presse DSI française (deuxième passage, en français)", ["cio-online.com", "itforbusiness.fr", "informatiquenews.fr", "linformaticien.com", "channelnews.fr", "solutions-numeriques.com", "alliancy.fr"]], ["D. IA, cloud et marché, international (deuxième passage, en anglais)", ["technologyreview.com", "the-decoder.com", "axios.com", "semafor.com", "geekwire.com", "datacenterdynamics.com", "datacenterknowledge.com", "thenextplatform.com"]], ["E. Cybersécurité et régulation, international (deuxième passage, en anglais)", ["securityweek.com", "bleepingcomputer.com", "therecord.media", "darkreading.com", "cyberscoop.com", "iapp.org"]], ["F. Institutions et régulateurs (deuxième passage)", ["cnil.fr", "cyber.gouv.fr", "cert.ssi.gouv.fr", "europa.eu", "cigref.fr", "numeum.fr", "ncsc.gov.uk", "nist.gov"]], ["G. ServiceNow en direct (deuxième passage)", ["servicenow.com"]]], "groups": [["Presse française", ["lemagit.fr", "lemondeinformatique.fr", "silicon.fr", "zdnet.fr", "usine-digitale.fr", "next.ink", "cio-online.com", "itforbusiness.fr", "informatiquenews.fr", "linformaticien.com", "alliancy.fr", "solutions-numeriques.com", "channelnews.fr", "distributique.com", "reseaux-telecoms.net", "incyber.org", "lesechos.fr", "latribune.fr", "usinenouvelle.com", "lemonde.fr", "lefigaro.fr", "challenges.fr", "afp.com", "numerama.com", "contexte.com", "euractiv.fr", "acteurspublics.fr"]], ["Presse internationale générale et économique", ["reuters.com", "bloomberg.com", "ft.com", "wsj.com", "nytimes.com", "economist.com", "cnbc.com", "axios.com", "apnews.com", "bbc.com", "bbc.co.uk", "theguardian.com", "politico.eu", "euractiv.com", "semafor.com", "fortune.com", "theinformation.com"]], ["Presse tech internationale", ["theregister.com", "techcrunch.com", "venturebeat.com", "siliconangle.com", "cio.com", "computerworld.com", "infoworld.com", "networkworld.com", "csoonline.com", "arstechnica.com", "technologyreview.com", "theverge.com", "wired.com", "zdnet.com", "techtarget.com", "computerweekly.com", "diginomica.com", "thenewstack.io", "crn.com", "sdxcentral.com", "itpro.com", "thestack.technology", "computing.co.uk", "geekwire.com", "the-decoder.com", "datacenterdynamics.com", "datacenterknowledge.com", "thenextplatform.com"]], ["Presse cybersécurité et vie privée", ["darkreading.com", "bleepingcomputer.com", "therecord.media", "securityweek.com", "infosecurity-magazine.com", "cyberscoop.com", "krebsonsecurity.com", "scworld.com", "iapp.org"]], ["Institutions et régulateurs", ["gouv.fr", "cnil.fr", "europa.eu", "cigref.fr", "numeum.fr", "arcep.fr", "senat.fr", "assemblee-nationale.fr", "autoritedelaconcurrence.fr", "ccomptes.fr", "banque-france.fr", "clusif.fr", "cesin.fr", "afnor.org", "oecd.org", "oecd.ai", "nist.gov", "cisa.gov", "ftc.gov", "ncsc.gov.uk", "ico.org.uk", "bsi.bund.de"]], ["Analystes, études et recherche", ["gartner.com", "forrester.com", "idc.com", "mckinsey.com", "bcg.com", "deloitte.com", "capgemini.com", "accenture.com", "canalys.com", "everestgrp.com", "isg-one.com", "constellationr.com", "hfsresearch.com", "hai.stanford.edu", "epoch.ai"]], ["Sites officiels d'éditeurs (seulement quand l'annonce elle-même est l'actu)", ["servicenow.com", "microsoft.com", "google.com", "blog.google", "deepmind.google", "amazon.com", "aboutamazon.com", "openai.com", "anthropic.com", "mistral.ai", "sap.com", "salesforce.com", "atlassian.com", "ibm.com", "oracle.com", "nvidia.com", "meta.com", "fb.com", "github.blog", "workday.com", "snowflake.com", "databricks.com", "zendesk.com", "bmc.com", "ivanti.com", "freshworks.com", "pagerduty.com", "dynatrace.com", "datadoghq.com", "crowdstrike.com", "paloaltonetworks.com", "cisco.com", "hpe.com", "dell.com", "intel.com", "amd.com", "huggingface.co", "cohere.com", "ovhcloud.com", "scaleway.com", "outscale.com", "orange.com", "orange-business.com", "atos.net", "eviden.com", "thalesgroup.com", "soprasteria.com"]]]};
+  function domainList(list) {
+    var box = el("div", { class: "domains" });
+    list.forEach(function (d) {
+      var href = d === "gouv.fr" ? "https://www.info.gouv.fr/" : "https://" + d + "/";
+      box.appendChild(el("a", { href: href, target: "_blank", rel: "noopener noreferrer", title: "Ouvrir " + d + " dans un nouvel onglet", text: d }));
+    });
+    return box;
+  }
+  function renderSources() {
+    var body = document.getElementById("src-body");
+    if (body.firstChild) return;
+    var packs = el("section", { class: "src-sec" }, el("h3", { text: "Recherches du matin, dans l'ordre" }));
+    VEILLE_SOURCES.packs.forEach(function (pk) {
+      packs.appendChild(el("div", { class: "src-group" }, el("b", null, pk[0], el("span", { text: plural(pk[1].length, "site", "sites") })), domainList(pk[1])));
+    });
+    packs.appendChild(el("p", { class: "src-note", text: "Les autres sites acceptés (Reuters, Les Echos, Le Monde, Politico, Euractiv…) ne figurent dans aucun paquet parce que la recherche ne sait pas les filtrer. Ils servent à recouper une info, ou quand une recherche sans filtre les fait remonter." }));
+    var total = VEILLE_SOURCES.groups.reduce(function (n, g) { return n + g[1].length; }, 0);
+    var groups = el("section", { class: "src-sec" }, el("h3", { text: "Sites acceptés comme source (" + total + ")" }));
+    VEILLE_SOURCES.groups.forEach(function (g) {
+      groups.appendChild(el("div", { class: "src-group" }, el("b", null, g[0], el("span", { text: plural(g[1].length, "site", "sites") })), domainList(g[1])));
+    });
+    var rules = el("section", { class: "src-sec" }, el("h3", { text: "Écartés d'office" }),
+      el("p", { class: "src-note", text: "Les tribunes, chroniques et avis d'experts (rubriques Opinion, Contributor ou DataDecisionMakers comprises), les communiqués de presse, les contenus partenaires ou sponsorisés, les livres blancs, dossiers, guides et définitions, les webinaires, podcasts et pages d'événements." }),
+      el("p", { class: "src-note", text: "Les articles de plus de 7 jours, ceux dont la date n'est pas lisible, et tout article déjà paru dans les 14 derniers jours." }),
+      el("p", { class: "src-note", text: "Un site d'éditeur ne compte que lorsque l'annonce elle-même est l'actu. Quand plusieurs médias relaient la même info, la tâche garde la source la plus fiable et la plus complète, française à qualité égale." }));
+    body.appendChild(packs); body.appendChild(groups); body.appendChild(rules);
+  }
+  var srcDialog = document.getElementById("src-dialog");
+  document.getElementById("src-open").addEventListener("click", function () {
+    renderSources();
+    if (typeof srcDialog.showModal === "function") srcDialog.showModal(); else srcDialog.setAttribute("open", "");
+  });
+  document.getElementById("src-close").addEventListener("click", function () { if (srcDialog.close) srcDialog.close(); else srcDialog.removeAttribute("open"); });
+  srcDialog.addEventListener("click", function (ev) { if (ev.target === srcDialog && srcDialog.close) srcDialog.close(); });
+
+  // ---------- commandes
+  // Le logo ramène à l'accueil : vue quotidienne du mois en cours, sans filtre, première actu ouverte, tout en haut.
+  function goHome() {
+    var otherMonth = state.month !== thisMonth;
+    state.tab = "quotidien"; state.cat = null; state.day = null; state.q = ""; searchInput.value = "";
+    state.sel = null; state.detailOpen = false; state.navOpen = false; resetList = true;
+    try { history.replaceState(null, "", "#quotidien"); } catch (e) { /* sans importance */ }
+    if (otherMonth) { state.month = thisMonth; subDaily(); } else render();
+    window.scrollTo(0, 0); listBox.scrollTop = 0; detailBox.scrollTop = 0;
+    syncToTop();
+  }
+  document.getElementById("home").addEventListener("click", goHome);
+  document.querySelectorAll("[data-tab]").forEach(function (b) { b.addEventListener("click", function () { setTab(b.getAttribute("data-tab")); }); });
+  document.getElementById("ftoggle").addEventListener("click", function () { state.navOpen = !state.navOpen; render(); });
+  var searchTimer = null;
+  searchInput.addEventListener("input", function (ev) {
+    var v = ev.target.value; clearTimeout(searchTimer);
+    searchTimer = setTimeout(function () { if (state.q === v.trim()) return; state.q = v.trim(); state.sel = null; resetList = true; render(); }, 140);
+  });
+  searchInput.addEventListener("keydown", function (ev) {
+    if (ev.key === "Escape" && searchInput.value) { ev.preventDefault(); searchInput.value = ""; state.q = ""; state.sel = null; resetList = true; render(); }
+  });
+  document.addEventListener("keydown", function (ev) {
+    if (ev.key !== "/" || ev.ctrlKey || ev.metaKey || ev.altKey) return;
+    var t = ev.target, tag = t && t.tagName;
+    if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT" || (t && t.isContentEditable)) return;
+    var askBox = document.getElementById("ask");
+    if (srcDialog.open || (askBox && !askBox.hidden)) return;
+    ev.preventDefault(); searchInput.focus();
+  });
+  listBox.addEventListener("keydown", function (ev) {
+    if (ev.key !== "ArrowDown" && ev.key !== "ArrowUp") return;
+    var rows = Array.prototype.slice.call(listBox.querySelectorAll(".row"));
+    var i = rows.indexOf(document.activeElement); if (i < 0) return;
+    var n = rows[i + (ev.key === "ArrowDown" ? 1 : -1)];
+    if (n) { ev.preventDefault(); n.focus(); }
+  });
+  window.addEventListener("hashchange", function () { setTab(location.hash.replace("#", ""), true); });
+  if (compactMq) {
+    var onCompact = function () { render(); };
+    if (compactMq.addEventListener) compactMq.addEventListener("change", onCompact); else if (compactMq.addListener) compactMq.addListener(onCompact);
+  }
+
+  // ---------- retour en haut
+  var toTop = document.getElementById("to-top");
+  function scrolledFar() {
+    if (compact()) return (window.scrollY || document.documentElement.scrollTop || 0) > 480;
+    return Math.max(listBox.scrollTop, detailBox.scrollTop) > 480;
+  }
+  function syncToTop() { toTop.classList.toggle("show", scrolledFar()); }
+  window.addEventListener("scroll", syncToTop, { passive: true });
+  listBox.addEventListener("scroll", syncToTop, { passive: true });
+  detailBox.addEventListener("scroll", syncToTop, { passive: true });
+  toTop.addEventListener("click", function () {
+    var how = reduceMotion() ? "auto" : "smooth";
+    [window, listBox, detailBox].forEach(function (box) { try { box.scrollTo({ top: 0, behavior: how }); } catch (e) { if (box === window) window.scrollTo(0, 0); else box.scrollTop = 0; } });
+    document.querySelector(".brand").focus({ preventScroll: true });
+  });
+
+  var h = location.hash.replace("#", "");
+  if (h) state.tab = ["quotidien", "hebdo", "mensuel"].indexOf(h) > -1 ? h : "quotidien";
+  render();
+
+  state.available = true;
+  subDaily();
+  loadPeriods("weekly", "weekly.json", "start");
+  loadPeriods("monthly", "monthly.json", "start");
+})();
+</script>
+</body>
+</html>

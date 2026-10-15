@@ -1,0 +1,281 @@
+[
+ {
+  "end": "2026-10-11",
+  "generated_at": "2026-10-12T07:27:05Z",
+  "headline": "ServiceNow accélère sur les agents pendant que tout l'écosystème se branche dessus, et la vraie question devient qui gouverne, qui sécurise et qui paie chaque action d'agent.",
+  "kind": "weekly",
+  "schema": 1,
+  "seal": "ec30373b041903a13a07",
+  "shifts": [],
+  "start": "2026-10-05",
+  "stats": {
+   "by_category": {
+    "agents": 7,
+    "cloud": 5,
+    "esm": 5,
+    "marche": 5,
+    "modeles": 5,
+    "securite": 8
+   },
+   "days": 6,
+   "items": 35,
+   "top_sources": [
+    {
+     "count": 4,
+     "source": "IT for Business"
+    },
+    {
+     "count": 4,
+     "source": "Next"
+    },
+    {
+     "count": 4,
+     "source": "VentureBeat"
+    },
+    {
+     "count": 3,
+     "source": "ChannelNews"
+    },
+    {
+     "count": 3,
+     "source": "CIO.com"
+    },
+    {
+     "count": 3,
+     "source": "Journal du Net"
+    }
+   ]
+  },
+  "summary": "Semaine chargée côté ServiceNow : AI Workflow Factory passe en disponibilité mondiale, Flow ouvre une entrée de gamme ITSM conversationnelle et la mise à jour Now Assist du 8 octobre ajoute Incident Analyzer tout en dépréciant Apriel et GPT-OSS. Autour, Google, Atlassian, SAP et Workday poussent leurs propres agents, souvent capables d'agir dans ServiceNow, et Workday montre que chaque action d'agent sera facturée. Côté risques, la faille AgentCore et les enquêtes sur les agents créés hors DSI rappellent que les droits d'un agent font sa surface d'attaque. Les petits modèles deviennent quasi gratuits, mais la souveraineté reste en retard : Bleu glisse, NIS2 est reportée. Pour toi : audit des modèles configurés chez tes clients, gouvernance des agents tiers et budget en assists.",
+  "themes": [
+   {
+    "analysis": "En une semaine, ServiceNow a mis AI Workflow Factory en disponibilité mondiale (Process Mining, Autonomous Engineer, App Engine sous AI Control Tower), lancé Flow, un service desk IA autonome facturé à la consommation, et livré la collection d'agents ITSM 12.0.1 sur Zurich Patch 12. Le fil commun : la plateforme veut porter elle-même la boucle repérage, construction et exécution des améliorations, y compris hors des projets d'intégration classiques. Côté terrain, Incident Analyzer consomme 4 assists par exécution et la dépréciation d'Apriel et GPT-OSS oblige à revoir les skills et agents de tes clients réglés sur ces modèles. Flow peut aussi court-circuiter l'intégrateur dans les filiales.",
+    "category": "esm",
+    "refs": [
+     {
+      "date": "2026-10-08",
+      "source": "ServiceNow",
+      "title": "Now Assist : la mise à jour du 8 octobre ajoute Incident Analyzer et déprécie les modèles Apriel et GPT-OSS",
+      "url": "https://www.servicenow.com/docs/r/C17ZqvSaMwUVpMBg8Nc5sg/Q4uk5TCXN9wAK84vDLM8Yg"
+     },
+     {
+      "date": "2026-10-06",
+      "source": "ServiceNow",
+      "title": "ServiceNow lance AI Workflow Factory et l'agent Autonomous Engineer",
+      "url": "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-launches-AI-Workflow-Factory-to-turn-workflow-improvement-into-a-continuous-agentic-AI-powered-loop/default.aspx"
+     },
+     {
+      "date": "2026-10-01",
+      "source": "CIO.com",
+      "title": "ServiceNow lance Flow, un service desk IA autonome dans Teams, Slack et la messagerie",
+      "url": "https://www.cio.com/article/4229569/servicenow-launches-standalone-ai-service-desk-to-provide-support-in-teams-slack-and-email.html"
+     }
+    ],
+    "title": "ServiceNow industrialise ses agents, avec un coût en assists"
+   },
+   {
+    "analysis": "La faille AWS AgentCore montre qu'une simple injection de prompt suffisait à récupérer les identifiants d'un rôle IAM par défaut couvrant tous les agents d'un compte. En parallèle, l'enquête Howdy.com indique que 16 % des travailleurs du savoir construisent déjà leurs propres agents, hors inventaire, et VentureBeat observe un retour vers la validation humaine après des défaillances d'agents pourtant évalués. Aon ajoute la dimension financière : les dégâts causés par des agents relèveront des contrats d'assurance existants. Pour tes déploiements, cela plaide pour des rôles minimaux, un registre des agents et des points de validation humaine documentés.",
+    "category": "securite",
+    "refs": [
+     {
+      "date": "2026-10-09",
+      "source": "The Register",
+      "title": "AWS AgentCore : un simple prompt permettait de voler les identifiants d'un agent et de prendre la main sur les autres",
+      "url": "https://www.theregister.com/security/2026/10/09/aws-agentcore-security-undone-by-prompt-requesting-credentials/5302436"
+     },
+     {
+      "date": "2026-10-08",
+      "source": "CIO.com",
+      "title": "Agents créés par les salariés : 16 % s'y sont mis et 7 % ont dû en arrêter un qui leur échappait, selon Howdy.com",
+      "url": "https://www.cio.com/article/4230240/your-employees-are-building-ai-agents-do-you-know-what-theyre-doing.html"
+     },
+     {
+      "date": "2026-10-05",
+      "source": "VentureBeat",
+      "title": "Agents IA en production : les entreprises reviennent vers la validation humaine",
+      "url": "https://venturebeat.com/resources/agentic-reliability-and-evaluations-fewer-enterprises-plan-to-let-ai-agents-ship-production-changes-on-automated-checks-alone-56-allow-it-or-plan-to-down-from-75-in-july"
+     },
+     {
+      "date": "2026-10-07",
+      "source": "Next",
+      "title": "Agents IA : selon Aon, les assureurs devront indemniser les dégâts causés par des agents au titre des contrats existants",
+      "url": "https://next.ink/260221/assurances-les-patrons-de-lia-pourraient-etre-responsables-des-derapages-des-agents/"
+     },
+     {
+      "date": "2026-10-06",
+      "source": "Journal du Net",
+      "title": "Agents IA : une nouvelle catégorie d'identité à gouverner en cybersécurité",
+      "url": "https://www.journaldunet.com/cybersecurite/1555799-mois-de-la-sensibilisation-a-la-cybersecurite-les-agents-ia-sont-eux-aussi-des-identites-a-gouverner/"
+     }
+    ],
+    "title": "Les droits d'un agent font sa surface d'attaque"
+   },
+   {
+    "analysis": "Google Cloud présente un agent Gemini persistant avec sa propre identité et une intégration ServiceNow, Atlassian refond son serveur MCP (Jira Service Management annoncé bientôt), SAP généralise Joule Work et Workday facture en Flex Credits chaque action passant par sa plateforme, y compris depuis des agents tiers. Chaque grand éditeur veut être l'orchestrateur, et les points d'entrée se multiplient via MCP. Chez tes clients, la question n'est plus seulement de construire des agents ServiceNow, mais de décider qui orchestre, qui gouverne via AI Control Tower et combien coûte chaque appel croisé entre plateformes.",
+    "category": "agents",
+    "refs": [
+     {
+      "date": "2026-10-08",
+      "source": "VentureBeat",
+      "title": "Google Cloud lance un agent Gemini persistant, avec sa propre identité Workspace et une intégration ServiceNow",
+      "url": "https://venturebeat.com/orchestration/google-cloud-unveils-persistent-gemini-agents-for-long-running-tasks-and-they-get-their-own-gmail-calendar-and-drive-storage"
+     },
+     {
+      "date": "2026-10-08",
+      "source": "LeMagIT",
+      "title": "Workday : près de 600 M$ de revenu récurrent dans l'IA, mais à peine plus de 200 clients sur la facturation à l'usage",
+      "url": "https://www.lemagit.fr/actualites/366652037/Workday-de-lIA-gratuite-en-attendant-quelle-paie-plus"
+     },
+     {
+      "date": "2026-10-06",
+      "source": "VentureBeat",
+      "title": "Atlassian étend son partenariat avec OpenAI et refond son serveur MCP, Jira Service Management suivra",
+      "url": "https://venturebeat.com/orchestration/atlassian-deepens-its-openai-partnership-with-a-spend-commitment-but-its-platform-stays-firmly-multi-model"
+     },
+     {
+      "date": "2026-10-06",
+      "source": "CIO.com",
+      "title": "SAP lance Joule Work et de nouveaux assistants et agents Joule en disponibilité générale",
+      "url": "https://www.cio.com/article/4231331/sap-advances-its-autonomous-ai-agenda-with-yet-more-joule-assistants-and-agents.html"
+     },
+     {
+      "date": "2026-10-08",
+      "source": "Solutions Numériques",
+      "title": "Meta et Sierra proposent le Personal Agent Protocol pour encadrer les agents personnels qui s'adressent aux entreprises",
+      "url": "https://www.solutions-numeriques.com/meta-et-sierra-veulent-standardiser-la-facon-dont-les-agents-ia-parlent-aux-entreprises/"
+     }
+    ],
+    "title": "Les agents des autres éditeurs viennent agir dans ServiceNow"
+   },
+   {
+    "analysis": "Anthropic divise par dix le prix d'API de Claude Haiku 5.5 et Microsoft lance Decision-1, un modèle de classification très bon marché bâti sur Qwen. Les tâches de tri, routage et classification deviennent presque gratuites hors plateforme. Côté souveraineté, Mistral sort Large 4 en préversion avec publication des poids prévue le 26 octobre, mais Ecosia le quitte pour des modèles chinois ouverts et Qwant réévalue. Pour tes clients, l'argument coût pousse vers les petits modèles, l'argument provenance complique le choix.",
+    "category": "modeles",
+    "refs": [
+     {
+      "date": "2026-10-07",
+      "source": "VentureBeat",
+      "title": "Anthropic lance Claude Haiku 5.5 avec un prix d'API divisé par dix sous 100 000 jetons",
+      "url": "https://venturebeat.com/technology/anthropic-launches-claude-haiku-5-5-with-90-api-price-reduction-matching-gpt-6-luna"
+     },
+     {
+      "date": "2026-10-10",
+      "source": "The Register",
+      "title": "Microsoft lance Decision-1, un modèle de décision à 0,042 dollar le million de jetons en entrée, bâti sur Qwen d'Alibaba",
+      "url": "https://www.theregister.com/ai-and-ml/2026/10/10/microsoft-leans-on-open-weight-model-from-chinese-ai-lab-to-challenge-jev/5302473"
+     },
+     {
+      "date": "2026-10-06",
+      "source": "Next",
+      "title": "Mistral lance en préversion Large 4, son modèle à 1 050 milliards de paramètres",
+      "url": "https://next.ink/260208/mistral-lance-une-preversion-de-son-llm-frontiere-mistrale-large-surnomme-le-chonk/"
+     },
+     {
+      "date": "2026-10-09",
+      "source": "Next",
+      "title": "Ecosia abandonne Mistral pour des modèles chinois à poids ouverts proposés par Melious",
+      "url": "https://next.ink/260759/ecosia-lache-mistral-et-se-tourne-vers-les-modeles-chinois/"
+     }
+    ],
+    "title": "Petits modèles à prix plancher, modèle européen contesté"
+   },
+   {
+    "analysis": "Bleu repousse sa qualification SecNumCloud à la fin de l'année, sans Microsoft 365 dans le premier lot, tandis qu'Orange Business obtient une seconde qualification avec GPU dédiés et que le consortium mené par Cloud Temple vise l'horizon 2028. Côté réglementation, la transposition de NIS2 a été retirée de l'ordre du jour le 6 octobre, l'ANSSI visant une conformité complète fin 2028. Tes clients publics ou sensibles ont des options d'hébergement qualifiées pour leurs modèles, mais pas de date ferme pour NIS2 ni pour Bleu.",
+    "category": "cloud",
+    "refs": [
+     {
+      "date": "2026-10-09",
+      "source": "Next",
+      "title": "SecNumCloud : Bleu repousse sa qualification à la fin de l'année, Microsoft 365 viendra dans un second temps",
+      "url": "https://next.ink/260765/secnumcloud-bleu-vise-desormais-une-qualification-pour-la-fin-dannee/"
+     },
+     {
+      "date": "2026-10-08",
+      "source": "Silicon.fr",
+      "title": "NIS2 : examen à l'Assemblée reporté sine die, l'ANSSI vise une conformité complète fin 2028",
+      "url": "https://www.silicon.fr/cybersecurite-1371/les-assises-2026-nis-2-229563"
+     },
+     {
+      "date": "2026-10-07",
+      "source": "ChannelNews",
+      "title": "Orange Business obtient une seconde qualification SecNumCloud pour Cloud Avenue, avec des GPU dédiés",
+      "url": "https://www.channelnews.fr/orange-business-obtient-une-seconde-qualification-secnumcloud-pour-cloud-avenue-159340"
+     },
+     {
+      "date": "2026-10-09",
+      "source": "Le Monde Informatique",
+      "title": "Cloud de confiance : Cloud Temple prend la tête d'un consortium avec Thales, Bull, Vates et le CEA, soutenu par France 2030",
+      "url": "https://www.lemondeinformatique.fr/actualites/lire-cloud-temple-prend-la-tete-d-un-consortium-dedie-au-cloud-de-confiance-100844.html"
+     }
+    ],
+    "title": "Souveraineté et NIS2 : les calendriers glissent"
+   }
+  ],
+  "top": [
+   {
+    "category": "esm",
+    "date": "2026-10-08",
+    "source": "ServiceNow",
+    "title": "Now Assist : la mise à jour du 8 octobre ajoute Incident Analyzer et déprécie les modèles Apriel et GPT-OSS",
+    "url": "https://www.servicenow.com/docs/r/C17ZqvSaMwUVpMBg8Nc5sg/Q4uk5TCXN9wAK84vDLM8Yg",
+    "why": "C'est la seule annonce de la semaine qui impose une action concrète sur les instances de tes clients : revoir les modèles configurés et chiffrer la consommation d'assists."
+   },
+   {
+    "category": "esm",
+    "date": "2026-10-06",
+    "source": "ServiceNow",
+    "title": "ServiceNow lance AI Workflow Factory et l'agent Autonomous Engineer",
+    "url": "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-launches-AI-Workflow-Factory-to-turn-workflow-improvement-into-a-continuous-agentic-AI-powered-loop/default.aspx",
+    "why": "ServiceNow confie à ses agents une partie du travail d'amélioration des workflows, ce qui redéfinit la place du consultant dans les projets."
+   },
+   {
+    "category": "securite",
+    "date": "2026-10-09",
+    "source": "The Register",
+    "title": "AWS AgentCore : un simple prompt permettait de voler les identifiants d'un agent et de prendre la main sur les autres",
+    "url": "https://www.theregister.com/security/2026/10/09/aws-agentcore-security-undone-by-prompt-requesting-credentials/5302436",
+    "why": "Cas concret et documenté à montrer aux RSSI pour justifier des rôles minimaux par agent."
+   },
+   {
+    "category": "agents",
+    "date": "2026-10-08",
+    "source": "LeMagIT",
+    "title": "Workday : près de 600 M$ de revenu récurrent dans l'IA, mais à peine plus de 200 clients sur la facturation à l'usage",
+    "url": "https://www.lemagit.fr/actualites/366652037/Workday-de-lIA-gratuite-en-attendant-quelle-paie-plus",
+    "why": "Premier signal clair que les intégrations entre agents de plateformes différentes auront un coût par action, à intégrer dans tes cadrages."
+   },
+   {
+    "category": "modeles",
+    "date": "2026-10-07",
+    "source": "VentureBeat",
+    "title": "Anthropic lance Claude Haiku 5.5 avec un prix d'API divisé par dix sous 100 000 jetons",
+    "url": "https://venturebeat.com/technology/anthropic-launches-claude-haiku-5-5-with-90-api-price-reduction-matching-gpt-6-luna",
+    "why": "La baisse rend les agents à fort volume beaucoup moins chers quand tes clients utilisent leurs propres modèles."
+   }
+  ],
+  "watch": [
+   {
+    "text": "Recenser chez tes clients les skills et agents Now Assist encore réglés sur Apriel ou GPT-OSS, et estimer le coût en assists d'Incident Analyzer avant de l'activer.",
+    "url": "https://www.servicenow.com/docs/r/C17ZqvSaMwUVpMBg8Nc5sg/Q4uk5TCXN9wAK84vDLM8Yg"
+   },
+   {
+    "text": "NIS2 : le rapporteur espère un retour du texte à l'Assemblée d'ici fin octobre, sans date confirmée par le ministère.",
+    "url": "https://www.channelnews.fr/la-transposition-de-nis-2-a-nouveau-repoussee-159415"
+   },
+   {
+    "text": "Mistral Large 4 : sortie officielle et publication des poids prévues le 26 octobre.",
+    "url": "https://next.ink/260208/mistral-lance-une-preversion-de-son-llm-frontiere-mistrale-large-surnomme-le-chonk/"
+   },
+   {
+    "text": "ServiceNow publie ses résultats du troisième trimestre le 28 octobre après la clôture : à suivre pour les chiffres sur Now Assist et les agents."
+   },
+   {
+    "text": "Personal Agent Protocol de Meta et Sierra : version 0.1 attendue courant octobre, utile si tu déploies du CSM ou un portail client.",
+    "url": "https://www.solutions-numeriques.com/meta-et-sierra-veulent-standardiser-la-facon-dont-les-agents-ia-parlent-aux-entreprises/"
+   },
+   {
+    "text": "AWS coupera son European Sovereign Cloud du réseau mondial le 24 octobre pour démontrer son autonomie."
+   }
+  ],
+  "week": "2026-W41"
+ }
+]
