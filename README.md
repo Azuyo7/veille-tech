@@ -3,7 +3,7 @@
 Veille technologique quotidienne : IA, ServiceNow et ESM, cloud, cybersécurité, régulation et marché du logiciel.
 Un briefing chaque matin, une synthèse chaque lundi, une synthèse chaque début de mois.
 
-Site : https://azuyo7.github.io/veille-tech/
+Site : https://veille-tech.fr
 
 ## Contenu du dépôt
 
