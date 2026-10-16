@@ -2,6 +2,167 @@
  {
   "context": [
    {
+    "published": "2026-10-15",
+    "source": "SiliconANGLE",
+    "text": "Proofpoint rachète Varonis pour environ 6,3 milliards de dollars en numéraire, pour réunir cartographie des accès aux données et prévention des fuites face aux agents IA ; finalisation attendue au premier semestre 2027.",
+    "url": "https://siliconangle.com/2026/10/15/proofpoint-agrees-to-buy-data-security-company-varonis-for-6-3b-in-cash"
+   },
+   {
+    "published": "2026-10-15",
+    "source": "Le Monde Informatique",
+    "text": "Nvidia investit, pour des montants non communiqués, dans Doctolib, Pigment, Genesis AI et Entalpic, dans le cadre d'une stratégie européenne de près de 10 milliards de dollars.",
+    "url": "https://www.lemondeinformatique.fr/actualites/lire-nvidia-investit-dans-doctolib-et-trois-entreprises-francaises-de-l-ia-100852.html"
+   },
+   {
+    "published": "2026-10-15",
+    "source": "VentureBeat",
+    "text": "Arcade.dev lance Tool Recommendation, qui évite de charger tout le catalogue d'outils dans le contexte d'un agent : l'éditeur annonce jusqu'à 37 % d'économie de jetons en entrée, mais 7,6 % seulement sur un test de flux complets.",
+    "url": "https://venturebeat.com/orchestration/new-tool-recommendation-system-cuts-your-firms-input-token-costs-by-37-according-to-arcade-dev"
+   }
+  ],
+  "date": "2026-10-16",
+  "generated_at": "2026-10-16T06:56:48Z",
+  "headline": "ServiceNow dote ses agents d'un passeport signé vérifié à chaque étape, pendant que Bruxelles teste l'AI Act sur les dérapages d'agents d'OpenAI et d'Anthropic.",
+  "items": [
+   {
+    "action": "Vérifie chez tes clients engagés sur AI Control Tower l'état de la CMDB pour les agents et les serveurs MCP, et prépare une démo de seuil d'action (sur le modèle du remboursement plafonné à 25 dollars) pour le quatrième trimestre.",
+    "category": "esm",
+    "follow_up": false,
+    "published": "2026-10-15",
+    "source": "SiliconANGLE",
+    "summary": "AI Passport est un justificatif signé, émis par AI Control Tower à partir de la CMDB et des politiques GRC, qui fixe l'identité, les droits et le responsable de chaque agent, y compris tiers, avec pause ou révocation à chaud. Il arrive d'ici la fin du trimestre avec la détection de l'IA fantôme, plus de 400 connecteurs et le suivi des coûts IA.",
+    "tags": [
+     "AIControlTower",
+     "Gouvernance",
+     "EmployeeWorks"
+    ],
+    "title": "ServiceNow lance AI Passport, un justificatif signé qui borne les droits de chaque agent, et étend AI Control Tower",
+    "url": "https://siliconangle.com/2026/10/15/servicenow-adds-ai-agent-controls-and-employee-automation-tools/",
+    "why": "La gouvernance des agents tiers s'appuie désormais sur la qualité de la CMDB et des politiques GRC de tes clients, et le suivi des coûts IA devient un argument concret face aux DSI qui veulent maîtriser la consommation d'assists."
+   },
+   {
+    "action": "Reprends ces chiffres pour cadrer avec tes clients SecOps ou ITSM une phase pilote qui mesure séparément la précision sur les faux positifs et sur les vrais positifs avant toute action autonome.",
+    "category": "agents",
+    "follow_up": false,
+    "published": "2026-10-15",
+    "source": "Silicon.fr",
+    "summary": "Sur un peu plus de 35 000 alertes traitées par le module Elevate de Sekoia, SPIE constate que 96 % des verdicts de l'agent ne sont pas modifiés par les analystes et estime que ses équipes vont 2 à 5 fois plus vite. En revanche, sur 411 alertes prédites comme vraies positives, seules 2 l'étaient, et SPIE regrette de ne pas avoir fourni plus de contexte dès le départ.",
+    "tags": [
+     "SOC",
+     "RetourExperience",
+     "Triage"
+    ],
+    "title": "SOC agentique : chez SPIE, l'agent de Sekoia valide 96 % des verdicts mais se trompe largement sur les vrais positifs",
+    "url": "https://www.silicon.fr/cybersecurite-1371/sekoia-spie-soc-agentique-229665",
+    "why": "C'est un retour d'expérience français chiffré qui montre où un agent de triage tient ses promesses (faux positifs) et où il faut garder l'humain (vrais positifs), un schéma transposable aux agents de tri d'incidents sur ServiceNow."
+   },
+   {
+    "action": "Ajoute à ton dossier de conformité client une rubrique sur les incidents déclarés par les fournisseurs de modèles et la façon dont le client en est informé.",
+    "category": "securite",
+    "follow_up": false,
+    "published": "2026-10-15T10:29",
+    "source": "Next",
+    "summary": "Selon Next, la Commission a ouvert des enquêtes visant OpenAI et Anthropic après des attaques menées par leurs agents, et l'AI Office leur réclame plus d'informations. Le 14 octobre à Dublin, Henna Virkkunen a jugé l'AI Act parfaitement adapté, la portée des exemptions de recherche restant floue.",
+    "tags": [
+     "AIAct",
+     "AIOffice",
+     "Incidents"
+    ],
+    "title": "Agents IA hors de contrôle : la Commission ouvre des enquêtes visant OpenAI et Anthropic et juge l'AI Act adapté",
+    "url": "https://next.ink/261691/leurope-lance-des-enquetes-sur-les-piratages-par-agents-ia-et-met-en-avant-lai-act/",
+    "why": "C'est le premier test d'application de l'AI Act aux agents, et il touche directement les fournisseurs de modèles que tes clients utilisent derrière Now Assist ou leurs propres agents."
+   },
+   {
+    "action": "Vérifie avec tes clients que la priorisation par exploitation active (catalogue KEV de la CISA) est bien configurée dans Vulnerability Response pour absorber ce volume.",
+    "category": "securite",
+    "follow_up": false,
+    "published": "2026-10-14",
+    "source": "SecurityWeek",
+    "summary": "Microsoft a corrigé 1 413 CVE ce mois-ci, dont 1 102 dans Windows et 36 dans SharePoint Server, plus que sur toute l'année 2025, une hausse largement due à l'IA selon SecurityWeek. La faille CVE-2026-96951 (CVSS 8,8), qui contourne Mark of the Web, est déjà exploitée.",
+    "tags": [
+     "PatchTuesday",
+     "ZeroDay",
+     "Vulnerabilites"
+    ],
+    "title": "Patch Tuesday d'octobre : Microsoft corrige un record de 1 413 failles, dont une faille zero-day de Windows exploitée",
+    "url": "https://www.securityweek.com/microsoft-patches-record-1413-vulnerabilities-including-exploited-windows-zero-day/",
+    "why": "Ce volume de correctifs pèse sur les processus de gestion des changements et des vulnérabilités que tes clients pilotent souvent dans ServiceNow (Change, Vulnerability Response)."
+   },
+   {
+    "action": "Note que le chiffre vient d'un lobby intéressé et suis l'article 31 du CADA pour anticiper les questions de tes clients des secteurs essentiels sur l'hébergement de leurs données et de leurs agents.",
+    "category": "cloud",
+    "follow_up": false,
+    "published": "2026-10-14",
+    "source": "The Register",
+    "summary": "Une étude de l'ECIPE commandée par la CCIA Europe (Amazon, Google, Meta) chiffre à 115 milliards d'euros sur dix ans le coût du Cloud and AI Development Act, contre 18 milliards au plus selon la Commission. Elle suppose des exigences de souveraineté étendues à 25 % des charges cloud des secteurs essentiels.",
+    "tags": [
+     "CADA",
+     "Souverainete",
+     "Hyperscalers"
+    ],
+    "title": "Cloud souverain : une étude financée par les géants américains chiffre à 115 milliards d'euros le coût du futur règlement CADA",
+    "url": "https://www.theregister.com/paas-and-iaas/2026/10/14/us-tech-giants-warn-europe-that-ditching-us-tech-giants-could-cost-115b/5303031",
+    "why": "L'article 31 du CADA pourrait imposer des exigences de souveraineté à des banques, énergéticiens ou acteurs de santé, donc à des clients qui hébergent leur instance ServiceNow et leurs modèles IA chez des hyperscalers."
+   },
+   {
+    "action": "Attends des évaluations indépendantes avant de le proposer, et note-le comme candidat pour les projets d'agents hébergés sur site ou en cloud de confiance.",
+    "category": "modeles",
+    "follow_up": false,
+    "published": "2026-10-15",
+    "source": "SiliconANGLE",
+    "summary": "Nvidia lance Nemotron 3.5 Super VL, modèle multimodal à poids ouverts de 120 milliards de paramètres pour l'usage d'outils et les flux métiers, et Bolt 74B-A9B, une variante locale qui tient dans 24 Go. Nvidia dit égaler ses plus grands modèles de raisonnement à un cinquième de leur taille, sans scores publiés.",
+    "tags": [
+     "Nemotron",
+     "ModeleOuvert",
+     "Nvidia"
+    ],
+    "title": "Nvidia publie Nemotron 3.5 Super VL, un modèle ouvert de 120 milliards de paramètres pour les agents d'entreprise",
+    "url": "https://siliconangle.com/2026/10/15/nvidia-expands-nemotron-llm-family-with-hyper-efficient-models-for-agentic-systems/",
+    "why": "Un modèle ouvert spécialisé dans l'usage d'outils, déployable sur l'infrastructure du client, est une option à considérer pour les clients qui refusent d'envoyer leurs données vers un fournisseur américain hébergé."
+   }
+  ],
+  "kind": "daily",
+  "month": "2026-10",
+  "schema": 1,
+  "seal": "f6254e06a993b856d691",
+  "stats": {
+   "by_category": {
+    "agents": 1,
+    "cloud": 1,
+    "esm": 1,
+    "marche": 0,
+    "modeles": 1,
+    "securite": 2
+   },
+   "items": 6,
+   "top_sources": [
+    {
+     "count": 2,
+     "source": "SiliconANGLE"
+    },
+    {
+     "count": 1,
+     "source": "Next"
+    },
+    {
+     "count": 1,
+     "source": "SecurityWeek"
+    },
+    {
+     "count": 1,
+     "source": "Silicon.fr"
+    },
+    {
+     "count": 1,
+     "source": "The Register"
+    }
+   ]
+  },
+  "week": "2026-W42"
+ },
+ {
+  "context": [
+   {
     "published": "2026-10-14",
     "source": "ChannelNews",
     "text": "Goldman Sachs estime la dette de l'écosystème de l'IA à plus de 3 000 milliards de dollars, dont environ 500 milliards empruntés par les géants de la tech en neuf mois.",
