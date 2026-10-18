@@ -3,6 +3,170 @@
   "context": [
    {
     "published": "2026-10-16",
+    "source": "Silicon.fr",
+    "text": "Le Cigref publie son rapport d'orientation 2026 avec quatre scénarios pour 2035-2040, dont un « techno-féodalisme » où les DSI se replient sur la maîtrise du code, de l'exploitation et des données.",
+    "url": "https://www.silicon.fr/business-1367/cigref-scenarios-prospectifs-229724"
+   },
+   {
+    "published": "2026-10-16",
+    "source": "The Register",
+    "text": "PostgreSQL 19 est retardé de six à sept semaines et désormais attendu vers le 19 novembre : la revue de code assistée par IA a trouvé plus de bogues que les développeurs ne peuvent en corriger, et 8 à 10 fonctions sont reportées.",
+    "url": "https://theregister.com/databases/2026/10/16/postgres-19-delayed-after-ai-reviewers-find-more-bugs-than-humans-can-fix/5303471"
+   },
+   {
+    "published": "2026-10-17",
+    "source": "TechCrunch",
+    "text": "Replit fait d'OpenAI son modèle par défaut à la place d'Anthropic, en invoquant coût, partenariat et performance, Claude restant disponible en option.",
+    "url": "https://techcrunch.com/2026/10/17/replit-is-no-longer-working-with-anthropic-ceo-says/"
+   }
+  ],
+  "date": "2026-10-18",
+  "generated_at": "2026-10-18T06:54:34Z",
+  "headline": "Journée calme côté ServiceNow, qui écarte tout rachat de Decagon, pendant que Salesforce décroche 2,4 milliards de livres au fisc britannique et que la sécurité des données d'agents se consolide avec Proofpoint et Varonis.",
+  "items": [
+   {
+    "action": "Si un client hésite à engager un projet d'agents CSM en attendant un rachat, rassure-le avec cette déclaration et surveille les résultats du troisième trimestre annoncés le 28 octobre.",
+    "category": "esm",
+    "follow_up": false,
+    "published": "2026-10-13",
+    "source": "ServiceNow",
+    "summary": "Amit Zavery, président et directeur produit de ServiceNow, affirme que l'éditeur n'a « aucun intérêt ni intention » de racheter la start-up d'agents de service client Decagon. Il ajoute que ServiceNow ne voit pas de manque stratégique majeur justifiant de grosses acquisitions et que la croissance reste d'abord organique.",
+    "tags": [
+     "ServiceNow",
+     "Acquisitions",
+     "CSM"
+    ],
+    "title": "ServiceNow dément tout projet de rachat de Decagon et réaffirme une stratégie de croissance organique",
+    "url": "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-statement-on-MA/default.aspx",
+    "why": "Après Moveworks, Armis et Veza, cette déclaration signale une pause dans les grosses acquisitions, donc une feuille de route agents CSM bâtie sur l'existant plutôt que sur un nouveau produit à intégrer."
+   },
+   {
+    "action": "Note ce contrat comme argument concurrent à anticiper dans tes avant-ventes CSM du secteur public, et prépare la réponse ServiceNow sur la consolidation et la durée d'engagement.",
+    "category": "agents",
+    "follow_up": false,
+    "published": "2026-10-16",
+    "source": "The Stack",
+    "summary": "HMRC a publié le 15 octobre un contrat de 2,4 milliards de livres avec Salesforce, démarré le 30 septembre 2026 et prolongeable jusqu'en 2041. Il couvre Agentforce, Data Cloud, Informatica et Experience Cloud pour consolider les systèmes existants sur une plateforme unique.",
+    "tags": [
+     "Agentforce",
+     "SecteurPublic",
+     "CSM"
+    ],
+    "title": "Le fisc britannique signe avec Salesforce un contrat CRM de 2,4 milliards de livres sur 15 ans, Agentforce inclus",
+    "url": "https://thestack.technology/hmrc-2bn-crm-contract-salesforce",
+    "why": "C'est une référence publique massive pour Agentforce sur la relation usager, le terrain où ServiceNow CSM et ses agents se battent face à Salesforce dans les grands appels d'offres."
+   },
+   {
+    "action": "Chez tes clients équipés de Varonis ou de Proofpoint, vérifie la feuille de route des intégrations avec ServiceNow avant de figer l'architecture de gouvernance des agents.",
+    "category": "securite",
+    "follow_up": false,
+    "published": "2026-10-16",
+    "source": "LeMagIT",
+    "summary": "Proofpoint, détenu par Thoma Bravo, va racheter Varonis, avec une finalisation attendue au premier semestre 2027 sous réserve des autorisations réglementaires. L'objectif affiché est une plateforme unifiée pour découvrir et protéger les données sensibles et contrôler qui, humain ou agent IA, y accède.",
+    "tags": [
+     "Gouvernance",
+     "Données",
+     "Acquisitions"
+    ],
+    "title": "Proofpoint rachète Varonis pour contrôler l'accès des agents IA aux données sensibles",
+    "url": "https://www.lemagit.fr/actualites/366652495/Proofpoint-reprend-ses-emplettes-avec-Varonis",
+    "why": "La gouvernance des accès des agents aux données devient un marché à part entière, ce qui pèse sur les arbitrages de tes clients entre AI Control Tower de ServiceNow et des outils de sécurité des données spécialisés."
+   },
+   {
+    "action": "Si un client branche WhatsApp ou Messenger sur ses parcours de service, demande à son juridique de relire la version finale des conditions commerciales de Meta.",
+    "category": "securite",
+    "follow_up": false,
+    "published": "2026-10-17",
+    "source": "TechCrunch",
+    "summary": "Les conditions commerciales de Meta permettaient d'utiliser « tout contenu » des domaines d'un compte professionnel pour développer et entraîner ses produits, une clause désormais retirée selon The Verge. Meta affirme que ces règles ne concernaient que ses produits publicitaires et professionnels et que sa façon d'utiliser ses robots d'indexation ne change pas.",
+    "tags": [
+     "Meta",
+     "Données",
+     "Contrats"
+    ],
+    "title": "Meta retire de ses conditions commerciales la clause l'autorisant à exploiter le contenu des sites de ses clients professionnels pour entraîner ses modèles",
+    "url": "https://techcrunch.com/2026/10/17/meta-removes-language-that-raised-scraping-and-ai-training-concerns/",
+    "why": "Les entreprises qui utilisent les outils professionnels de Meta, dont les agents WhatsApp et Messenger, ont failli voir le contenu de leurs sites servir à l'entraînement de modèles sans réel choix."
+   },
+   {
+    "action": "Aucune action immédiate : attends l'annonce des modèles dérivés et de leurs prix avant d'en parler à un client.",
+    "category": "modeles",
+    "follow_up": false,
+    "published": "2026-10-16",
+    "source": "SiliconANGLE",
+    "summary": "MAI-Base-2 compte 2 000 milliards de paramètres dont 80 milliards actifs par requête, et a été entraîné en 38 jours sur 16 000 puces Nvidia GB200 avec 50 000 milliards de jetons. Microsoft en licenciera les poids à des « partenaires de confiance » via Azure et s'en servira pour une nouvelle série de modèles, sans prix ni date de disponibilité.",
+    "tags": [
+     "Microsoft",
+     "Modèles"
+    ],
+    "title": "Microsoft présente MAI-Base-2, un modèle de base de 2 000 milliards de paramètres réservé à des partenaires sur Azure",
+    "url": "https://siliconangle.com/2026/10/16/microsoft-reveals-cutting-edge-mai-base-2-model-with-2t-parameters/",
+    "why": "Microsoft réduit sa dépendance à OpenAI avec ses propres modèles, ce qui peut à terme changer les modèles proposés par Azure OpenAI et Copilot chez tes clients."
+   },
+   {
+    "action": "Garde Scaleway en tête pour les clients qui exigent un hébergement européen de leurs modèles, et redemande capacités et prix avant toute recommandation.",
+    "category": "cloud",
+    "follow_up": false,
+    "published": "2026-10-16",
+    "source": "Silicon.fr",
+    "summary": "Scaleway installe en Suède son premier supercalculateur hors de France, sur GPU AMD Instinct MI355X avec Bull, HPE et VAST Data, et ouvre à Copenhague une zone GPU en Nvidia HGX B300. Capacités, montant investi, dates et tarifs ne sont pas précisés.",
+    "tags": [
+     "Scaleway",
+     "GPU",
+     "Souveraineté"
+    ],
+    "title": "Scaleway ouvre des zones à Milan, en Suède et au Danemark, avec un supercalculateur IA sur GPU AMD",
+    "url": "https://www.silicon.fr/cloud-1370/scaleway-etend-ses-capacites-de-calcul-pour-lia-en-europe-du-nord-229716",
+    "why": "L'offre de calcul IA européenne s'élargit pour les clients qui veulent héberger leurs modèles hors des hyperscalers américains, mais sans chiffres il est trop tôt pour comparer."
+   }
+  ],
+  "kind": "daily",
+  "month": "2026-10",
+  "schema": 1,
+  "seal": "bbaed70a8ac2f4c6d25a",
+  "stats": {
+   "by_category": {
+    "agents": 1,
+    "cloud": 1,
+    "esm": 1,
+    "marche": 0,
+    "modeles": 1,
+    "securite": 2
+   },
+   "items": 6,
+   "top_sources": [
+    {
+     "count": 1,
+     "source": "LeMagIT"
+    },
+    {
+     "count": 1,
+     "source": "ServiceNow"
+    },
+    {
+     "count": 1,
+     "source": "Silicon.fr"
+    },
+    {
+     "count": 1,
+     "source": "SiliconANGLE"
+    },
+    {
+     "count": 1,
+     "source": "TechCrunch"
+    },
+    {
+     "count": 1,
+     "source": "The Stack"
+    }
+   ]
+  },
+  "week": "2026-W42"
+ },
+ {
+  "context": [
+   {
+    "published": "2026-10-16",
     "source": "VentureBeat",
     "text": "Reflection AI publie Beam, un modèle ouvert sous licence Apache 2.0 (501 milliards de paramètres, 23 milliards actifs), qui revendique environ trois fois moins de jetons que GLM-5.2 par tentative sur Terminal-Bench 2.1.",
     "url": "https://venturebeat.com/technology/reflections-beam-aims-to-undercut-chinese-open-models-with-fewer-tokens-not-cheaper-tokens"
