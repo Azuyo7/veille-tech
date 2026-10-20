@@ -2,6 +2,147 @@
  {
   "context": [
    {
+    "published": "2026-10-20",
+    "source": "Next",
+    "text": "Le client en ligne de commande d'OVHcloud a été piégé sur GitHub le 19 octobre pendant près de deux heures (versions v0.11.0 à v0.15.0) : si tes clients l'utilisent en CI, fais tourner leurs secrets et passe en v0.16.0.",
+    "url": "https://next.ink/262824/le-client-en-ligne-de-commande-dovhcloud-compromis-par-un-pirate-sur-github/"
+   },
+   {
+    "published": "2026-10-20",
+    "source": "The Register",
+    "text": "Les États-Unis bannissent DeepSeek des agences fédérales civiles, y compris les produits tiers développés avec, ce qui pose la question des passerelles IA qui routent les requêtes vers un modèle sans que le client le sache.",
+    "url": "https://www.theregister.com/security/2026/10/20/deepseek-deep-sixed-at-all-us-federal-civilian-agencies/5304010"
+   },
+   {
+    "published": "2026-10-19",
+    "source": "LeMagIT",
+    "text": "Snowflake annonce son intention d'héberger sa plateforme, Cortex AI compris, sur le cloud de confiance de Bleu, exploité par Orange Business, qui vise toujours la qualification SecNumCloud fin 2026.",
+    "url": "https://www.lemagit.fr/actualites/366652398/Cloud-de-confiance-Snowflake-se-rapproche-de-Bleu-et-dOrange-Business"
+   }
+  ],
+  "date": "2026-10-20",
+  "generated_at": "2026-10-20T06:55:24Z",
+  "headline": "ServiceNow reste leader du low-code chez Gartner malgré un recul en exécution, Microsoft traite les agents comme des menaces internes et une attaque OAuth via ConnectWise frappe des centaines de tenants Microsoft 365.",
+  "items": [
+   {
+    "action": "Avant ta prochaine proposition, clarifie pour chaque client ce qui relève encore d'App Engine (quotas inclus) et ce qui relève d'AI Platform, et reprends le classement en vision comme argument face à Microsoft et Salesforce.",
+    "category": "esm",
+    "follow_up": false,
+    "published": "2026-10-20T08:17",
+    "source": "Silicon.fr",
+    "summary": "Dans le Magic Quadrant 2026 de Gartner, ServiceNow reste leader mais passe 8e en exécution (moins 3 places) et 4e en vision (plus 2), porté par la gouvernance des agents et par Otto, ex-Now Assist. Gartner juge sa structure commerciale confuse, certaines fonctions restant vendues sous App Engine avec quotas.",
+    "tags": [
+     "Gartner",
+     "LowCode",
+     "Licences"
+    ],
+    "title": "Magic Quadrant low-code 2026 : ServiceNow reste leader mais recule de 3 places en exécution",
+    "url": "https://www.silicon.fr/data-ia-1372/low-code-magic-quadrant-2026-229741",
+    "why": "La critique de Gartner sur l'empilement App Engine et AI Platform est exactement la question que tes clients posent au moment de chiffrer des agents et des applications sur l'instance."
+   },
+   {
+    "action": "Prépare un tableau comparant Entra Agent ID et l'accès conditionnel dynamique avec AI Control Tower pour tes clients Microsoft, et note Ignite le 17 novembre pour les dates de disponibilité.",
+    "category": "agents",
+    "follow_up": false,
+    "published": "2026-10-19",
+    "source": "SiliconANGLE",
+    "summary": "Microsoft détecte 60 types d'agents locaux (dont Claude Code et Codex), leur donne une identité Entra Agent ID et un score de risque qui retire l'écriture, exige une validation humaine puis isole l'agent. L'ensemble est rattaché à Microsoft 365 E7, sans date ni prix avant Ignite le 17 novembre.",
+    "tags": [
+     "Microsoft",
+     "Gouvernance",
+     "Identité"
+    ],
+    "title": "Microsoft traite les agents IA comme des menaces internes et bride leurs droits selon un score de risque",
+    "url": "https://siliconangle.com/2026/10/19/microsoft-targets-the-agentic-insider-with-new-controls-for-rogue-ai-agents/",
+    "why": "Microsoft se positionne sur la gouvernance transverse des agents, le même terrain qu'AI Control Tower et AI Passport chez ServiceNow, et tes clients sous E7 vont te demander qui gouverne quoi."
+   },
+   {
+    "action": "Liste chez tes clients les applications OAuth utilisées par ServiceNow dans Entra, vérifie qu'aucune ne détient Directory.ReadWrite.All sans nécessité et propose une revue des consentements.",
+    "category": "securite",
+    "follow_up": false,
+    "published": "2026-10-19",
+    "source": "LeMagIT",
+    "summary": "Un attaquant a détourné l'application OAuth de ConnectWise Cloud Backup (ex-SkyKick) et ses droits déjà accordés, comme Directory.ReadWrite.All : plus de 300 environnements compromis, près de 1 000 ciblés selon Huntress. ConnectWise a coupé l'accès le 17 octobre, et Microsoft recommande d'auditer les consentements de cet AppId.",
+    "tags": [
+     "OAuth",
+     "Microsoft365",
+     "ChaîneLogistique"
+    ],
+    "title": "Attaque OAuth via ConnectWise Cloud Backup : plus de 300 environnements Microsoft 365 compromis",
+    "url": "https://www.lemagit.fr/actualites/366652535/Des-pirates-compromettent-des-environnements-Microsoft-365-via-ConnectWise",
+    "why": "Les intégrations ServiceNow vers Microsoft 365 et Entra reposent sur le même modèle d'applications OAuth à droits élevés, et un agent IA connecté hérite de ces droits."
+   },
+   {
+    "action": "Pour chaque client SAP sensible, note les jalons 2027 à 2029 et vérifie que tes intégrations ServiceNow vers SAP restent compatibles avec un futur hébergement sur S3NS, Bleu ou la région SAP Paris.",
+    "category": "cloud",
+    "follow_up": false,
+    "published": "2026-10-19",
+    "source": "LeMagIT",
+    "summary": "SAP prévoit trois data centers en région parisienne (300 millions d'euros maximum jusqu'en 2032), ouverts au premier trimestre 2027, avec une qualification SecNumCloud possible en 2029, en plus de Bleu et S3NS. Selon l'USF, 63 % des membres jugent le cloud de confiance concerné pour leur entreprise.",
+    "tags": [
+     "SAP",
+     "SecNumCloud",
+     "Souveraineté"
+    ],
+    "title": "SAP détaille sa souveraineté à la carte : région Paris début 2027, SecNumCloud au mieux en 2029",
+    "url": "https://www.lemagit.fr/actualites/366652414/SAP-decline-une-souverainete-a-la-carte",
+    "why": "Chez tes clients régulés, le calendrier souverain de SAP conditionne où tourneront les données que tes flux et agents ServiceNow vont consommer ou alimenter."
+   },
+   {
+    "action": "Cite ces chiffres USF quand un client SAP hésite entre Joule et des agents ServiceNow, et prépare un cas d'usage transverse (achats, RH, IT) qui orchestre SAP depuis ServiceNow.",
+    "category": "marche",
+    "follow_up": false,
+    "published": "2026-10-19",
+    "source": "IT for Business",
+    "summary": "L'enquête USF (276 répondants, 154 organisations) montre que 9 % seulement ont mis en œuvre de l'IA sur des solutions SAP et que 1 % voient SAP comme leader de l'IA, alors que SAP annonce 400 agents prêts à l'emploi d'ici la fin de l'année. Côté cloud, 36 % ont signé un contrat RISE ou GROW, mais seuls 6 % sont convaincus par les clauses de réversibilité.",
+    "tags": [
+     "SAP",
+     "Joule",
+     "Adoption"
+    ],
+    "title": "Enquête USF : seuls 9 % des clients SAP ont un cas d'usage IA sur SAP, contre 45 % sur d'autres logiciels",
+    "url": "https://www.itforbusiness.fr/bon-gre-mal-gre-les-dsi-suivent-la-marche-forcee-de-sap-vers-s-4-et-le-cloud-108654",
+    "why": "Ce faible usage de Joule laisse de la place aux agents ServiceNow sur les processus transverses chez les clients SAP, tant que l'orchestration avec SAP est bien traitée."
+   }
+  ],
+  "kind": "daily",
+  "month": "2026-10",
+  "schema": 1,
+  "seal": "a5733320b2e1e213f210",
+  "stats": {
+   "by_category": {
+    "agents": 1,
+    "cloud": 1,
+    "esm": 1,
+    "marche": 1,
+    "modeles": 0,
+    "securite": 1
+   },
+   "items": 5,
+   "top_sources": [
+    {
+     "count": 2,
+     "source": "LeMagIT"
+    },
+    {
+     "count": 1,
+     "source": "IT for Business"
+    },
+    {
+     "count": 1,
+     "source": "Silicon.fr"
+    },
+    {
+     "count": 1,
+     "source": "SiliconANGLE"
+    }
+   ]
+  },
+  "week": "2026-W43"
+ },
+ {
+  "context": [
+   {
     "published": "2026-10-15",
     "source": "VentureBeat",
     "text": "Arcade.dev ajoute à sa passerelle MCP une recommandation d'outils : jusqu'à 37 % d'économie de jetons en entrée en théorie, mais 7,6 % mesurés sur 408 sessions réelles, et aucun gain sous 25 à 28 outils.",
