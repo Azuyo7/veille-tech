@@ -2,6 +2,179 @@
  {
   "context": [
    {
+    "published": "2026-10-19",
+    "source": "TechCrunch",
+    "text": "OpenCode, agent de codage open source, a vu des clés API stockées dans sa console dérobées : 1,4 % des utilisateurs touchés, certains avec plus de 1 000 dollars de frais indus.",
+    "url": "https://techcrunch.com/2026/10/19/hackers-hit-ai-coding-tool-opencode-running-up-charges-on-users-ai-accounts/"
+   },
+   {
+    "published": "2026-10-20",
+    "source": "TechCrunch",
+    "text": "Le département de la Sécurité intérieure américain ordonne de retirer DeepSeek des systèmes des agences fédérales civiles, y compris les services tiers qui intègrent ses modèles.",
+    "url": "https://techcrunch.com/2026/10/20/us-orders-federal-agencies-to-remove-chinas-deepseek-ai-from-their-systems/"
+   },
+   {
+    "published": "2026-10-20",
+    "source": "Silicon.fr",
+    "text": "S3NS revendiquait plus de 70 clients en mai 2026 et compte 29 services qualifiés SecNumCloud, avec Matmut, MGEN, Qonto et EDF parmi les références citées.",
+    "url": "https://www.silicon.fr/cloud-1370/s3ns-clients-229762"
+   }
+  ],
+  "date": "2026-10-21",
+  "generated_at": "2026-10-21T06:55:29Z",
+  "headline": "Journée sécurité : un client OVHcloud piégé sur GitHub et un bilan ANSSI qui rappellent que les fuites passent surtout par des identifiants légitimes, pendant que Freshworks vise l'ITSM autonome face à ServiceNow.",
+  "items": [
+   {
+    "action": "Demande à tes clients hébergés chez OVHcloud de vérifier les téléchargements de la CLI du 19 octobre et, au moindre doute, de faire tourner les identifiants stockés sur ces machines, MID Servers compris.",
+    "category": "securite",
+    "follow_up": false,
+    "published": "2026-10-20",
+    "source": "Next",
+    "summary": "Le 19 octobre, de 14h47 à 16h21, un pirate a remplacé via le compte GitHub d'un développeur les versions v0.11.0 à v0.15.0 de la CLI officielle d'OVHcloud par un binaire conçu pour voler les secrets de la machine. OVHcloud a activé l'immutabilité des releases, publié une v0.16.0 et demande de révoquer tous les secrets des machines concernées.",
+    "tags": [
+     "OVHcloud",
+     "ChaîneLogicielle",
+     "Secrets"
+    ],
+    "title": "Le client en ligne de commande d'OVHcloud piégé sur GitHub pendant près de deux heures",
+    "url": "https://next.ink/262824/le-client-en-ligne-de-commande-dovhcloud-compromis-par-un-pirate-sur-github/",
+    "why": "Une chaîne CI/CD ou un poste d'intégrateur qui a téléchargé la CLI ce jour-là a pu exposer clés API, clés SSH et variables d'environnement, y compris des identifiants d'intégration vers ServiceNow."
+   },
+   {
+    "action": "Lis le document CERTFR-2026-CTI-008 et sers-t'en comme grille de revue chez tes clients : MFA sur les portails, ACL des comptes d'intégration, journalisation et alertes sur les extractions massives via l'API Table.",
+    "category": "securite",
+    "follow_up": false,
+    "published": "2026-10-20",
+    "source": "LeMagIT",
+    "summary": "L'ANSSI a traité près de 200 violations de données sur des applications web en 2025, contre 130 l'année d'avant, surtout via des identifiants légitimes volés par des infostealers ou des données exposées sans contrôle d'accès. Elle recommande gestion des droits, authentification forte, traçabilité et surveillance des volumes de requêtes.",
+    "tags": [
+     "ANSSI",
+     "FuitesDeDonnées",
+     "Portails"
+    ],
+    "title": "Violations de données : l'ANSSI recense près de 200 fuites sur des applications web en 2025 et liste ses conseils",
+    "url": "https://www.lemagit.fr/actualites/366652500/Violations-de-donnees-a-repetition-lAnssi-fait-son-bilan-et-donne-ses-conseils",
+    "why": "Les portails ServiceNow (service client, RH, fournisseurs) cochent exactement le profil visé, avec des comptes de prestataires et des comptes techniques souvent surdimensionnés."
+   },
+   {
+    "action": "Prépare pour tes clients en renouvellement une comparaison chiffrée entre le coût des assists Now Assist et une offre au siège, avant que l'argument ne soit posé par un concurrent.",
+    "category": "esm",
+    "follow_up": false,
+    "published": "2026-10-20",
+    "source": "Computer Weekly",
+    "summary": "Freshworks veut faire de Freshservice un ITSM qui détecte et résout les incidents sans humain, s'étend aux opérations IT avec FireHydrant et rachète Torii, qui suit licences et usage de l'IA jusqu'au jeton (clôture prévue au T4 2026). L'éditeur facture au siège, plus cher pour l'IA avancée, et recrute chez ServiceNow.",
+    "tags": [
+     "Freshworks",
+     "ITSM",
+     "Licences"
+    ],
+    "title": "Freshworks vise un ITSM autonome avec Freshservice et rachète Torii pour suivre licences et consommation d'IA",
+    "url": "https://www.computerweekly.com/news/366652536/Freshworks-builds-towards-autonomous-IT-as-it-moves-upmarket",
+    "why": "Freshworks monte en gamme avec un discours de prix au siège lisible face aux « assists » de ServiceNow, un argument qui pèsera dans les appels d'offres ITSM de taille intermédiaire."
+   },
+   {
+    "action": "Avec tes clients sensibles qui couplent ServiceNow et Snowflake, n'engage aucune promesse SecNumCloud avant la qualification de Bleu, attendue fin 2026.",
+    "category": "cloud",
+    "follow_up": false,
+    "published": "2026-10-19",
+    "source": "LeMagIT",
+    "summary": "Annoncé le 15 octobre à Paris, l'accord prévoit qu'Orange Business opère Snowflake sur Bleu et signe directement les contrats clients, sans feuille de route publique à ce stade. Bleu, qui annonce 100 services disponibles, vise désormais la qualification SecNumCloud fin 2026, avec environ six mois de retard.",
+    "tags": [
+     "Snowflake",
+     "Bleu",
+     "SecNumCloud"
+    ],
+    "title": "Snowflake veut héberger sa plateforme, Cortex AI compris, sur le cloud de confiance de Bleu, opéré par Orange Business",
+    "url": "https://www.lemagit.fr/actualites/366652398/Cloud-de-confiance-Snowflake-se-rapproche-de-Bleu-et-dOrange-Business",
+    "why": "Les données que tes clients exposent aux agents ServiceNow via Snowflake pourraient demain rester dans un cloud de confiance français, mais rien n'est qualifié SecNumCloud aujourd'hui."
+   },
+   {
+    "action": "Si un client envisage un modèle ouvert chinois en hébergement privé, note dans ton analyse de risques la date du 15 novembre et prévois une alternative non chinoise.",
+    "category": "modeles",
+    "follow_up": false,
+    "published": "2026-10-20",
+    "source": "LeMagIT",
+    "summary": "Pékin propose d'ajouter 23 technologies d'IA à sa liste de contrôle à l'export, dont les modèles au-delà de 10^26 FLOPS et les systèmes de plus de 60 agents pour usages sensibles, avec commentaires jusqu'au 15 novembre. API, SaaS et modèles ouverts déjà publiés sont exclus, mais le sort des futurs modèles ouverts reste flou.",
+    "tags": [
+     "Chine",
+     "ModèlesOuverts",
+     "Export"
+    ],
+    "title": "La Chine veut soumettre à contrôle à l'export les grands modèles, les agents et les clusters de calcul",
+    "url": "https://www.lemagit.fr/actualites/366652420/Controle-a-lexport-la-Chine-laisse-planer-le-doute-sur-le-sort-des-modeles-frontieres-ouverts",
+    "why": "Les clients qui misent sur des modèles ouverts chinois pour réduire leurs coûts d'inférence s'exposent à un risque d'approvisionnement sur les prochaines versions."
+   },
+   {
+    "action": "Dans tes plans de montée de version, chiffre séparément ce qui est imposé par le cycle de ServiceNow et ce qui apporte de la valeur, pour ne pas laisser l'IA payer l'addition des mises à niveau.",
+    "category": "marche",
+    "follow_up": false,
+    "published": "2026-10-20",
+    "source": "The Register",
+    "summary": "Selon une enquête Censuswide pour Origina, prestataire de support tiers, auprès de 2 018 décideurs IT américains et britanniques, 28 % des budgets logiciels partent en mises à niveau et changements de licence imposés. 90 % disent que ces coûts ont pesé sur le retard ou l'abandon de leur dernier projet IA ou data.",
+    "tags": [
+     "Budgets",
+     "Licences",
+     "Étude"
+    ],
+    "title": "Les entreprises consacrent 28 % de leur budget logiciel à des mises à niveau imposées par les éditeurs",
+    "url": "https://www.theregister.com/software/2026/10/20/enterprises-blow-nearly-a-third-of-software-budgets-on-upgrades-they-never-asked-for/5304181",
+    "why": "C'est un argument que tes clients opposeront aux montées de version et au passage aux nouveaux modèles de licence IA, même si l'étude vient d'un acteur qui vend du support alternatif."
+   },
+   {
+    "action": "Propose à tes clients financiers une catégorie d'incident « défaillance IA » et un champ « quasi-incident » dans ServiceNow, reliés aux agents recensés dans AI Control Tower.",
+    "category": "securite",
+    "follow_up": false,
+    "published": "2026-10-20",
+    "source": "The Register",
+    "summary": "Jessica Rusu, responsable des données de la FCA, a déclaré que les règles de déclaration des incidents majeurs doivent s'étendre aux défaillances significatives d'IA et aux quasi-incidents. Aucune consultation ni échéance n'est encore annoncée.",
+    "tags": [
+     "FCA",
+     "Incidents",
+     "Finance"
+    ],
+    "title": "Royaume-Uni : la FCA veut que les acteurs financiers déclarent leurs défaillances d'IA et leurs quasi-incidents",
+    "url": "https://www.theregister.com/ai-and-ml/2026/10/20/uk-finance-watchdog-wants-firms-to-report-ai-failures-and-close-calls/5304078",
+    "why": "Pour tes clients bancaires présents au Royaume-Uni, un agent IA qui dérape deviendrait un incident à déclarer au régulateur, ce qui suppose de le tracer comme tel dans l'outil de gestion des incidents."
+   }
+  ],
+  "kind": "daily",
+  "month": "2026-10",
+  "schema": 1,
+  "seal": "015cf506ee5536f97938",
+  "stats": {
+   "by_category": {
+    "agents": 0,
+    "cloud": 1,
+    "esm": 1,
+    "marche": 1,
+    "modeles": 1,
+    "securite": 3
+   },
+   "items": 7,
+   "top_sources": [
+    {
+     "count": 3,
+     "source": "LeMagIT"
+    },
+    {
+     "count": 2,
+     "source": "The Register"
+    },
+    {
+     "count": 1,
+     "source": "Computer Weekly"
+    },
+    {
+     "count": 1,
+     "source": "Next"
+    }
+   ]
+  },
+  "week": "2026-W43"
+ },
+ {
+  "context": [
+   {
     "published": "2026-10-20",
     "source": "Next",
     "text": "Le client en ligne de commande d'OVHcloud a été piégé sur GitHub le 19 octobre pendant près de deux heures (versions v0.11.0 à v0.15.0) : si tes clients l'utilisent en CI, fais tourner leurs secrets et passe en v0.16.0.",
