@@ -2,6 +2,159 @@
  {
   "context": [
    {
+    "published": "2026-10-22",
+    "source": "LeMagIT",
+    "text": "Moody's lie cyber-résilience et coût d'emprunt : 60 % des quelque 9 500 émetteurs notés avaient au moins une faille connue et exploitée non corrigée, avec un délai médian de correction proche de trois mois.",
+    "url": "https://www.lemagit.fr/actualites/366652543/Selon-Moodys-lIA-va-faire-grimper-le-cout-dune-mauvaise-posture-de-securite"
+   },
+   {
+    "published": "2026-10-22",
+    "source": "Le Monde Informatique",
+    "text": "Chambres froides piratées : devant le Sénat, l'ANSSI explique que les contrôleurs Danfoss étaient exposés sur Internet sans pare-feu ni segmentation, avec des mots de passe faibles.",
+    "url": "https://www.lemondeinformatique.fr/actualites/lire-frigos-de-supermarches-pirates-l-anssi-pointe-des-failles-de-securite-elementaires-100864.html"
+   },
+   {
+    "published": "2026-10-22",
+    "source": "BleepingComputer",
+    "text": "GitLab corrige une faille d'exécution de code de sévérité maximale (CVE-2026-110264) : versions corrigées 19.5.1, 19.4.3 et suivantes, GitLab.com déjà protégé.",
+    "url": "https://www.bleepingcomputer.com/news/security/gitlab-warns-of-new-max-severity-code-execution-vulnerability/"
+   }
+  ],
+  "date": "2026-10-23",
+  "generated_at": "2026-10-23T06:53:14Z",
+  "headline": "BT montre des agents ServiceNow qui résolvent seuls la moitié des incidents internes non critiques, pendant que l'attaque ConnectWise prouve que les identités d'application sont la nouvelle porte d'entrée.",
+  "items": [
+   {
+    "action": "Reprends le découpage de BT (tickets sans impact client automatisés, impact client sous validation humaine) comme trame de cadrage pour ton prochain atelier agents ITSM.",
+    "category": "esm",
+    "follow_up": false,
+    "published": "2026-10-22",
+    "source": "diginomica",
+    "summary": "Chez BT Business, environ 60 % des tickets ServiceNow n'affectent pas les clients et près de la moitié d'entre eux se résolvent seuls grâce aux agents couplés à Dynatrace, un humain restant dans la boucle côté clients et sécurité. Experian a bâti une passerelle IA et des registres d'agents, chaque agent produisant des journaux d'audit.",
+    "tags": [
+     "AIAgents",
+     "ITSM",
+     "Retour d'expérience"
+    ],
+    "title": "World Forum Londres : BT fait résoudre la moitié de ses incidents internes non critiques par des agents ServiceNow, Experian mise sur une passerelle IA",
+    "url": "https://diginomica.com/servicenow-world-forum-london-how-experian-and-bt-are-taking-different-paths-agentic-ai",
+    "why": "C'est un retour d'expérience chiffré d'un grand compte européen sur l'auto-remédiation ITSM, exactement le cas d'usage que tu vends, avec une frontière claire sur ce qui reste humain."
+   },
+   {
+    "action": "Fais l'inventaire avec tes clients des applications Entra autorisées sur leurs instances et intégrations ServiceNow, et vérifie les secrets ajoutés ou modifiés depuis le 10 octobre.",
+    "category": "securite",
+    "follow_up": true,
+    "published": "2026-10-22",
+    "source": "The Register",
+    "summary": "Fait nouveau : Microsoft attribue l'attaque à Storm-0940, qui a détourné les identités d'application de ConnectWise avec un outil d'intrusion piloté par agents IA, obtenant parfois un accès privilégié en moins de trois heures. Révoquer les identifiants d'origine ne suffit pas forcément à supprimer les accès persistants.",
+    "tags": [
+     "Entra",
+     "Identités",
+     "ConnectWise"
+    ],
+    "title": "Attaque ConnectWise : Microsoft l'attribue au groupe chinois Storm-0940 et compte plus de 2 250 environnements Microsoft 365 visés",
+    "url": "https://www.theregister.com/security/2026/10/22/microsoft-says-connectwise-breach-let-chinese-spies-loose-on-2250-cloud-tenants/5304687",
+    "why": "Tes clients accordent les mêmes autorisations d'application aux intégrations ServiceNow avec Microsoft 365 et Entra, et ce type d'accès sans connexion interactive échappe souvent à la surveillance."
+   },
+   {
+    "action": "Pour chaque client qui envisage Bleu, vérifie que ses intégrations ServiceNow avec Entra et Microsoft 365 sont prévues dans le périmètre et note l'échéance Sentinel du premier semestre 2027.",
+    "category": "cloud",
+    "follow_up": true,
+    "published": "2026-10-22",
+    "source": "LeMagIT",
+    "summary": "Fait nouveau : Bleu ouvre environ 100 services avec engagement de niveau de service, dont une soixantaine en disponibilité générale, sur deux data centers de 20 MW, et revendique une soixantaine de clients actifs. La qualification SecNumCloud n'est pas encore obtenue, Sentinel arrive au premier semestre 2027 et Copilot n'a pas de date.",
+    "tags": [
+     "Bleu",
+     "SecNumCloud",
+     "Microsoft"
+    ],
+    "title": "Bleu passe en production avec une centaine de services Azure et Microsoft 365, toujours sans SecNumCloud",
+    "url": "https://www.lemagit.fr/actualites/366652544/Le-cloud-Bleu-est-la",
+    "why": "Tes clients publics et sensibles peuvent désormais cibler Bleu pour leur socle Microsoft, mais sans Copilot ni Foundry avant 2027 l'IA générative devra passer par d'autres plateformes."
+   },
+   {
+    "action": "Quand un client compare les couches de gouvernance, distingue ce qui relève de l'exécution (OpenShell, matériel Nvidia) de ce qui relève du pilotage et de l'inventaire (AI Control Tower).",
+    "category": "agents",
+    "follow_up": false,
+    "published": "2026-10-21",
+    "source": "The Register",
+    "summary": "L'architecture OpenShell ajoute au-dessus des bacs à sable d'agents une couche qui gère les identifiants via une passerelle, les identités et les règles, avec AWS, Google Cloud, Azure, Anthropic, OpenAI et SAP (pour Joule Studio) comme partenaires. Elle exige du matériel Nvidia, collecte de la télémétrie par défaut et présente encore des failles ouvertes sur GitHub.",
+    "tags": [
+     "Nvidia",
+     "Gouvernance",
+     "OpenShell"
+    ],
+    "title": "Nvidia publie l'architecture de référence OpenShell pour encadrer les agents IA, avec SAP, Red Hat et les trois hyperscalers",
+    "url": "https://www.theregister.com/ai-and-ml/2026/10/21/nvidia-picks-openshell-to-tame-ai-gents/5304319",
+    "why": "La gouvernance des agents se standardise aussi au niveau de l'infrastructure, ce qui recoupe le rôle que ServiceNow donne à AI Control Tower et AI Passport."
+   },
+   {
+    "action": "Fixe avec chaque client, avant le lancement, deux ou trois indicateurs financiers mesurables à six mois (tickets évités, temps de traitement, coût par résolution).",
+    "category": "marche",
+    "follow_up": false,
+    "published": "2026-10-21",
+    "source": "The Register",
+    "summary": "Selon Forrester, 45 % des décideurs exigent un retour positif en moins d'un an, alors que 22 % seulement constatent un effet positif de l'IA sur leur EBITDA sur les douze derniers mois. Les modèles à poids ouverts représenteraient la moitié des jetons consommés mais 5 % seulement des dépenses.",
+    "tags": [
+     "Forrester",
+     "ROI",
+     "Budgets"
+    ],
+    "title": "Forrester : l'IA pèsera 20 % des dépenses technologiques en 2027, mais plus de la moitié des DSI rateront leurs objectifs de retour sur investissement",
+    "url": "https://www.theregister.com/ai-and-ml/2026/10/21/ai-will-eat-a-fifth-of-tech-budgets-in-2027-but-dont-expect-it-to-pay-for-itself/5304466",
+    "why": "Tes sponsors vont devoir justifier vite leurs budgets Now Assist, et un projet d'agents sans indicateurs mesurés dès le départ sera le premier coupé."
+   },
+   {
+    "action": "Prépare une comparaison simple pour tes clients : coût et exploitation d'un modèle ouvert sur site face aux options de modèles de Now Assist, en intégrant les compétences d'exploitation nécessaires.",
+    "category": "modeles",
+    "follow_up": false,
+    "published": "2026-10-22",
+    "source": "The Register",
+    "summary": "Lors de ses résultats trimestriels (17,1 milliards de dollars, +5 %), Arvind Krishna estime que l'écart entre modèles fermés et ouverts s'est fortement réduit et que la plupart des entreprises peuvent faire tourner une IA utile sur site avec deux ou trois baies. Il prévient toutefois que beaucoup auront du mal à l'exploiter.",
+    "tags": [
+     "IBM",
+     "Poids ouverts",
+     "Coûts"
+    ],
+    "title": "IBM : les modèles à poids ouverts offrent 90 % de l'efficacité des modèles de pointe pour 10 à 25 % du coût",
+    "url": "https://www.theregister.com/systems/2026/10/22/ibm-ceo-says-open-weight-models-are-now-irresistibly-good-and-cheap-on-prem/5304640",
+    "why": "L'argument coût des modèles ouverts sur site va revenir chez tes clients sensibles, face aux modèles hébergés de Now Assist."
+   }
+  ],
+  "kind": "daily",
+  "month": "2026-10",
+  "schema": 1,
+  "seal": "8ffd76ba8b4f7c080050",
+  "stats": {
+   "by_category": {
+    "agents": 1,
+    "cloud": 1,
+    "esm": 1,
+    "marche": 1,
+    "modeles": 1,
+    "securite": 1
+   },
+   "items": 6,
+   "top_sources": [
+    {
+     "count": 4,
+     "source": "The Register"
+    },
+    {
+     "count": 1,
+     "source": "diginomica"
+    },
+    {
+     "count": 1,
+     "source": "LeMagIT"
+    }
+   ]
+  },
+  "week": "2026-W43"
+ },
+ {
+  "context": [
+   {
     "published": "2026-10-19",
     "source": "VentureBeat",
     "text": "DeepSeek publie V4.1-Flash-1017 à 0,30 dollar le million de jetons en entrée, alors que le gouvernement américain bannit sa technologie de ses agences civiles.",
