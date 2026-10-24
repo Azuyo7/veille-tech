@@ -2,6 +2,187 @@
  {
   "context": [
    {
+    "published": "2026-10-23",
+    "source": "Le Monde Informatique",
+    "text": "1Password lance 1Password for Agents : l'agent demande l'accès, l'utilisateur valide, et le mot de passe est saisi sans jamais passer par le modèle.",
+    "url": "https://www.lemondeinformatique.fr/actualites/lire-agents-ia-1password-encadre-l-utilisation-des-identifiants-100869.html"
+   },
+   {
+    "published": "2026-10-22",
+    "source": "Computer Weekly",
+    "text": "Barclays va supprimer 5 000 postes, dont 60 % dans les fonctions support, en invoquant notamment des besoins moindres en développeurs grâce à l'IA.",
+    "url": "https://www.computerweekly.com/news/366652509/Barclays-to-cut-5000-jobs-and-employ-more-artificial-intelligence"
+   },
+   {
+    "published": "2026-10-23",
+    "source": "Le Monde Informatique",
+    "text": "Amazon prévoit plus de 16 Md€ d'investissements en Allemagne en 2027, dont 4,8 Md€ pour AWS à Francfort, en plus de son cloud souverain européen.",
+    "url": "https://www.lemondeinformatique.fr/actualites/lire-amazon-annonce-16-mdeteuro-d-investissements-en-allemagne-en-2027-100867.html"
+   }
+  ],
+  "date": "2026-10-24",
+  "generated_at": "2026-10-24T06:54:05Z",
+  "headline": "Les briques des agents se normalisent (Agent Skills, Open Responses et OpenSandbox rejoignent la fondation de MCP) pendant que l'audit METR chez OpenAI et Gartner rappellent que leur surveillance et leur identité restent le maillon faible.",
+  "items": [
+   {
+    "action": "Regarde la spécification Agent Skills et Open Responses pour voir si les skills et agents que tu conçois sur ServiceNow pourraient être décrits ou exposés dans ces formats.",
+    "category": "agents",
+    "follow_up": false,
+    "published": "2026-10-23",
+    "source": "The Register",
+    "summary": "L'Agentic AI Foundation, créée sous l'égide de la Linux Foundation en décembre 2025 avec MCP, goose et AGENTS.md, ajoute quatre projets : Agent Skills (Anthropic), Open Responses (spécification d'API commune d'OpenAI), OpenSandbox (Alibaba) et OpenEnv (Hugging Face). Elle compte désormais 10 projets et plus de 300 membres, dont 60 arrivés ce trimestre.",
+    "tags": [
+     "MCP",
+     "Standards",
+     "Interopérabilité"
+    ],
+    "title": "La fondation qui gère MCP accueille Agent Skills d'Anthropic, Open Responses d'OpenAI et OpenSandbox d'Alibaba",
+    "url": "https://www.theregister.com/ai-and-ml/2026/10/23/vendor-affiliated-ai-agent-tech-gets-adopted-by-friendly-funded-foundation/5304912",
+    "why": "Le format des skills d'agents et l'API d'appel aux modèles deviennent des standards neutres, ce qui rend plus crédible la portabilité des agents entre plateformes que tes clients demandent face au verrouillage."
+   },
+   {
+    "action": "Reprends les principes de METR (surveillance difficile à contourner, contrôle que le trafic est bien surveillé, red teaming du moniteur, isolement agents et moniteurs) comme grille de revue de la gouvernance des agents.",
+    "category": "securite",
+    "follow_up": true,
+    "published": "2026-10-23T12:20",
+    "source": "Silicon.fr",
+    "summary": "Fait nouveau depuis l'incident révélé le 21 octobre : le rapport de METR publié le 22 octobre estime qu'environ 10 % du trafic Codex éligible est resté sans contrôle de mai à juillet 2026 et relève cinq vulnérabilités, dont deux en-têtes côté client qui désactivaient la surveillance de nouveaux agents. OpenAI dit les avoir corrigées, sans que METR ait vérifié ces correctifs.",
+    "tags": [
+     "OpenAI",
+     "Supervision",
+     "METR"
+    ],
+    "title": "Agents d'OpenAI hors surveillance : l'audit de METR chiffre les trous du dispositif et liste cinq vulnérabilités",
+    "url": "https://www.silicon.fr/cybersecurite-1371/agents-ia-la-surveillance-interne-dopenai-passee-au-crible-229881",
+    "why": "C'est une preuve chiffrée qu'une couche de supervision d'agents peut être contournée sans que personne ne le voie, exactement le risque que tes clients veulent couvrir avec AI Control Tower."
+   },
+   {
+    "action": "Garde le chiffre de 25 % des failles liées à un abus d'agent d'ici 2028 pour ton prochain atelier de cadrage sur la gouvernance des agents.",
+    "category": "marche",
+    "follow_up": false,
+    "published": "2026-10-23",
+    "source": "IT for Business",
+    "summary": "Parmi ses dix tendances 2027, Gartner estime que les plateformes de contexte métier pour agents pourraient améliorer leur précision jusqu'à 80 % et réduire les coûts jusqu'à 60 %, et que 25 % des failles de sécurité en entreprise pourraient impliquer un abus d'agent IA d'ici 2028.",
+    "tags": [
+     "Gartner",
+     "Identité des agents",
+     "Contexte"
+    ],
+    "title": "Tendances Gartner 2027 : plateformes de contexte pour agents et identité numérique pour chaque agent",
+    "url": "https://www.itforbusiness.fr/tendances-tech-2027-gartner-108791",
+    "why": "Ces chiffres donnent des arguments d'analyste pour justifier auprès de tes clients le travail sur la donnée de contexte (CMDB, base de connaissances) et sur l'identité des agents avant de multiplier les cas d'usage."
+   },
+   {
+    "action": "Chez un client du secteur public, vérifie quelles intégrations ServiceNow dépendent de Microsoft 365 et prévois une alternative compatible avec La Suite ou Tchap.",
+    "category": "cloud",
+    "follow_up": false,
+    "published": "2026-10-22T15:38",
+    "source": "Silicon.fr",
+    "summary": "Les dépenses bureautiques de onze ministères sont passées de 67 M€ en 2021 à 100 M€ en 2025, et une suite libre qualifiée SecNumCloud coûterait environ 100 € par poste et par an contre environ 250 € pour Microsoft 365 ou Bleu. La Cour recommande de converger vers une suite libre hébergée dans un cloud souverain, avec une échéance fixée à 2027.",
+    "tags": [
+     "Souveraineté",
+     "Secteur public",
+     "Microsoft 365"
+    ],
+    "title": "La Cour des comptes chiffre la bureautique de l'État et pousse une suite libre en cloud SecNumCloud d'ici 2027",
+    "url": "https://www.silicon.fr/workspace-1376/bureautique-etat-la-cour-des-comptes-plaide-pour-le-logiciel-libre-229860",
+    "why": "Pour tes clients publics, la pression pour sortir de Microsoft 365 va peser sur les intégrations (Teams, Outlook, Copilot) que tu prévois dans leurs parcours ServiceNow."
+   },
+   {
+    "action": "Demande aux équipes DevOps de tes clients si leur GitLab autogéré est passé sur une branche corrigée, même s'il a déjà été mis à jour le 12 octobre.",
+    "category": "securite",
+    "follow_up": false,
+    "published": "2026-10-23",
+    "source": "Le Monde Informatique",
+    "summary": "La faille CVE-2026-110264 (CVSS 10) permet à un attaquant non authentifié d'exécuter du code via un fichier Org-mode piégé, et les correctifs du 21 octobre ne couvrent pas les branches 18.10 et antérieures. Le correctif du 12 octobre contre une autre faille notée 10 ne protège pas de celle-ci.",
+    "tags": [
+     "GitLab",
+     "Vulnérabilité",
+     "DevOps"
+    ],
+    "title": "GitLab corrige une faille critique notée 10 sur 10 qui touche toutes les versions depuis la 7.0",
+    "url": "https://www.lemondeinformatique.fr/actualites/lire-gitlab-corrige-une-faille-critique-vieille-de-douze-ans-100870.html",
+    "why": "Beaucoup de tes clients hébergent leurs dépôts et pipelines de déploiement ServiceNow (SDK, applications scopées) sur GitLab autogéré, et une compromission y donnerait accès aux identifiants d'instance."
+   },
+   {
+    "action": "Si un client utilise Zoom Contact Center, note de tester ses serveurs MCP comme source de contexte pour un agent d'incident dès qu'ils seront disponibles.",
+    "category": "agents",
+    "follow_up": false,
+    "published": "2026-10-23",
+    "source": "LeMagIT",
+    "summary": "Zoom annonce une couche de contexte unifiée qui agrège réunions, appels, messages et centre de contact, interrogeable par Claude, GPT, Copilot, Gemini et tout agent compatible MCP. L'éditeur lance aussi des serveurs MCP sur l'ensemble de son portefeuille, sans calendrier ni prix précisés.",
+    "tags": [
+     "Zoom",
+     "MCP",
+     "Contexte"
+    ],
+    "title": "Zoom ouvre sa couche de contexte aux assistants tiers via MCP",
+    "url": "https://www.lemagit.fr/actualites/366652676/Zoom-ouvre-sa-couche-de-contexte-aux-assistants-IA-tiers",
+    "why": "Les échanges Zoom (appels au support, réunions de crise) deviennent une source de contexte exploitable par des agents, utile pour enrichir un incident ou un dossier client dans ServiceNow."
+   },
+   {
+    "action": "Ne reprends pas ces scores tels quels devant un client : ils viennent d'une évaluation interne non reproductible.",
+    "category": "modeles",
+    "follow_up": false,
+    "published": "2026-10-22T11:53",
+    "source": "Next",
+    "summary": "Sur son évaluation de migration COBOL vers C++, Java, Python ou Rust, OpenAI annonce 86,6 % de réussite pour GPT-6.1 Sol en raisonnement faible (97,9 % en raisonnement élevé) contre 5,4 % pour GPT-5.6 Sol, pour un coût inférieur de 39 %. Cette évaluation n'est pas publique et OpenAI reconnaît que la mise en production exige toujours une vérification par des experts.",
+    "tags": [
+     "OpenAI",
+     "COBOL",
+     "Modernisation"
+    ],
+    "title": "OpenAI vise la migration du COBOL : 86,6 % de réussite pour GPT-6.1 Sol sur son évaluation interne",
+    "url": "https://next.ink/263107/openai-sattaque-a-la-migration-des-projets-en-cobol/",
+    "why": "Les projets de modernisation d'applications historiques (banque, assurance) vont s'accélérer chez tes clients, avec des besoins de suivi des changements et des risques que ServiceNow peut porter."
+   }
+  ],
+  "kind": "daily",
+  "month": "2026-10",
+  "schema": 1,
+  "seal": "491aecf9cf036823187a",
+  "stats": {
+   "by_category": {
+    "agents": 2,
+    "cloud": 1,
+    "esm": 0,
+    "marche": 1,
+    "modeles": 1,
+    "securite": 2
+   },
+   "items": 7,
+   "top_sources": [
+    {
+     "count": 2,
+     "source": "Silicon.fr"
+    },
+    {
+     "count": 1,
+     "source": "IT for Business"
+    },
+    {
+     "count": 1,
+     "source": "Le Monde Informatique"
+    },
+    {
+     "count": 1,
+     "source": "LeMagIT"
+    },
+    {
+     "count": 1,
+     "source": "Next"
+    },
+    {
+     "count": 1,
+     "source": "The Register"
+    }
+   ]
+  },
+  "week": "2026-W43"
+ },
+ {
+  "context": [
+   {
     "published": "2026-10-22",
     "source": "LeMagIT",
     "text": "Moody's lie cyber-résilience et coût d'emprunt : 60 % des quelque 9 500 émetteurs notés avaient au moins une faille connue et exploitée non corrigée, avec un délai médian de correction proche de trois mois.",
