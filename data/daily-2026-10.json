@@ -2,6 +2,156 @@
  {
   "context": [
    {
+    "published": "2026-10-26",
+    "source": "The Register",
+    "text": "Aiven dit avoir réduit d'environ 80 % ses coûts de jetons avec une passerelle LLM bâtie sur LiteLLM et des modèles ouverts, et veut la proposer à ses clients.",
+    "url": "https://www.theregister.com/ai-and-ml/2026/10/26/euro-open-source-specialist-proposes-llm-gateway-to-ease-token-bills/5305170"
+   },
+   {
+    "published": "2026-10-27",
+    "source": "Next",
+    "text": "Microsoft ouvre un plan de départs volontaires à 60 000 salariés aux États-Unis, au Canada, en Inde et au Royaume-Uni, dont des équipes Copilot et CoreAI.",
+    "url": "https://next.ink/brief-article/microsoft-ouvre-un-plan-de-departs-volontaires-a-60-000-salaries/"
+   }
+  ],
+  "date": "2026-10-27",
+  "generated_at": "2026-10-27T07:54:27Z",
+  "headline": "Anthropic conseille de revenir à un agent unique plutôt qu'à une armée de sous-agents, OpenAI casse les prix de son modèle intermédiaire et l'attaque LiteLLM rappelle de révoquer toute clé exposée.",
+  "items": [
+   {
+    "action": "Sur ton prochain cas d'usage, compte les outils rattachés à chaque agent et teste une version à agent unique avant de proposer une orchestration à plusieurs agents.",
+    "category": "agents",
+    "follow_up": false,
+    "published": "2026-10-25",
+    "source": "The Decoder",
+    "summary": "Anthropic conseille de fusionner les sous-agents en un agent unique qui charge contexte et outils à la demande, le choix d'outil se dégradant au-delà de 30 à 50 définitions. Une étude Vals citée ne montre aucun gain de qualité de 10 à 100 agents, pour un coût bien plus élevé, et Anthropic publie un kit de migration.",
+    "tags": [
+     "Orchestration",
+     "Architecture",
+     "Anthropic"
+    ],
+    "title": "Anthropic recommande un agent unique plutôt que plusieurs sous-agents, maintenant que les modèles gèrent seuls la complexité",
+    "url": "https://the-decoder.com/anthropic-says-one-ai-agent-beats-many-subagents-now-that-models-can-handle-complexity-alone/",
+    "why": "Ça donne un argument chiffré pour simplifier les architectures multi-agents que tes clients veulent empiler dans AI Agent Studio, et pour plafonner le nombre d'outils par agent."
+   },
+   {
+    "action": "Mets à jour ta grille de coûts par tâche avec ces tarifs et vérifie si le modèle est proposé par les fournisseurs de LLM que tes clients branchent sur Now Assist.",
+    "category": "modeles",
+    "follow_up": false,
+    "published": "2026-10-26",
+    "source": "The Decoder",
+    "summary": "GPT-6.1 Terra coûte 1 dollar en entrée et 5 dollars en sortie par million de jetons, contre 2 et 12 dollars pour GPT-5.6 Terra, et obtient 48 à l'indice d'Artificial Analysis contre 52 pour GPT-6.1 Sol. Il est disponible dans l'API, ChatGPT Work et Codex.",
+    "tags": [
+     "OpenAI",
+     "PrixAPI"
+    ],
+    "title": "GPT-6.1 Terra : OpenAI divise par deux le prix en entrée de son modèle intermédiaire et se rapproche de ses grands modèles",
+    "url": "https://the-decoder.com/gpt-6-1-terra-halves-openais-api-prices-and-still-gains-ground-on-its-larger-models/",
+    "why": "Un modèle intermédiaire à ce prix fait baisser le coût par tâche des agents et devient une référence face à Claude Sonnet 5.5 (2 et 10 dollars) dans les comparatifs que te demandent tes clients."
+   },
+   {
+    "action": "Demande à tes clients s'ils utilisent LiteLLM, en particulier la version 1.107.0, et fais tourner les clés d'API LLM et cloud associées, y compris celles des intégrations Now Assist avec des modèles externes.",
+    "category": "securite",
+    "follow_up": true,
+    "published": "2026-10-26",
+    "source": "The Register",
+    "summary": "Fait nouveau : selon le rapport d'incident, une clé maîtresse publiée par erreur sur GitHub le 27 mai, retirée mais jamais révoquée, a permis le 10 octobre de prendre le contrôle de tous les dépôts de LiteLLM. La version piégée 1.107.0, en ligne moins de deux heures, a été téléchargée environ 49 000 fois selon Wiz.",
+    "tags": [
+     "LiteLLM",
+     "ChaîneLogicielle"
+    ],
+    "title": "Attaque LiteLLM : tout est parti d'une clé maîtresse publiée sur GitHub en mai et jamais révoquée",
+    "url": "https://www.theregister.com/security/2026/10/26/litellm-supply-chain-attack-started-with-an-exposed-master-key/5305544",
+    "why": "LiteLLM sert souvent de passerelle vers les LLM dans les architectures d'agents : un client qui l'a installé doit considérer comme volées toutes les clés accessibles depuis le système touché."
+   },
+   {
+    "action": "Fixe une règle simple dans ton équipe et chez tes clients : jamais d'agent de code lancé depuis Téléchargements ou le dossier personnel, et relecture de tout AGENTS.md ou CLAUDE.md inconnu.",
+    "category": "securite",
+    "follow_up": false,
+    "published": "2026-10-25",
+    "source": "BleepingComputer",
+    "summary": "Un fichier AGENTS.md malveillant placé dans Téléchargements a poussé un agent de code lancé depuis ce dossier à installer un paquet npm piégé, avec 90 % de réussite sur Codex ; une variante via CLAUDE.md a exposé le jeton OAuth de Claude Code. Aucun correctif n'est prévu : OpenAI et Anthropic recommandent de lancer les agents depuis le dossier du projet.",
+    "tags": [
+     "AgentsDeCode",
+     "InjectionDePrompt"
+    ],
+    "title": "Agents de code détournés par un fichier AGENTS.md déposé dans le dossier Téléchargements",
+    "url": "https://www.bleepingcomputer.com/news/security/ai-coding-agents-hijacked-using-agentsmd-file-in-downloads-folder/",
+    "why": "Les fichiers d'instructions chargés automatiquement sont un vecteur d'injection concret pour toute équipe qui utilise des agents de code sur les projets ServiceNow, notamment avec le SDK."
+   },
+   {
+    "action": "Lis la partie risques du prospectus quand elle sera commentée et prépare une réponse courte sur la dépendance de Now Assist à un fournisseur de modèles unique.",
+    "category": "modeles",
+    "follow_up": false,
+    "published": "2026-10-26",
+    "source": "Silicon.fr",
+    "summary": "Anthropic vise le Nasdaq sous le symbole ANT, avec 16,3 milliards de dollars de chiffre d'affaires au premier semestre 2026 et une perte nette de 80,7 milliards, surtout comptable. Le prospectus révèle environ 450 milliards de dollars de contrats cloud sur 7 à 10 ans et deux clients pesant un cinquième du chiffre d'affaires.",
+    "tags": [
+     "Anthropic",
+     "IPO"
+    ],
+    "title": "Anthropic dépose son dossier d'introduction en Bourse : 16,3 milliards de dollars de chiffre d'affaires au premier semestre",
+    "url": "https://www.silicon.fr/business-1367/anthropic-lance-son-ipo-croissance-record-et-pertes-abyssales-229940",
+    "why": "ServiceNow s'appuie sur Claude pour ses agents : les engagements de calcul et la concentration des clients révélés par le prospectus sont des éléments de risque fournisseur que les DSI vont te demander de commenter."
+   },
+   {
+    "action": "Ajoute ces chiffres à ta proposition type pour justifier un lot formation et des indicateurs d'usage par rôle lors du déploiement de Now Assist.",
+    "category": "marche",
+    "follow_up": false,
+    "published": "2026-10-26",
+    "source": "LeMagIT",
+    "summary": "Selon une étude Jabra menée par Toluna auprès de 1 000 salariés du tertiaire en France, environ un tiers des millennials et 22 % de la génération Z n'ont reçu aucune formation à l'IA de leur employeur. Pourtant 51 % des moins de 30 ans pensent que l'IA pourrait prendre au moins la moitié de leurs tâches d'ici deux ans.",
+    "tags": [
+     "Formation",
+     "Adoption"
+    ],
+    "title": "Salariés français et IA : optimistes, mais un tiers des millennials n'a reçu aucune formation de son employeur",
+    "url": "https://www.lemagit.fr/actualites/366652682/Les-employes-francais-plutot-optimistes-face-a-lIA-mais-mal-accompagnes-par-leurs-employeurs",
+    "why": "Ces chiffres français appuient la nécessité d'un volet formation et conduite du changement dans tes projets d'agents, souvent sacrifié dans les budgets."
+   }
+  ],
+  "kind": "daily",
+  "month": "2026-10",
+  "schema": 1,
+  "seal": "b7439cbcc709c05e1250",
+  "stats": {
+   "by_category": {
+    "agents": 1,
+    "cloud": 0,
+    "esm": 0,
+    "marche": 1,
+    "modeles": 2,
+    "securite": 2
+   },
+   "items": 6,
+   "top_sources": [
+    {
+     "count": 2,
+     "source": "The Decoder"
+    },
+    {
+     "count": 1,
+     "source": "BleepingComputer"
+    },
+    {
+     "count": 1,
+     "source": "LeMagIT"
+    },
+    {
+     "count": 1,
+     "source": "Silicon.fr"
+    },
+    {
+     "count": 1,
+     "source": "The Register"
+    }
+   ]
+  },
+  "week": "2026-W44"
+ },
+ {
+  "context": [
+   {
     "published": "2026-10-22",
     "source": "The Decoder",
     "text": "Enquête Gartner auprès de 2 002 DSI et dirigeants IT : seuls 13 % constatent des retours majeurs de l'IA, et 51 % s'attendent à une hausse des coûts d'exploitation.",
