@@ -2,6 +2,168 @@
  {
   "context": [
    {
+    "published": "2026-10-28",
+    "source": "SiliconANGLE",
+    "text": "Alphabet manque les attentes au troisième trimestre, mais Google Cloud dépasse 30,7 milliards de dollars de revenus, plus du double d'il y a un an.",
+    "url": "https://siliconangle.com/2026/10/28/alphabets-stock-sinks-after-shocking-investors-with-top-and-bottom-line-miss/"
+   }
+  ],
+  "date": "2026-10-29",
+  "generated_at": "2026-10-29T07:53:25Z",
+  "headline": "ServiceNow affiche une IA en forte croissance mais déçoit sur ses prévisions, et ouvre ses workflows à ChatGPT avec une alliance autour de sa Control Tower.",
+  "items": [
+   {
+    "action": "Pour tes clients en renouvellement d'ici fin décembre, prépare un état de leur consommation Now Assist et EmployeeWorks avant de discuter des paliers IA proposés.",
+    "category": "esm",
+    "follow_up": false,
+    "published": "2026-10-28",
+    "source": "SiliconANGLE",
+    "summary": "ServiceNow réalise 4,11 milliards de dollars de chiffre d'affaires (+20,5 %), mais prévoit 4,25 à 4,26 milliards au quatrième trimestre contre 4,36 milliards attendus, et l'action chute de 18 % après la clôture. Le nouvel ACV net des produits IA progresse de 65 %, l'objectif annuel d'ACV IA passe à 1,7 milliard et EmployeeWorks atteint 100 millions d'ACV en trois trimestres.",
+    "tags": [
+     "Résultats",
+     "NowAssist",
+     "Licences"
+    ],
+    "title": "Résultats du troisième trimestre : l'action ServiceNow perd 18 % malgré des revenus IA en hausse",
+    "url": "https://siliconangle.com/2026/10/28/servicenow-shares-drop-18-after-mixed-third-quarter-results/",
+    "why": "Une prévision en retrait peut pousser ServiceNow à accélérer la vente de licences IA en fin d'année, ce qui pèse sur les négociations de renouvellement de tes clients."
+   },
+   {
+    "action": "Teste le plugin MCP sur une instance de démonstration et vérifie quels rôles et quelles ACL s'appliquent aux actions lancées depuis ChatGPT.",
+    "category": "esm",
+    "follow_up": false,
+    "published": "2026-10-28",
+    "source": "ServiceNow",
+    "summary": "Un plugin MCP basé sur Action Fabric, déjà disponible chez OpenAI, permet depuis ChatGPT de chercher des incidents similaires, d'évaluer le risque d'un changement ou de mettre à jour des enregistrements. OpenAI rejoint la Control Tower Alliance avec Anthropic, AWS, Nvidia ou Okta, et des fonctions de sécurité conjointes arrivent en janvier 2027.",
+    "tags": [
+     "OpenAI",
+     "MCP",
+     "ControlTower"
+    ],
+    "title": "ServiceNow et OpenAI : un plugin pour lancer des workflows ServiceNow depuis ChatGPT et une alliance autour de la Control Tower",
+    "url": "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-and-OpenAI-accelerate-enterprise-AI-from-models-and-operations-to-cybersecurity-and-agentic-development/default.aspx",
+    "why": "Tes clients équipés de ChatGPT Enterprise vont pouvoir agir sur leurs tickets hors de l'interface ServiceNow, ce qui pose la question des droits, de la traçabilité et du décompte de consommation."
+   },
+   {
+    "action": "Sur tes projets mêlant ServiceNow et SAP, demande au client qui administrera la passerelle Joule et quelles identités d'agents y seront autorisées.",
+    "category": "agents",
+    "follow_up": false,
+    "published": "2026-10-27",
+    "source": "SiliconANGLE",
+    "summary": "Avec Joule Work, les agents de SAP utilisent MCP et Agent2Agent pour enchaîner des workflows en plusieurs étapes, y compris avec des services tiers. Une couche d'orchestration permet aux agents extérieurs d'appeler les agents Joule par un point d'entrée contrôlé, sans date de disponibilité annoncée.",
+    "tags": [
+     "SAP",
+     "A2A",
+     "MCP"
+    ],
+    "title": "SAP TechEd : les agents Joule passent à MCP et A2A, avec une passerelle gouvernée pour les agents externes",
+    "url": "https://siliconangle.com/2026/10/27/sap-advances-its-autonomous-enterprise-push-with-smarter-governed-joule-agents/",
+    "why": "Chez un client SAP, un agent ServiceNow pourra demander une action à un agent Joule via A2A, à condition de passer par cette passerelle et ses règles d'accès."
+   },
+   {
+    "action": "Vérifie chez tes clients que les comptes d'intégration des API ServiceNow ont des droits en lecture limités et que les volumes d'appels anormaux déclenchent une alerte.",
+    "category": "securite",
+    "follow_up": false,
+    "published": "2026-10-28",
+    "source": "The Register",
+    "summary": "123 Reg, filiale de GoDaddy, signale une intrusion commencée le 18 septembre qui a exposé noms, téléphones, numéros de TVA et produits souscrits, avec des « skills » d'attaque retrouvés sur une infrastructure chinoise. L'entreprise soupçonne un groupe étatique chinois et a notifié la FTC et les autorités de protection des données britannique et européennes.",
+    "tags": [
+     "Cyberattaque",
+     "API",
+     "Agents"
+    ],
+    "title": "Le registrar britannique 123 Reg révèle une cyberattaque menée avec l'IA contre ses données clients",
+    "url": "https://www.theregister.com/cyber-crime/2026/10/28/123-reg-discloses-ai-cyberattack-on-customer-data-suspects-china-nexus/5305936",
+    "why": "Des données lues via une API produit montrent que les outils agentiques ciblent désormais les interfaces des plateformes clients, donc aussi les API REST d'une instance ServiceNow."
+   },
+   {
+    "action": "Avant de valider un modèle ouvert pour un skill Now Assist ou un agent, teste-le sur un jeu de cas réels du client plutôt que sur des benchmarks publics.",
+    "category": "modeles",
+    "follow_up": false,
+    "published": "2026-10-28",
+    "source": "The Decoder",
+    "summary": "La version 5 de l'Intelligence Index repose pour la première fois à 60 % sur des jeux de tests privés, pour limiter l'entraînement sur des questions connues. Kimi K3.1 Pro, meilleur modèle ouvert, recule de la quatrième à la neuvième place, derrière huit modèles fermés.",
+    "tags": [
+     "Benchmarks",
+     "ModèlesOuverts"
+    ],
+    "title": "Artificial Analysis refond son indice : l'écart entre modèles ouverts et fermés passe de 3 à 12 points",
+    "url": "https://the-decoder.com/new-artificial-analysis-index-widens-the-gap-between-open-and-closed-models/",
+    "why": "Quand un client veut remplacer un modèle fermé par un modèle ouvert moins cher, ce classement rappelle que les scores publics surestimaient l'équivalence."
+   },
+   {
+    "action": "Si un client héberge ses modèles ou ses agents sur Azure, vérifie ses réservations de capacité pour 2027 avant de planifier un passage à l'échelle.",
+    "category": "cloud",
+    "follow_up": false,
+    "published": "2026-10-28",
+    "source": "ChannelNews",
+    "summary": "Microsoft réalise 92,3 milliards de dollars de chiffre d'affaires (+19 %) au premier trimestre de son exercice 2027, dont 33,2 milliards pour Azure, présenté en hausse de 48 %. Le carnet de commandes commerciales atteint 677 milliards (+73 %) et les investissements du trimestre, 45,2 milliards, restent sous les 50 milliards attendus.",
+    "tags": [
+     "Azure",
+     "Résultats"
+    ],
+    "title": "Microsoft : Azure atteint 33,2 milliards de dollars sur le trimestre, avec 677 milliards de commandes en carnet",
+    "url": "https://www.channelnews.fr/microsoft-azure-bondit-de-48-portant-le-chiffre-daffaires-trimestriel-a-923-milliards-de-dollars-159901",
+    "why": "Un carnet de commandes de cette taille indique une demande cloud et IA toujours tendue, donc peu de marge de négociation sur les capacités Azure dont dépendent certains clients."
+   },
+   {
+    "action": "Intègre à chaque cadrage d'agent un indicateur de référence mesuré avant la mise en production, par exemple le temps moyen de résolution, pour pouvoir chiffrer le gain ensuite.",
+    "category": "marche",
+    "follow_up": false,
+    "published": "2026-10-27",
+    "source": "The Register",
+    "summary": "Selon Gartner, environ trois quarts des administrateurs attendent de l'IA des gains de productivité et des baisses de coûts, mais 3 % seulement des organisations les ont obtenus et 38 % dépassent leur budget IA. 85 % prévoient pourtant d'augmenter leurs dépenses l'an prochain.",
+    "tags": [
+     "Gartner",
+     "ROI"
+    ],
+    "title": "Gartner : seules 3 % des organisations atteignent leurs objectifs de productivité et de coûts avec l'IA",
+    "url": "https://www.theregister.com/ai-and-ml/2026/10/27/a-whopping-3-of-boardroom-execs-spy-productivity-and-costs-savings-from-ai/5305675",
+    "why": "Ces chiffres renforcent la demande de preuves de valeur mesurées avant tout nouveau déploiement d'agents chez tes clients."
+   }
+  ],
+  "kind": "daily",
+  "month": "2026-10",
+  "schema": 1,
+  "seal": "936ba1c4b99b16662ed3",
+  "stats": {
+   "by_category": {
+    "agents": 1,
+    "cloud": 1,
+    "esm": 2,
+    "marche": 1,
+    "modeles": 1,
+    "securite": 1
+   },
+   "items": 7,
+   "top_sources": [
+    {
+     "count": 2,
+     "source": "SiliconANGLE"
+    },
+    {
+     "count": 2,
+     "source": "The Register"
+    },
+    {
+     "count": 1,
+     "source": "ChannelNews"
+    },
+    {
+     "count": 1,
+     "source": "ServiceNow"
+    },
+    {
+     "count": 1,
+     "source": "The Decoder"
+    }
+   ]
+  },
+  "week": "2026-W44"
+ },
+ {
+  "context": [
+   {
     "published": "2026-10-27",
     "source": "Next",
     "text": "Productivité : Next compile plusieurs études (Workday, MIT-Wharton, Harvard) montrant que le temps gagné par l'IA est en partie repris par la vérification des résultats.",
