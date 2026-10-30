@@ -2,6 +2,167 @@
  {
   "context": [
    {
+    "published": "2026-10-29",
+    "source": "Silicon.fr",
+    "text": "Orange Cyberdefense intégrera progressivement une version de Mistral Large 4 spécialisée en cybersécurité, réservée à des partenaires contrôlés, pour les tests d'intrusion et l'analyse d'incidents.",
+    "url": "https://www.silicon.fr/cybersecurite-1371/orange-cyberdefense-integre-une-version-cyber-de-mistral-large-4-a-ses-offres-230021"
+   },
+   {
+    "published": "2026-10-28",
+    "source": "The Decoder",
+    "text": "Google DeepMind lance Gemini 4 Carbon deux semaines après Argon : premier de l'indice d'Artificial Analysis, au même prix de lancement de 2 dollars par million de jetons en entrée, mais d'abord réservé à des experts en sécurité.",
+    "url": "https://the-decoder.com/google-deepmind-releases-gemini-4-carbon-just-two-weeks-after-argon-with-gains-across-the-board/"
+   },
+   {
+    "published": "2026-10-29",
+    "source": "LeMagIT",
+    "text": "Chez GitHub, plus de 40 % des demandes de fusion sont désormais produites par des agents, contre 17 % en mars, ce qui pousse la plateforme à revoir son architecture de stockage.",
+    "url": "https://www.lemagit.fr/actualites/366652921/Face-a-la-surcharge-de-lIA-agentique-GitHub-accelere-la-rearchitecture-de-sa-plateforme"
+   },
+   {
+    "published": "2026-10-29",
+    "source": "LeMagIT",
+    "text": "Oracle a investi 28,5 milliards de dollars dans OCI au dernier trimestre, pour 7,4 milliards de revenus d'infrastructure, en hausse de 121 % sur un an.",
+    "url": "https://www.lemagit.fr/actualites/366652860/Oracle-AI-World-2026-OCI-appuie-sur-laccelerateur"
+   }
+  ],
+  "date": "2026-10-30",
+  "generated_at": "2026-10-30T07:56:08Z",
+  "headline": "Serval lève 150 millions de dollars en ciblant ouvertement les clients ITSM de ServiceNow, tandis que les outils d'IA des développeurs révèlent des failles encore ouvertes et que Mistral publie les poids de Large 4.",
+  "items": [
+   {
+    "action": "Prépare une réponse factuelle sur les délais de mise en service et le coût d'une migration hors ServiceNow, CMDB comprise, pour les clients qui recevront une offre de Serval.",
+    "category": "esm",
+    "follow_up": false,
+    "published": "2026-10-29",
+    "source": "SiliconANGLE",
+    "summary": "Valorisée 3 milliards de dollars après une série C menée par Sequoia, la jeune pousse étend ses agents d'automatisation du support IT aux RH, à la finance et au juridique. Elle désigne ServiceNow comme son principal concurrent et cite un constructeur automobile passé chez elle en 45 jours pour l'ITSM, la CMDB et le suivi des actifs.",
+    "tags": [
+     "Concurrence",
+     "ITSM"
+    ],
+    "title": "Serval lève 150 millions de dollars et affirme remplacer ServiceNow chez de grands comptes",
+    "url": "https://siliconangle.com/2026/10/29/serval-raises-150m-at-3b-valuation-to-bring-its-automation-agents-beyond-it",
+    "why": "Un concurrent bien financé vient chercher le terrain ITSM et ESM de tes clients avec un discours de mise en service en 30 jours, juste au moment où l'action ServiceNow est sous pression."
+   },
+   {
+    "action": "Vérifie avec l'équipe sécurité de tes clients quelles versions de ces outils sont utilisées et limite l'usage de leurs navigateurs intégrés tant que Codex et VS Code ne sont pas corrigés.",
+    "category": "securite",
+    "follow_up": false,
+    "published": "2026-10-29",
+    "source": "The Register",
+    "summary": "La société Forever Security a trouvé dans les navigateurs intégrés de Cursor, GitHub Copilot, Claude Desktop, Codex et VS Code des failles permettant l'exécution de commandes, la lecture de fichiers locaux ou l'usurpation d'adresse. Cursor et Copilot sont corrigés, mais Codex reste vulnérable et Microsoft a jugé non valide le signalement visant VS Code.",
+    "tags": [
+     "Vulnérabilités",
+     "Développeurs"
+    ],
+    "title": "Des failles dans cinq outils d'IA pour développeurs, dont Codex et VS Code toujours non corrigés",
+    "url": "https://www.theregister.com/security/2026/10/29/researchers-find-bugs-in-5-ai-developer-tools-with-openai-and-microsoft-flaws-still-unpatched/5306508",
+    "why": "Les postes des développeurs qui préparent tes agents et tes scripts ServiceNow avec ces outils peuvent exposer identifiants d'instance et fichiers de configuration."
+   },
+   {
+    "action": "Teste le jeu de règles de départ sur un agent connecté à une instance de développement via MCP pour voir ce qu'il ajoute aux traces de l'AI Control Tower.",
+    "category": "agents",
+    "follow_up": false,
+    "published": "2026-10-28",
+    "source": "The Register",
+    "summary": "Project Quarry analyse une session d'agent dans son ensemble, y compris les appels d'outils et les échanges MCP, pour repérer des enchaînements suspects, comme la lecture d'un fichier sensible suivie d'un envoi vers l'extérieur. Ses règles ressemblent à celles de YARA ou Snort et le dépôt GitHub fournit des greffons pour Claude Code, Codex et d'autres agents compatibles MCP.",
+    "tags": [
+     "Gouvernance",
+     "MCP"
+    ],
+    "title": "Cisco publie en open source Project Quarry, un moteur de détection des comportements à risque des agents",
+    "url": "https://www.theregister.com/security/2026/10/28/cisco-open-sources-tool-for-detecting-ai-agents-on-hacking-sprees/5305867",
+    "why": "C'est une brique gratuite pour surveiller des enchaînements d'actions d'agents, ce qu'un journal d'appels isolés ne montre pas."
+   },
+   {
+    "action": "Note ces prix et ce besoin matériel pour comparer Large 4 aux modèles proposés dans Now Assist quand un client pose la question de la souveraineté du modèle.",
+    "category": "modeles",
+    "follow_up": false,
+    "published": "2026-10-29",
+    "source": "The Decoder",
+    "summary": "La version finale, dont 52 milliards de paramètres actifs, est sur Hugging Face sous licence MIT modifiée (licence séparée pour la revendre en service cloud) et coûte 0,70 dollar en entrée et 2,10 dollars en sortie par million de jetons. Elle obtient 26 points à l'indice d'Artificial Analysis, contre 32 pour DeepSeek V4.1 Flash, et exige huit GPU B300.",
+    "tags": [
+     "Mistral",
+     "Souveraineté"
+    ],
+    "title": "Mistral publie les poids de Large 4, son modèle de 1 000 milliards de paramètres, à 0,70 dollar le million de jetons",
+    "url": "https://the-decoder.com/paris-based-mistral-releases-le-chonk-a-strong-coding-model-that-still-trails-china-overall/",
+    "why": "Pour un client qui exige un modèle européen hébergeable chez lui, Large 4 devient une option réelle, mais son niveau reste sous les modèles fermés et son hébergement demande un gros parc de GPU."
+   },
+   {
+    "action": "Demande à tes clients hébergés sur VMware si leur fournisseur fait partie des plateformes certifiées par Broadcom et quand tombe leur prochain renouvellement de licences.",
+    "category": "cloud",
+    "follow_up": false,
+    "published": "2026-10-28",
+    "source": "Silicon.fr",
+    "summary": "Selon l'association des clouds européens, les partenaires du nouveau programme Broadcom paient 15 % de plus et, depuis mai 2026, les clients ne peuvent apporter leurs licences que sur des plateformes certifiées par Broadcom. Le CISPE juge VMware Cloud Foundation non conforme à son référentiel de souveraineté, et Bruxelles n'a pas ouvert d'enquête formelle.",
+    "tags": [
+     "VMware",
+     "Licences"
+    ],
+    "title": "Le CISPE dénonce une hausse de 15 % des licences VMware et des restrictions sur le BYOL imposées par Broadcom",
+    "url": "https://www.silicon.fr/cloud-1370/broadcom-clouders-229976",
+    "why": "Les clients dont l'infrastructure tourne sur VMware chez un hébergeur européen voient leurs coûts et leurs options de migration se réduire, ce qui pèse sur les budgets de transformation."
+   },
+   {
+    "action": "Ajoute une estimation des « assists » Now Assist consommés par cas d'usage dans tes prochaines propositions, avec un plafond et un suivi mensuel.",
+    "category": "marche",
+    "follow_up": false,
+    "published": "2026-10-28",
+    "source": "ITPro",
+    "summary": "Selon le rapport State of Enterprise AI 2026 de Cloudera, 89 % des organisations ont réduit ou redessiné leurs projets d'IA cette année à cause du coût des jetons, et 45 % ont déplacé des charges de travail face à la volatilité des prix. Seules 27 % mesurent très précisément le coût de bout en bout de leurs projets, et 23 % estiment que l'IA rapporte plus qu'elle ne coûte.",
+    "tags": [
+     "Coûts",
+     "Adoption"
+    ],
+    "title": "Cloudera : 89 % des entreprises ont réduit ou revu leurs projets d'IA à cause du coût des jetons",
+    "url": "https://itpro.com/technology/artificial-intelligence/ais-price-tag-is-starting-to-shape-its-path-through-the-enterprise-89-percent-of-enterprises-have-scaled-back-ai-deployments-over-token-costs-and-theyre-still-struggling-to-track-spending",
+    "why": "Le coût à l'usage devient un critère de décision avant la valeur fonctionnelle, ce qui touche directement les projets d'agents facturés à la consommation."
+   }
+  ],
+  "kind": "daily",
+  "month": "2026-10",
+  "schema": 1,
+  "seal": "ffb2129082ec73356570",
+  "stats": {
+   "by_category": {
+    "agents": 1,
+    "cloud": 1,
+    "esm": 1,
+    "marche": 1,
+    "modeles": 1,
+    "securite": 1
+   },
+   "items": 6,
+   "top_sources": [
+    {
+     "count": 2,
+     "source": "The Register"
+    },
+    {
+     "count": 1,
+     "source": "ITPro"
+    },
+    {
+     "count": 1,
+     "source": "Silicon.fr"
+    },
+    {
+     "count": 1,
+     "source": "SiliconANGLE"
+    },
+    {
+     "count": 1,
+     "source": "The Decoder"
+    }
+   ]
+  },
+  "week": "2026-W44"
+ },
+ {
+  "context": [
+   {
     "published": "2026-10-28",
     "source": "SiliconANGLE",
     "text": "Alphabet manque les attentes au troisième trimestre, mais Google Cloud dépasse 30,7 milliards de dollars de revenus, plus du double d'il y a un an.",
