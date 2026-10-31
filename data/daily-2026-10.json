@@ -2,6 +2,172 @@
  {
   "context": [
    {
+    "published": "2026-10-30",
+    "source": "SiliconANGLE",
+    "text": "Google, Microsoft, Anthropic et OpenAI soutiennent une entrée robots.txt unique pour bloquer les robots qui collectent des données d'entraînement, avec un projet déposé à l'IETF.",
+    "url": "https://siliconangle.com/2026/10/30/google-anthropic-and-others-to-support-new-ai-crawling-opt-out-standard/"
+   },
+   {
+    "published": "2026-10-30",
+    "source": "The Register",
+    "text": "Accenture fait trier les CV et planifier les entretiens par des agents IA et revendique 28 % de délai de recrutement en moins, la décision finale restant humaine.",
+    "url": "https://www.theregister.com/ai-and-ml/2026/10/30/accenture-ai-agents-are-sifting-through-applicants/5306460"
+   },
+   {
+    "published": "2026-10-30",
+    "source": "The Decoder",
+    "text": "OpenAI réorganise son Model Spec autour de cinq valeurs et précise quand ses agents peuvent agir et comment ils doivent signaler les conséquences de leurs actions.",
+    "url": "https://the-decoder.com/openai-sets-new-behavioral-guidelines-for-ai-models-that-have-already-proven-hard-to-control/"
+   },
+   {
+    "published": "2026-10-28",
+    "source": "Le Monde Informatique",
+    "text": "Microsoft propose des départs volontaires à environ 60 000 salariés aux États-Unis, au Canada, au Royaume-Uni et en Inde, la France n'étant pas citée.",
+    "url": "https://www.lemondeinformatique.fr/actualites/lire-microsoft-propose-des-departs-volontaires-a-60-000-salaries-100878.html"
+   }
+  ],
+  "date": "2026-10-31",
+  "generated_at": "2026-10-31T07:52:52Z",
+  "headline": "ServiceNow branche ses workflows ITSM et CRM sur Gemini Enterprise via MCP et A2A, pendant qu'IBM et Cursor rappellent que l'identité et la chaîne d'approvisionnement des agents restent le point faible.",
+  "items": [
+   {
+    "action": "Repère dans tes comptes ceux qui ont Gemini Enterprise et demande à ServiceNow le modèle de licence des appels Action Fabric entrants, absent du communiqué.",
+    "category": "esm",
+    "follow_up": false,
+    "published": "2026-10-27",
+    "source": "ServiceNow",
+    "summary": "Gemini Enterprise devient une interface d'entrée pour exécuter des actions en plusieurs étapes dans les workflows ServiceNow, via des serveurs MCP et la connectivité A2A d'Action Fabric. ITSM, ITOM, CMDB, CRM et opérations magasin sont disponibles dès maintenant, les télécoms début 2027, avec des connecteurs publiés en plugins sur Google Cloud Marketplace.",
+    "tags": [
+     "ActionFabric",
+     "Gemini",
+     "MCP"
+    ],
+    "title": "ServiceNow et Google Cloud relient les workflows Action Fabric à Gemini Enterprise via MCP et A2A",
+    "url": "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-and-Google-Cloud-advance-agentic-AI-for-industry-workflows/default.aspx",
+    "why": "Chez un client sous Google Workspace, les agents Gemini peuvent déclencher incidents, changements ou requêtes CMDB sans passer par ServiceNow : la gouvernance se joue sur les droits accordés dans Action Fabric."
+   },
+   {
+    "action": "Ajoute IBM Agent Identity à ta grille de comparaison avec AI Passport et AI Control Tower, en notant le mode de facturation par jetons d'accès émis.",
+    "category": "agents",
+    "follow_up": false,
+    "published": "2026-10-30",
+    "source": "Silicon.fr",
+    "summary": "Présenté à TechXchange 2026, Agent Identity ajoute un registre d'identités et un moteur d'autorisation, intégrés à HashiCorp Vault et watsonx Orchestrate, en SaaS dans IBM Verify, version autohébergée prévue en décembre. Facturation par paliers selon les utilisateurs actifs et les jetons d'accès émis, avec une limite souple de 100 jetons par utilisateur et par mois.",
+    "tags": [
+     "IdentitéAgents",
+     "IBM",
+     "Gouvernance"
+    ],
+    "title": "IBM lance Agent Identity, un registre d'identités et un moteur d'autorisation pour les agents IA",
+    "url": "https://www.silicon.fr/data-ia-1372/ibm-plan-controle-agentique-230027",
+    "why": "IBM rejoint ServiceNow (AI Passport), Microsoft et Salesforce sur l'identité des agents, et facture au volume de jetons d'accès : un modèle de coût à comparer quand un client hésite sur où ancrer la gouvernance de ses agents."
+   },
+   {
+    "action": "Vérifie avec les équipes de dev de tes clients qui utilisent Cursor si la version 2.1.313 a été installée jeudi, et fais appliquer les scripts de nettoyage de l'avis de Cursor.",
+    "category": "securite",
+    "follow_up": false,
+    "published": "2026-10-30",
+    "source": "The Register",
+    "summary": "La version 2.1.313 de l'extension Claude Code, modifiée par un attaquant, est restée environ 11 heures jeudi sur la place de marché de Cursor, avec jusqu'à 5 000 développeurs touchés selon Cursor : elle collectait identifiants et IP et installait une porte dérobée SSH. Cursor l'a retirée et publie des scripts de nettoyage, la mise à jour seule ne supprimant pas la persistance.",
+    "tags": [
+     "ChaîneApprovisionnement",
+     "Cursor",
+     "ClaudeCode"
+    ],
+    "title": "Une version piégée de l'extension Claude Code diffusée 11 heures sur la place de marché de Cursor",
+    "url": "https://www.theregister.com/cyber-crime/2026/10/30/anthropic-that-claude-code-extension-compromise-couldnt-be-us/5306682",
+    "why": "Les équipes qui développent des agents ou du code ServiceNow avec des assistants IA dépendent de places de marché d'extensions tierces, devenues un vecteur d'attaque direct sur les postes de développeurs."
+   },
+   {
+    "action": "Si un client prévoit Gemini 4 via Google Cloud, chiffre ses cas d'usage au prix catalogue de 4 et 20 dollars, pas au tarif de lancement.",
+    "category": "modeles",
+    "follow_up": false,
+    "published": "2026-10-28",
+    "source": "The Decoder",
+    "summary": "Gemini 4 Carbon obtient 59 points sur l'Artificial Analysis Intelligence Index v5, contre 50 pour Argon, et se classe premier, à 2 dollars le million de jetons en entrée et 10 en sortie, tarif de lancement à -50 % jusqu'à fin 2026. L'accès est d'abord réservé à des experts en cybersécurité, avant une ouverture progressive aux partenaires puis aux entreprises.",
+    "tags": [
+     "Gemini",
+     "PrixAPI"
+    ],
+    "title": "Google DeepMind sort Gemini 4 Carbon, premier de l'indice Artificial Analysis, deux semaines après Argon",
+    "url": "https://the-decoder.com/google-deepmind-releases-gemini-4-carbon-just-two-weeks-after-argon-with-gains-across-the-board/",
+    "why": "Le meilleur modèle du moment n'est pas encore accessible aux entreprises, et son prix réel double après 2026 : à intégrer dans tout chiffrage de coût d'agents qui s'appuierait sur Gemini."
+   },
+   {
+    "action": "Pour un client qui fait tourner ses agents sur Bedrock, vérifie ses quotas de débit et ses engagements de capacité avant une montée en charge.",
+    "category": "cloud",
+    "follow_up": false,
+    "published": "2026-10-30",
+    "source": "The Register",
+    "summary": "AWS a réalisé un peu moins de 46 milliards de dollars de chiffre d'affaires au troisième trimestre (+39,3 %) et installe un accélérateur IA toutes les 14 secondes environ. Amazon a investi 75,9 milliards sur le trimestre et vise 220 milliards en 2026, Bedrock étant présenté comme le service multimilliardaire à la croissance la plus rapide d'AWS.",
+    "tags": [
+     "AWS",
+     "Bedrock",
+     "Capacité"
+    ],
+    "title": "AWS croît de 39,3 % au troisième trimestre et Amazon prévoit 220 milliards de dollars d'investissements en 2026",
+    "url": "https://www.theregister.com/off-prem/2026/10/30/aws-installs-an-ai-accelerator-every-14-seconds-and-eyes-1-trillion-annual-revenue/5306547",
+    "why": "Avec Azure la veille, les deux hyperscalers confirment une demande IA qui accapare la capacité de calcul, ce qui pèse sur la disponibilité et le prix des modèles appelés par les agents de tes clients."
+   },
+   {
+    "action": "Utilise ces chiffres pour positionner tes propositions agents ServiceNow comme projets IA à valeur mesurée plutôt que comme run ITSM classique.",
+    "category": "marche",
+    "follow_up": false,
+    "published": "2026-10-30",
+    "source": "ChannelNews",
+    "summary": "Capgemini réalise 6,07 milliards d'euros au troisième trimestre (+12,6 %, +4,9 % en France) et relève son objectif à 9 à 9,5 %, avec un ratio commandes sur facturation de 0,89 ; Sopra Steria fait 1,42 milliard (+7,9 %) et relève son objectif organique à 2,5 à 3 %. Numeum ne prévoit que 1 % de croissance pour les ESN en 2026.",
+    "tags": [
+     "ESN",
+     "Capgemini",
+     "SopraSteria"
+    ],
+    "title": "Capgemini et Sopra Steria relèvent leurs objectifs grâce à l'IA, la défense et la cyber, dans un marché des ESN atone",
+    "url": "https://www.channelnews.fr/capgemini-et-sopra-steria-retrouvent-de-lelan-malgre-un-marche-des-esn-atone-159922",
+    "why": "La croissance des ESN françaises se concentre sur l'IA, notamment agentique, la défense et la cybersécurité : c'est là que se jouent les budgets et les staffings face à un marché global quasi plat."
+   }
+  ],
+  "kind": "daily",
+  "month": "2026-10",
+  "schema": 1,
+  "seal": "38df33c42d1628d813ae",
+  "stats": {
+   "by_category": {
+    "agents": 1,
+    "cloud": 1,
+    "esm": 1,
+    "marche": 1,
+    "modeles": 1,
+    "securite": 1
+   },
+   "items": 6,
+   "top_sources": [
+    {
+     "count": 2,
+     "source": "The Register"
+    },
+    {
+     "count": 1,
+     "source": "ChannelNews"
+    },
+    {
+     "count": 1,
+     "source": "ServiceNow"
+    },
+    {
+     "count": 1,
+     "source": "Silicon.fr"
+    },
+    {
+     "count": 1,
+     "source": "The Decoder"
+    }
+   ]
+  },
+  "week": "2026-W44"
+ },
+ {
+  "context": [
+   {
     "published": "2026-10-29",
     "source": "Silicon.fr",
     "text": "Orange Cyberdefense intégrera progressivement une version de Mistral Large 4 spécialisée en cybersécurité, réservée à des partenaires contrôlés, pour les tests d'intrusion et l'analyse d'incidents.",
