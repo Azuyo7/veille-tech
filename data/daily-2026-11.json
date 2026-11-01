@@ -1,0 +1,151 @@
+[
+ {
+  "context": [
+   {
+    "published": "2026-10-30",
+    "source": "The Register",
+    "text": "Une étude de la Productivity Institute de l'université de Manchester relève que les outils d'IA ont augmenté l'activité de code d'environ 240 % mais les mises en production de seulement 30 % environ.",
+    "url": "https://www.theregister.com/ai-and-ml/2026/10/30/ai-projects-not-paying-off-keep-at-it-says-uni-productivity-institute/5306581"
+   }
+  ],
+  "date": "2026-11-01",
+  "generated_at": "2026-11-01T07:54:05Z",
+  "headline": "Gartner voit les agents IA prendre l'astreinte des opérations IT d'ici 2030, pendant qu'un modèle ouvert exploite en quelques heures les failles corrigées mais pas encore déployées.",
+  "items": [
+   {
+    "action": "Avant le prochain cadrage d'agents ITOM ou ITSM, propose au client un plafond de consommation et un suivi par la Control Tower dès le premier lot, chiffres de Gartner à l'appui.",
+    "category": "agents",
+    "follow_up": false,
+    "published": "2026-10-29",
+    "source": "IT for Business",
+    "summary": "Gartner prévoit qu'une organisation sur deux s'appuiera sur des agents IA d'astreinte pour ses opérations IT d'ici 2030, et que 20 % seulement des actions suggérées par l'IA seront encore validées par un humain en 2029, contre 80 % en 2025. Les agents payés à l'usage sans plafond feraient dépasser le budget initial de plus de 50 % par rapport à un prix fixe.",
+    "tags": [
+     "ITOps",
+     "Gartner",
+     "Coûts"
+    ],
+    "title": "Gartner, tendances Infra & Ops 2027 : agents d'astreinte, jetons comme unité de coût et fusion NOC-SOC",
+    "url": "https://www.itforbusiness.fr/tendances-io-2027-gartner-109140",
+    "why": "Ces projections touchent directement le tri d'incidents, la validation des changements et la remédiation que tes clients confient aux agents ServiceNow, ainsi que la façon dont ils budgètent la consommation."
+   },
+   {
+    "action": "Vérifie chez tes clients en auto-hébergé le délai réel d'application des derniers hotfixes ServiceNow et des mises à jour des MID Servers, et propose un objectif en jours plutôt qu'en semaines.",
+    "category": "securite",
+    "follow_up": false,
+    "published": "2026-10-30",
+    "source": "The Decoder",
+    "summary": "Des chercheurs d'Epoch AI ont fait exploiter par GLM 5.3 des failles corrigées dans le code mais pas encore livrées, sur six versions de Firefox, pour environ 1 000 dollars d'API par attaque et 12 heures pour la plus rapide. Aucun fournisseur testé n'a refusé les requêtes, et ce « patch gap » touche tous les logiciels mis à jour rarement.",
+    "tags": [
+     "Correctifs",
+     "Exploits",
+     "ModèlesOuverts"
+    ],
+    "title": "Le modèle ouvert GLM 5.3 a produit seul des chaînes d'exploits complètes pour Firefox en moins de 48 heures",
+    "url": "https://the-decoder.com/open-weight-model-glm-5-3-built-full-firefox-exploit-chains-with-zero-human-input-in-under-48-hours/",
+    "why": "Le délai entre la publication d'un correctif et son installation devient exploitable en quelques heures, ce qui fragilise les clients qui laissent traîner les hotfixes de leurs instances auto-hébergées ou de leurs MID Servers."
+   },
+   {
+    "action": "Sur tes projets d'agents connectés à des bases Oracle, vérifie si l'identité de l'utilisateur final est transmise jusqu'à la base ou si l'agent passe par un compte de service aux droits trop larges.",
+    "category": "securite",
+    "follow_up": false,
+    "published": "2026-10-30",
+    "source": "LeMagIT",
+    "summary": "Avec Deep Trust AI Architecture, la base Oracle réécrit chaque requête d'une IA selon l'identité de l'utilisateur qui la pilote, grâce à des jetons chiffrés, et des « SQL Assertions » bloquent les opérations qui violent une règle métier comme un plafond de dépense. Ces fonctions sont incluses sans licence supplémentaire et arrivent dans les douze prochains mois sur OCI.",
+    "tags": [
+     "Oracle",
+     "Habilitations",
+     "Données"
+    ],
+    "title": "Oracle AI World : la base de données filtre elle-même les requêtes des IA selon l'identité de l'utilisateur",
+    "url": "https://www.lemagit.fr/actualites/366653156/AI-World-2026-Oracle-deplace-la-securite-des-IA-dans-les-donnees",
+    "why": "C'est la même question que posent tes clients pour les agents ServiceNow qui lisent des données Oracle : qui garantit que l'agent ne voit que ce que l'utilisateur a le droit de voir."
+   },
+   {
+    "action": "Si un client développe ses applications ServiceNow avec Copilot, fais-lui chiffrer la consommation de crédits agentiques avant la fin de la remise du 30 novembre.",
+    "category": "modeles",
+    "follow_up": false,
+    "published": "2026-10-30",
+    "source": "LeMagIT",
+    "summary": "Copilot Fusion fait rédiger un brouillon par un petit modèle puis l'escalade vers un plus puissant si besoin, avec selon GitHub jusqu'à 77 % d'économies pour des performances proches de Claude Opus 5.5 Max. Depuis le 28 octobre, GitHub Enterprise inclut Copilot, mais les fonctions agentiques consomment des crédits à 0,01 dollar, remisés de 30 % jusqu'au 30 novembre.",
+    "tags": [
+     "GitHub",
+     "Routage",
+     "Crédits"
+    ],
+    "title": "GitHub lance Copilot Fusion, qui choisit et combine automatiquement les modèles d'IA pour chaque tâche",
+    "url": "https://www.lemagit.fr/actualites/366653133/Copilot-Fusion-GitHub-veut-choisir-et-combiner-les-modeles-dIA-a-la-place-des-developpeurs",
+    "why": "Le routage automatique entre petits et grands modèles devient un levier de coût standard, un argument que tes clients opposeront aux choix de modèles faits pour leurs skills Now Assist."
+   },
+   {
+    "action": "Propose aux clients qui ont SAM Pro ou la CMDB de sortir l'inventaire de leurs hôtes vSphere 8 et de poser un jalon de décision bien avant octobre 2027.",
+    "category": "cloud",
+    "follow_up": false,
+    "published": "2026-10-30",
+    "source": "ChannelNews",
+    "summary": "À VMware Explore 2026, VMware a reconnu que la poussée vers VMware Cloud Foundation convenait mal aux PME et prépare un nouveau vSphere Standard limité à la virtualisation de base, sans date ni prix. Broadcom a arrêté en octobre 2026 les renouvellements et achats de licences vSphere 8, dont le support prend fin en octobre 2027.",
+    "tags": [
+     "VMware",
+     "Licences",
+     "CMDB"
+    ],
+    "title": "VMware prépare un retour de vSphere Standard pour les PME, alors que les licences vSphere 8 ne se renouvellent plus",
+    "url": "https://www.channelnews.fr/vmware-vsphere-standard-le-retour-159938",
+    "why": "La fin de support de vSphere 8 en octobre 2027 oblige tes clients à décider migration ou renouvellement, une décision qui se pilote avec des données fiables de CMDB et de gestion des actifs logiciels."
+   },
+   {
+    "action": "Si un client HRSD demande un agent de présélection, cadre dès l'atelier la validation humaine et la documentation exigées pour un système à haut risque avant de parler fonctionnalités.",
+    "category": "marche",
+    "follow_up": false,
+    "published": "2026-10-30",
+    "source": "The Register",
+    "summary": "Accenture utilise des agents pour filtrer les CV, planifier les entretiens et accompagner l'intégration, et annonce 28 % de délai de recrutement en moins et une montée en compétence des juniors ramenée de six mois à six semaines. L'entreprise affirme qu'un humain décide toujours, alors que des études citées contestent l'équité de ces logiciels.",
+    "tags": [
+     "HRSD",
+     "Recrutement",
+     "AIAct"
+    ],
+    "title": "Accenture confie le tri des candidatures et la planification des entretiens à des agents IA",
+    "url": "https://www.theregister.com/ai-and-ml/2026/10/30/accenture-ai-agents-are-sifting-through-applicants/5306460",
+    "why": "Un grand cabinet affiche des chiffres sur un cas d'usage RH que tes clients HRSD vont vouloir copier, alors que le recrutement est classé à haut risque par l'AI Act."
+   }
+  ],
+  "kind": "daily",
+  "month": "2026-11",
+  "schema": 1,
+  "seal": "2d9ef0cc72e857cb7965",
+  "stats": {
+   "by_category": {
+    "agents": 1,
+    "cloud": 1,
+    "esm": 0,
+    "marche": 1,
+    "modeles": 1,
+    "securite": 2
+   },
+   "items": 6,
+   "top_sources": [
+    {
+     "count": 2,
+     "source": "LeMagIT"
+    },
+    {
+     "count": 1,
+     "source": "ChannelNews"
+    },
+    {
+     "count": 1,
+     "source": "IT for Business"
+    },
+    {
+     "count": 1,
+     "source": "The Decoder"
+    },
+    {
+     "count": 1,
+     "source": "The Register"
+    }
+   ]
+  },
+  "week": "2026-W44"
+ }
+]
