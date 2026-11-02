@@ -1,5 +1,268 @@
 [
  {
+  "end": "2026-11-01",
+  "generated_at": "2026-11-02T08:33:47Z",
+  "headline": "ServiceNow ouvre ses workflows à ChatGPT et Gemini au moment où la Bourse le sanctionne et où le contrôle des agents devient le vrai champ de bataille.",
+  "kind": "weekly",
+  "schema": 1,
+  "seal": "5a9e4b1c9d76450b9dda",
+  "shifts": [],
+  "start": "2026-10-26",
+  "stats": {
+   "by_category": {
+    "agents": 8,
+    "cloud": 5,
+    "esm": 4,
+    "marche": 7,
+    "modeles": 8,
+    "securite": 10
+   },
+   "days": 7,
+   "items": 42,
+   "top_sources": [
+    {
+     "count": 10,
+     "source": "The Register"
+    },
+    {
+     "count": 9,
+     "source": "The Decoder"
+    },
+    {
+     "count": 5,
+     "source": "Silicon.fr"
+    },
+    {
+     "count": 4,
+     "source": "LeMagIT"
+    },
+    {
+     "count": 3,
+     "source": "ChannelNews"
+    },
+    {
+     "count": 3,
+     "source": "SiliconANGLE"
+    }
+   ]
+  },
+  "summary": "Semaine dense pour ServiceNow : un trimestre solide sur l'IA mais une prévision décevante qui fait chuter l'action de 18 %, des connecteurs Action Fabric qui laissent ChatGPT et Gemini agir sur les tickets, et Serval qui lève 150 millions en visant ses clients ITSM. Autour, Salesforce, IBM et SAP outillent l'identité, l'évaluation et l'arrêt des agents, terrain direct d'AI Control Tower. Côté risques, la chaîne d'outils des développeurs IA (LiteLLM, extensions, fichiers d'instructions) est attaquée de toutes parts. Enfin, le coût des jetons devient un critère de décision avant la valeur. Pour toi : la gouvernance des accès externes aux workflows, la preuve de valeur chiffrée et l'hygiène des postes de développement sont les trois sujets à porter chez tes clients.",
+  "themes": [
+   {
+    "analysis": "En deux jours, ServiceNow a publié un plugin MCP pour ChatGPT et des connecteurs MCP et A2A pour Gemini Enterprise, tous deux bâtis sur Action Fabric. SAP fait le même mouvement avec Joule et sa passerelle gouvernée pour agents externes. Les workflows ITSM, ITOM et CMDB deviennent donc pilotables depuis l'assistant que le client a déjà choisi, hors de l'interface ServiceNow. La conséquence pour toi : chaque projet doit désormais cadrer les droits accordés dans Action Fabric, la traçabilité des actions venues d'un agent externe et la façon dont cette consommation est décomptée.",
+    "category": "esm",
+    "refs": [
+     {
+      "date": "2026-10-28",
+      "source": "ServiceNow",
+      "title": "ServiceNow et OpenAI : un plugin pour lancer des workflows ServiceNow depuis ChatGPT et une alliance autour de la Control Tower",
+      "url": "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-and-OpenAI-accelerate-enterprise-AI-from-models-and-operations-to-cybersecurity-and-agentic-development/default.aspx"
+     },
+     {
+      "date": "2026-10-27",
+      "source": "ServiceNow",
+      "title": "ServiceNow et Google Cloud relient les workflows Action Fabric à Gemini Enterprise via MCP et A2A",
+      "url": "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-and-Google-Cloud-advance-agentic-AI-for-industry-workflows/default.aspx"
+     },
+     {
+      "date": "2026-10-27",
+      "source": "SiliconANGLE",
+      "title": "SAP TechEd : les agents Joule passent à MCP et A2A, avec une passerelle gouvernée pour les agents externes",
+      "url": "https://siliconangle.com/2026/10/27/sap-advances-its-autonomous-enterprise-push-with-smarter-governed-joule-agents/"
+     }
+    ],
+    "title": "ServiceNow s'ouvre aux assistants tiers via Action Fabric"
+   },
+   {
+    "analysis": "L'ACV net IA progresse de 65 % et l'objectif annuel monte à 1,7 milliard, mais la prévision du quatrième trimestre manque les attentes et l'action perd 18 %. Le lendemain, Serval lève 150 millions de dollars en désignant ServiceNow comme cible et en citant une bascule ITSM et CMDB en 45 jours. Les deux faits se renforcent : ServiceNow a intérêt à pousser ses licences IA en fin d'année, et les concurrents vendent la rapidité de mise en service. Attends-toi à des renouvellements plus tendus et à des clients qui demandent un délai de valeur comparable.",
+    "category": "esm",
+    "refs": [
+     {
+      "date": "2026-10-28",
+      "source": "SiliconANGLE",
+      "title": "Résultats du troisième trimestre : l'action ServiceNow perd 18 % malgré des revenus IA en hausse",
+      "url": "https://siliconangle.com/2026/10/28/servicenow-shares-drop-18-after-mixed-third-quarter-results/"
+     },
+     {
+      "date": "2026-10-29",
+      "source": "SiliconANGLE",
+      "title": "Serval lève 150 millions de dollars et affirme remplacer ServiceNow chez de grands comptes",
+      "url": "https://siliconangle.com/2026/10/29/serval-raises-150m-at-3b-valuation-to-bring-its-automation-agents-beyond-it"
+     }
+    ],
+    "title": "Pression commerciale sur ServiceNow"
+   },
+   {
+    "analysis": "Salesforce date son scanner, ses évaluations et son coupe-circuit d'Agent Fabric, IBM lance Agent Identity facturé au volume de jetons d'accès, et Cisco publie en open source un moteur qui détecte les enchaînements d'actions à risque. En parallèle, les grandes banques américaines bloquent les agents qui empruntent les identifiants des clients. Le message est cohérent : un agent doit avoir sa propre identité, des droits bornés et une surveillance de session. Chez un client multi-éditeurs, il faudra arbitrer où ancrer cette gouvernance, et AI Control Tower n'est plus seul sur le créneau.",
+    "category": "agents",
+    "refs": [
+     {
+      "date": "2026-10-27",
+      "source": "VentureBeat",
+      "title": "Salesforce date les nouvelles briques d'Agent Fabric : évaluations d'agents, scanner et coupe-circuit automatique",
+      "url": "https://venturebeat.com/orchestration/salesforce-details-cost-controls-and-kill-switch"
+     },
+     {
+      "date": "2026-10-30",
+      "source": "Silicon.fr",
+      "title": "IBM lance Agent Identity, un registre d'identités et un moteur d'autorisation pour les agents IA",
+      "url": "https://www.silicon.fr/data-ia-1372/ibm-plan-controle-agentique-230027"
+     },
+     {
+      "date": "2026-10-22",
+      "source": "Axios",
+      "title": "Les grandes banques américaines bloquent les agents IA qui se connectent avec les identifiants des clients",
+      "url": "https://www.axios.com/2026/10/22/ai-agents-banks-unauthorized-accounts-access"
+     },
+     {
+      "date": "2026-10-28",
+      "source": "The Register",
+      "title": "Cisco publie en open source Project Quarry, un moteur de détection des comportements à risque des agents",
+      "url": "https://www.theregister.com/security/2026/10/28/cisco-open-sources-tool-for-detecting-ai-agents-on-hacking-sprees/5305867"
+     }
+    ],
+    "title": "Identité, évaluation et arrêt des agents : la gouvernance devient concurrentielle"
+   },
+   {
+    "analysis": "Le rapport sur LiteLLM montre qu'une clé jamais révoquée a suffi à piéger une passerelle LLM téléchargée 49 000 fois. La même semaine, une extension Claude Code modifiée a circulé 11 heures sur la place de marché de Cursor, un simple AGENTS.md dans Téléchargements détourne les agents de code, et cinq outils de développement IA présentent des failles, dont certaines non corrigées. Le poste du développeur et ses dépendances deviennent la porte d'entrée vers les identifiants d'instance. Pour tes équipes qui travaillent avec le SDK ServiceNow et des assistants de code, il faut des règles simples : lancer les agents depuis le dossier du projet, contrôler les extensions et révoquer toute clé exposée.",
+    "category": "securite",
+    "refs": [
+     {
+      "date": "2026-10-26",
+      "source": "The Register",
+      "title": "Attaque LiteLLM : tout est parti d'une clé maîtresse publiée sur GitHub en mai et jamais révoquée",
+      "url": "https://www.theregister.com/security/2026/10/26/litellm-supply-chain-attack-started-with-an-exposed-master-key/5305544"
+     },
+     {
+      "date": "2026-10-30",
+      "source": "The Register",
+      "title": "Une version piégée de l'extension Claude Code diffusée 11 heures sur la place de marché de Cursor",
+      "url": "https://www.theregister.com/cyber-crime/2026/10/30/anthropic-that-claude-code-extension-compromise-couldnt-be-us/5306682"
+     },
+     {
+      "date": "2026-10-25",
+      "source": "BleepingComputer",
+      "title": "Agents de code détournés par un fichier AGENTS.md déposé dans le dossier Téléchargements",
+      "url": "https://www.bleepingcomputer.com/news/security/ai-coding-agents-hijacked-using-agentsmd-file-in-downloads-folder/"
+     },
+     {
+      "date": "2026-10-29",
+      "source": "The Register",
+      "title": "Des failles dans cinq outils d'IA pour développeurs, dont Codex et VS Code toujours non corrigés",
+      "url": "https://www.theregister.com/security/2026/10/29/researchers-find-bugs-in-5-ai-developer-tools-with-openai-and-microsoft-flaws-still-unpatched/5306508"
+     }
+    ],
+    "title": "La chaîne d'outils des développeurs IA sous attaque"
+   },
+   {
+    "analysis": "Cloudera indique que 89 % des entreprises ont réduit ou revu leurs projets d'IA à cause du coût des jetons, Gartner que seules 3 % atteignent leurs objectifs de productivité et de coûts, et qu'un agent payé à l'usage sans plafond dépasse son budget de plus de 50 %. En face, les prix baissent : OpenAI consent jusqu'à 90 % de remise aux gros clients et divise par deux le prix de GPT-6.1 Terra. Les prix catalogue ne sont plus une référence et le coût par tâche devient négociable. Tes chiffrages d'agents doivent intégrer un plafond de consommation et une mesure de valeur, pas seulement un volume d'usage.",
+    "category": "marche",
+    "refs": [
+     {
+      "date": "2026-10-28",
+      "source": "ITPro",
+      "title": "Cloudera : 89 % des entreprises ont réduit ou revu leurs projets d'IA à cause du coût des jetons",
+      "url": "https://itpro.com/technology/artificial-intelligence/ais-price-tag-is-starting-to-shape-its-path-through-the-enterprise-89-percent-of-enterprises-have-scaled-back-ai-deployments-over-token-costs-and-theyre-still-struggling-to-track-spending"
+     },
+     {
+      "date": "2026-10-27",
+      "source": "The Register",
+      "title": "Gartner : seules 3 % des organisations atteignent leurs objectifs de productivité et de coûts avec l'IA",
+      "url": "https://www.theregister.com/ai-and-ml/2026/10/27/a-whopping-3-of-boardroom-execs-spy-productivity-and-costs-savings-from-ai/5305675"
+     },
+     {
+      "date": "2026-10-29",
+      "source": "IT for Business",
+      "title": "Gartner, tendances Infra & Ops 2027 : agents d'astreinte, jetons comme unité de coût et fusion NOC-SOC",
+      "url": "https://www.itforbusiness.fr/tendances-io-2027-gartner-109140"
+     },
+     {
+      "date": "2026-10-25",
+      "source": "The Decoder",
+      "title": "OpenAI accorde des remises allant jusqu'à 90 % pour attirer les plus gros clients d'Anthropic",
+      "url": "https://the-decoder.com/openai-offers-discounts-up-to-90-percent-to-poach-anthropics-biggest-customers/"
+     },
+     {
+      "date": "2026-10-26",
+      "source": "The Decoder",
+      "title": "GPT-6.1 Terra : OpenAI divise par deux le prix en entrée de son modèle intermédiaire et se rapproche de ses grands modèles",
+      "url": "https://the-decoder.com/gpt-6-1-terra-halves-openais-api-prices-and-still-gains-ground-on-its-larger-models/"
+     }
+    ],
+    "title": "Le coût des jetons passe avant la valeur"
+   }
+  ],
+  "top": [
+   {
+    "category": "esm",
+    "date": "2026-10-28",
+    "source": "ServiceNow",
+    "title": "ServiceNow et OpenAI : un plugin pour lancer des workflows ServiceNow depuis ChatGPT et une alliance autour de la Control Tower",
+    "url": "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-and-OpenAI-accelerate-enterprise-AI-from-models-and-operations-to-cybersecurity-and-agentic-development/default.aspx",
+    "why": "C'est la première fois qu'un assistant grand public d'entreprise peut agir directement sur les enregistrements ServiceNow, ce qui déplace la question de la gouvernance hors de la plateforme."
+   },
+   {
+    "category": "esm",
+    "date": "2026-10-28",
+    "source": "SiliconANGLE",
+    "title": "Résultats du troisième trimestre : l'action ServiceNow perd 18 % malgré des revenus IA en hausse",
+    "url": "https://siliconangle.com/2026/10/28/servicenow-shares-drop-18-after-mixed-third-quarter-results/",
+    "why": "Le décalage entre croissance IA et prévisions annonce une fin d'année commerciale agressive qui pèsera sur les renouvellements de tes clients."
+   },
+   {
+    "category": "esm",
+    "date": "2026-10-29",
+    "source": "SiliconANGLE",
+    "title": "Serval lève 150 millions de dollars et affirme remplacer ServiceNow chez de grands comptes",
+    "url": "https://siliconangle.com/2026/10/29/serval-raises-150m-at-3b-valuation-to-bring-its-automation-agents-beyond-it",
+    "why": "Un concurrent natif agents et bien financé attaque frontalement le cœur ITSM et CMDB, avec un argument de délai que tes clients vont te renvoyer."
+   },
+   {
+    "category": "securite",
+    "date": "2026-10-26",
+    "source": "The Register",
+    "title": "Attaque LiteLLM : tout est parti d'une clé maîtresse publiée sur GitHub en mai et jamais révoquée",
+    "url": "https://www.theregister.com/security/2026/10/26/litellm-supply-chain-attack-started-with-an-exposed-master-key/5305544",
+    "why": "Le cas d'école de la semaine : une passerelle LLM courante dans les architectures d'agents compromise par une seule négligence de gestion de secrets."
+   },
+   {
+    "category": "marche",
+    "date": "2026-10-28",
+    "source": "ITPro",
+    "title": "Cloudera : 89 % des entreprises ont réduit ou revu leurs projets d'IA à cause du coût des jetons",
+    "url": "https://itpro.com/technology/artificial-intelligence/ais-price-tag-is-starting-to-shape-its-path-through-the-enterprise-89-percent-of-enterprises-have-scaled-back-ai-deployments-over-token-costs-and-theyre-still-struggling-to-track-spending",
+    "why": "Le chiffre qui résume pourquoi chaque projet d'agent doit arriver avec un modèle de coût maîtrisé et mesurable."
+   }
+  ],
+  "watch": [
+   {
+    "text": "Salesforce ouvre en bêta Agent Evals et API Evals en novembre, avant la disponibilité générale d'Agent Fabric en janvier 2027 : à comparer avec AI Control Tower pour tes clients qui ont les deux.",
+    "url": "https://venturebeat.com/orchestration/salesforce-details-cost-controls-and-kill-switch"
+   },
+   {
+    "text": "La remise de 30 % sur les crédits agentiques de GitHub Copilot prend fin le 30 novembre.",
+    "url": "https://www.lemagit.fr/actualites/366653133/Copilot-Fusion-GitHub-veut-choisir-et-combiner-les-modeles-dIA-a-la-place-des-developpeurs"
+   },
+   {
+    "text": "IBM prévoit en décembre la version autohébergée d'Agent Identity.",
+    "url": "https://www.silicon.fr/data-ia-1372/ibm-plan-controle-agentique-230027"
+   },
+   {
+    "text": "Les fonctions de sécurité conjointes ServiceNow et OpenAI arrivent en janvier 2027 : prépare la question des droits et de la traçabilité pour les clients ChatGPT Enterprise.",
+    "url": "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-and-OpenAI-accelerate-enterprise-AI-from-models-and-operations-to-cybersecurity-and-agentic-development/default.aspx"
+   },
+   {
+    "text": "Gemini 4 Carbon reste réservé à des experts en sécurité et son tarif de lancement à -50 % expire fin 2026 : à intégrer dans tout chiffrage d'agents sur Gemini.",
+    "url": "https://the-decoder.com/google-deepmind-releases-gemini-4-carbon-just-two-weeks-after-argon-with-gains-across-the-board/"
+   },
+   {
+    "text": "Le support de vSphere 8 prend fin en octobre 2027 et les renouvellements sont déjà arrêtés : les décisions de migration de tes clients se prennent maintenant, données CMDB et SAM à l'appui.",
+    "url": "https://www.channelnews.fr/vmware-vsphere-standard-le-retour-159938"
+   }
+  ],
+  "week": "2026-W44"
+ },
+ {
   "end": "2026-10-25",
   "generated_at": "2026-10-26T08:26:09Z",
   "headline": "La gouvernance des agents devient le champ de bataille des éditeurs, au moment où les incidents prouvent que la supervision et les identités d'application sont le maillon faible.",

@@ -3,6 +3,127 @@
   "context": [
    {
     "published": "2026-10-30",
+    "source": "SiliconANGLE",
+    "text": "Google, Microsoft, Anthropic et OpenAI soutiendront une extension de robots.txt permettant de bloquer d'une seule ligne tous les robots qui collectent des données d'entraînement ; un projet a été déposé à l'IETF.",
+    "url": "https://siliconangle.com/2026/10/30/google-anthropic-and-others-to-support-new-ai-crawling-opt-out-standard/"
+   },
+   {
+    "published": "2026-10-30",
+    "source": "Silicon.fr",
+    "text": "L'Assemblée nationale a adopté à 11 voix contre 10 un amendement au budget 2027 créant une taxe de 0,055 euro par gigaoctet envoyé aux abonnés français, visant surtout Google, Meta, Amazon, Netflix et Akamai ; son maintien dépend du vote de la partie recettes.",
+    "url": "https://www.silicon.fr/business-1367/taxe-bande-passante-230030"
+   },
+   {
+    "published": "2026-10-30",
+    "source": "ITPro",
+    "text": "Alibaba Cloud ouvre sa première région de cloud public aux Pays-Bas, avec deux data centers à Amsterdam et plus de 80 services, dont des outils de sécurité pour agents IA.",
+    "url": "https://www.itpro.com/cloud/cloud-computing/alibaba-clouds-european-push-continues-with-first-public-cloud-region-in-the-netherlands"
+   }
+  ],
+  "date": "2026-11-02",
+  "generated_at": "2026-11-02T07:56:04Z",
+  "headline": "OpenAI passe ChatGPT Business à un quota de jetons partagé dès décembre, pendant que Mistral Large 4 entre dans les offres d'Orange Cyberdefense et que la charge des agents fait exploser l'infrastructure de GitHub.",
+  "items": [
+   {
+    "action": "Avant décembre, demande aux clients concernés quels usages intensifs tournent sur ChatGPT Business et prépare une comparaison de coût avec les assists Now Assist pour les mêmes cas.",
+    "category": "modeles",
+    "follow_up": false,
+    "published": "2026-11-01",
+    "source": "The Decoder",
+    "summary": "Selon une page d'aide mise à jour par OpenAI, les offres Plus, Pro et Business partageront à partir de décembre un seul quota de jetons entre ChatGPT et Codex, consommé plus vite par les modèles complexes, les modèles Instant restant hors quota. Une fois la limite atteinte, il faudra attendre la remise à zéro, changer d'offre ou acheter des crédits.",
+    "tags": [
+     "OpenAI",
+     "Tarifs",
+     "ChatGPT"
+    ],
+    "title": "ChatGPT : un quota de jetons commun à ChatGPT et Codex pour les offres Plus, Pro et Business dès décembre",
+    "url": "https://the-decoder.com/openais-upcoming-chat-and-work-merger-in-chatgpt-signals-the-end-of-all-you-can-prompt-pricing/",
+    "why": "Chez tes clients qui utilisent ChatGPT Business à côté de Now Assist, le coût de l'IA générative passe d'un forfait à une consommation mesurée, ce qui change la comparaison des coûts entre les deux."
+   },
+   {
+    "action": "Si un client suit déjà ses incidents de sécurité dans ServiceNow avec Orange Cyberdefense comme prestataire, demande-lui s'il fait partie des premiers déploiements et quelles données d'incident seront transmises au modèle.",
+    "category": "securite",
+    "follow_up": false,
+    "published": "2026-10-29T16:01",
+    "source": "Silicon.fr",
+    "summary": "Orange Cyberdefense ajoute une variante de Mistral Large 4 spécialisée en tests d'intrusion, évaluation de vulnérabilités et investigation d'incidents, réservée à des partenaires sélectionnés et exécutée en Europe. Le déploiement sera progressif, d'abord chez certains clients entreprises et publics, sans date ni conditions financières.",
+    "tags": [
+     "Mistral",
+     "Cybersécurité",
+     "Souveraineté"
+    ],
+    "title": "Orange Cyberdefense intègre une version cyber de Mistral Large 4 à ses offres de sécurité",
+    "url": "https://www.silicon.fr/cybersecurite-1371/orange-cyberdefense-integre-une-version-cyber-de-mistral-large-4-a-ses-offres-230021",
+    "why": "Tes clients publics et sensibles disposent désormais d'un fournisseur français de sécurité qui s'appuie sur un modèle européen à poids ouverts, un argument face aux offres cyber dopées à l'IA des éditeurs américains."
+   },
+   {
+    "action": "Sur tes projets d'agents ServiceNow appelant des API ou d'autres agents, ajoute au cadrage une estimation du volume d'appels par agent et vérifie les limites de débit des API de l'instance.",
+    "category": "agents",
+    "follow_up": false,
+    "published": "2026-10-29",
+    "source": "LeMagIT",
+    "summary": "Les agents génèrent plus de 40 % des pull requests depuis septembre, contre 17 % en mars 2026, et l'activité de GitHub a environ triplé en deux ans, avec 45,4 milliards de tâches GitHub Actions sur un an. GitHub a ajouté 4 millions de vCPU en 2026, revu le verrouillage des écritures Git et vise la fin de sa migration vers Azure au premier semestre 2027.",
+    "tags": [
+     "GitHub",
+     "Agents",
+     "Capacité"
+    ],
+    "title": "GitHub : les agents produisent plus de 40 % des pull requests et forcent la refonte de la plateforme",
+    "url": "https://www.lemagit.fr/actualites/366652921/Face-a-la-surcharge-de-lIA-agentique-GitHub-accelere-la-rearchitecture-de-sa-plateforme",
+    "why": "C'est un retour chiffré sur ce que la montée des agents fait subir à une plateforme : un volume d'appels multiplié bien au-delà des prévisions faites pour des utilisateurs humains."
+   },
+   {
+    "action": "Pour un client sous contrat OCI qui envisage d'héberger ses propres modèles, note 2027 comme date de disponibilité et attends les régions annoncées avant d'en faire une option.",
+    "category": "cloud",
+    "follow_up": false,
+    "published": "2026-10-28T16:04",
+    "source": "Silicon.fr",
+    "summary": "Annoncé à Oracle AI World, l'accord permettra aux clients d'OCI d'utiliser les TPU 8t (entraînement) et 8i (inférence, agents) de Google sans passer par Google Cloud, Oracle fournissant l'alimentation, le refroidissement et le réseau. Prix, régions et premiers clients ne sont pas encore connus.",
+    "tags": [
+     "Oracle",
+     "Google",
+     "GPU"
+    ],
+    "title": "Oracle proposera les TPU de Google sur OCI dès 2027",
+    "url": "https://www.silicon.fr/cloud-1370/oracle-accueillera-les-tpu-de-google-des-2027-229981",
+    "why": "Les accélérateurs de Google sortent de Google Cloud, ce qui élargit le choix d'infrastructure d'inférence pour les clients déjà engagés chez Oracle."
+   }
+  ],
+  "kind": "daily",
+  "month": "2026-11",
+  "schema": 1,
+  "seal": "a32e6eb4dce38bb28548",
+  "stats": {
+   "by_category": {
+    "agents": 1,
+    "cloud": 1,
+    "esm": 0,
+    "marche": 0,
+    "modeles": 1,
+    "securite": 1
+   },
+   "items": 4,
+   "top_sources": [
+    {
+     "count": 2,
+     "source": "Silicon.fr"
+    },
+    {
+     "count": 1,
+     "source": "LeMagIT"
+    },
+    {
+     "count": 1,
+     "source": "The Decoder"
+    }
+   ]
+  },
+  "week": "2026-W45"
+ },
+ {
+  "context": [
+   {
+    "published": "2026-10-30",
     "source": "The Register",
     "text": "Une étude de la Productivity Institute de l'université de Manchester relève que les outils d'IA ont augmenté l'activité de code d'environ 240 % mais les mises en production de seulement 30 % environ.",
     "url": "https://www.theregister.com/ai-and-ml/2026/10/30/ai-projects-not-paying-off-keep-at-it-says-uni-productivity-institute/5306581"
