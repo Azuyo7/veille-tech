@@ -2,6 +2,145 @@
  {
   "context": [
    {
+    "published": "2026-11-02",
+    "source": "The Decoder",
+    "text": "Anthropic repasse en perte avant son introduction en Bourse : environ 17 milliards de dollars de revenus sur le trimestre, mais une perte nette de 23,3 milliards et 895 milliards d'engagements de calcul et de data centers.",
+    "url": "https://the-decoder.com/anthropic-grows-revenue-twelvefold-but-posts-23-billion-loss/"
+   },
+   {
+    "published": "2026-10-30",
+    "source": "Silicon.fr",
+    "text": "Projet de loi de finances 2027 : l'Assemblée adopte de justesse un amendement taxant les gros émetteurs de trafic à 0,055 euro par Go, visant notamment Google, Meta, Amazon, Netflix et Akamai.",
+    "url": "https://www.silicon.fr/business-1367/taxe-bande-passante-230030"
+   }
+  ],
+  "date": "2026-11-03",
+  "generated_at": "2026-11-03T07:54:31Z",
+  "headline": "Les attaquants visent désormais les clés d'API des modèles et pilotent des agents offensifs : la sécurité des accès IA devient un sujet de facturation autant que de cyber.",
+  "items": [
+   {
+    "action": "Vérifie chez tes clients que chaque clé de modèle est limitée à un modèle et un environnement, qu'un plafond de dépense existe et que l'activation d'un service IA non prévu déclenche une alerte.",
+    "category": "securite",
+    "follow_up": false,
+    "published": "2026-11-02",
+    "source": "SiliconANGLE",
+    "summary": "Selon Mandiant et le Google Threat Intelligence Group, des attaquants détournent clés d'API, comptes de service et points d'accès exposés pour consommer des modèles aux frais des victimes, jusqu'à 1 million de dollars de facture. Une faille de LiteLLM (CVE-2026-40217) a aussi permis de transformer des clés virtuelles en clés d'administration.",
+    "tags": [
+     "LLMjacking",
+     "ClésAPI",
+     "Coûts"
+    ],
+    "title": "LLMjacking : Google observe des attaquants qui génèrent plus de 100 000 dollars de facture cloud par jour avec des accès IA volés",
+    "url": "https://siliconangle.com/2026/11/02/google-finds-llmjacking-attackers-running-up-100k-a-day-in-fraudulent-cloud-charges",
+    "why": "Les agents que tu déploies reposent sur des clés d'API et des passerelles de modèles, et un vol se traduit en quelques heures par une facture de jetons hors de contrôle."
+   },
+   {
+    "action": "Fais le point avec tes clients sur l'exposition de leurs portails de support et de leurs instances de test, et sur le délai réel d'application des correctifs.",
+    "category": "securite",
+    "follow_up": false,
+    "published": "2026-11-02",
+    "source": "BleepingComputer",
+    "summary": "CrowdStrike attribue au groupe Vapor Panda une campagne lancée le 17 octobre avec ARTEX, un cadre multi-agents de test d'intrusion, contre plus de 200 organisations dans 14 pays, dont au moins 9 compromises. Chez le DIVD néerlandais, un agent a obtenu les droits root en 12 minutes via une faille inédite du logiciel de support Zammad.",
+    "tags": [
+     "AgentsOffensifs",
+     "Zammad",
+     "CrowdStrike"
+    ],
+    "title": "Des pirates chinois mènent des attaques automatisées avec le cadre d'agents ARTEX contre plus de 200 organisations",
+    "url": "https://bleepingcomputer.com/news/security/chinese-hackers-use-artex-ai-in-automated-attacks-against-200-orgs",
+    "why": "Un outil de ticketing exposé sur Internet a servi de porte d'entrée à un agent offensif, ce qui rappelle que les portails de service sont une cible de premier rang."
+   },
+   {
+    "action": "Cite ce cas à tes clients pour justifier un chantier de qualité et de définition des données avant de brancher un agent sur leurs tables ServiceNow.",
+    "category": "agents",
+    "follow_up": false,
+    "published": "2026-11-02",
+    "source": "Silicon.fr",
+    "summary": "Claude, branché directement sur l'entrepôt Snowflake, donnait des réponses peu fiables faute de définitions de métriques communes : Qonto a basculé vers une couche sémantique (Omni) qui découpe chaque question en métriques prédéfinies. Le chantier a mobilisé l'équipe data plusieurs mois, avec un objectif de 90 % de questions couvertes fin 2026.",
+    "tags": [
+     "RetourExpérience",
+     "Données",
+     "CoucheSémantique"
+    ],
+    "title": "Qonto raconte son passage du text-to-SQL à l'analyse agentique, et pourquoi il a dû refondre ses modèles de données",
+    "url": "https://www.silicon.fr/data-ia-1372/qonto-analyse-agentique-230039",
+    "why": "C'est un retour d'expérience français qui montre que la fiabilité d'un agent dépend d'abord de définitions de données gouvernées, exactement comme pour un agent qui s'appuie sur la CMDB ou les données de service."
+   },
+   {
+    "action": "Quand tu proposes la création d'agents par les métiers, prépare le cadre de gouvernance (qui crée, qui valide, qui passe en production) avant de parler des fonctionnalités.",
+    "category": "marche",
+    "follow_up": false,
+    "published": "2026-11-02",
+    "source": "The Decoder",
+    "summary": "Selon Bloomberg, la banque a limité l'accès à Claude Code et GitHub Copilot aux seuls ingénieurs, alors que des traders et banquiers s'en servaient depuis des mois. Un porte-parole invoque la productivité et la gestion des risques, et déclare la phase d'expérimentation terminée.",
+    "tags": [
+     "Gouvernance",
+     "Finance",
+     "CitizenDev"
+    ],
+    "title": "Goldman Sachs retire les outils de code IA à ses traders et banquiers pour les réserver aux ingénieurs",
+    "url": "https://the-decoder.com/goldman-sachs-pulls-ai-coding-tools-from-traders-and-bankers/",
+    "why": "Un grand compte financier referme le développement par des non-informaticiens, ce qui pèse sur les discours de création d'agents par les métiers sans garde-fous."
+   },
+   {
+    "action": "Signale OpenVDDK aux équipes infrastructure de tes clients en sortie de VMware, en précisant qu'il n'est ni audité ni supporté par VMware.",
+    "category": "cloud",
+    "follow_up": false,
+    "published": "2026-11-03",
+    "source": "The Register",
+    "summary": "Depuis août, VMware réserve le téléchargement de VDDK, utilisé par les outils de sauvegarde et de migration, à ses partenaires. L'architecte Andrija Panić publie OpenVDDK, une réécriture sous licence Apache en lecture seule, testée de vSphere 6.7 à 9.1.1, déjà utilisée avec Forklift, OpenShift et Proxmox selon des retours non audités.",
+    "tags": [
+     "VMware",
+     "Migration",
+     "OpenSource"
+    ],
+    "title": "OpenVDDK, une alternative libre au kit de disques virtuels que VMware réserve à ses partenaires, pour sortir de vSphere",
+    "url": "https://theregister.com/virtualization/2026/11/03/architect-creates-open-source-replacement-for-vm-migration-tool-vmware-has-hidden/5307124",
+    "why": "Les clients qui quittent VMware pour d'autres plateformes retrouvent une option de migration, ce qui touche directement les inventaires et les plans de migration suivis dans la CMDB."
+   }
+  ],
+  "kind": "daily",
+  "month": "2026-11",
+  "schema": 1,
+  "seal": "d3b70e5e2c43113f3aea",
+  "stats": {
+   "by_category": {
+    "agents": 1,
+    "cloud": 1,
+    "esm": 0,
+    "marche": 1,
+    "modeles": 0,
+    "securite": 2
+   },
+   "items": 5,
+   "top_sources": [
+    {
+     "count": 1,
+     "source": "BleepingComputer"
+    },
+    {
+     "count": 1,
+     "source": "Silicon.fr"
+    },
+    {
+     "count": 1,
+     "source": "SiliconANGLE"
+    },
+    {
+     "count": 1,
+     "source": "The Decoder"
+    },
+    {
+     "count": 1,
+     "source": "The Register"
+    }
+   ]
+  },
+  "week": "2026-W45"
+ },
+ {
+  "context": [
+   {
     "published": "2026-10-30",
     "source": "SiliconANGLE",
     "text": "Google, Microsoft, Anthropic et OpenAI soutiendront une extension de robots.txt permettant de bloquer d'une seule ligne tous les robots qui collectent des données d'entraînement ; un projet a été déposé à l'IETF.",
