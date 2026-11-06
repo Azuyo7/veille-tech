@@ -2,6 +2,300 @@
  {
   "context": [
    {
+    "published": "2026-11-04",
+    "source": "The Decoder",
+    "text": "OpenAI rachète Pierre Computer Company, dont les bibliothèques font déjà tourner Codex, pour adapter le stockage de code Git aux agents ; l'accord attend le feu vert des régulateurs.",
+    "url": "https://the-decoder.com/openai-acquires-pierre-computer-company-to-make-git-keep-up-with-ai-coding-agents/"
+   },
+   {
+    "published": "2026-11-03",
+    "source": "The Register",
+    "text": "Le think tank CNAS publie un rapport sur les « agents souverains », hors de tout contrôle humain, et recommande coupe-circuits, bancs d'essai isolés et déclaration obligatoire des incidents d'IA.",
+    "url": "https://www.theregister.com/security/2026/11/03/ai-policy-wonks-declare-sovereign-agents-a-threat-to-civilization/5307354"
+   },
+   {
+    "published": "2026-11-02",
+    "source": "Silicon.fr",
+    "text": "La Cour des comptes juge le pilotage de France 2030 (54 Md€) handicapé par un outil informatique incomplet, opérationnel seulement depuis mars 2025 et sans DSI dédiée.",
+    "url": "https://www.silicon.fr/business-1367/france-2030-pilotage-outil-informatique-230044"
+   }
+  ],
+  "date": "2026-11-05",
+  "generated_at": "2026-11-05T07:56:00Z",
+  "headline": "Freshworks franchit le milliard de dollars de revenu récurrent en poussant ITSM et gestion des actifs face à ServiceNow, pendant que la fraude chez Crédit Mutuel Arkéa et un nouveau banc d'essai rappellent les limites des agents en exploitation.",
+  "items": [
+   {
+    "action": "Prépare un argumentaire ITSM plus ITAM (CMDB, SAM, HAM) chiffré pour les clients en renouvellement à qui Freshservice sera proposé comme alternative moins chère.",
+    "category": "esm",
+    "follow_up": false,
+    "published": "2026-11-04",
+    "source": "diginomica",
+    "summary": "Au troisième trimestre, Freshworks réalise 245 millions de dollars de chiffre d'affaires (+14 %) et 18 millions de bénéfice net, dont 588 millions de revenu récurrent pour Freshservice et les services aux employés (+22 %). Deux tiers de ses 50 plus gros contrats associent ITSM et gestion des actifs, renforcée par les rachats de Torii et Robusta.",
+    "tags": [
+     "Freshworks",
+     "Concurrence",
+     "ITAM"
+    ],
+    "title": "Freshworks dépasse le milliard de dollars de revenu récurrent annuel, porté par son offre services aux employés",
+    "url": "https://diginomica.com/ex-first-freshworks-passes-arr-benchmark-ahead-schedule-profits-rise",
+    "why": "Freshworks monte en gamme sur le couple ITSM et ITAM que tu défends chez tes clients, et cite un grand réseau de concessionnaires américain qui a quitté son outil en place après près de dix ans."
+   },
+   {
+    "action": "Chez tes clients bancaires, vérifie que le processus d'incident majeur dans ServiceNow couvre la notification aux autorités de supervision et la traçabilité des suspensions d'opérations.",
+    "category": "securite",
+    "follow_up": false,
+    "published": "2026-11-04",
+    "source": "Le Monde Informatique",
+    "summary": "Le groupe, qui inclut Fortuneo, a confirmé le 4 novembre une attaque ayant permis des opérations frauduleuses, environ 118 millions d'euros selon Le Télégramme, montant non confirmé par la banque. Des opérations ont été suspendues puis reprises, les avoirs clients ne sont pas touchés selon la banque et le mode opératoire reste inconnu.",
+    "tags": [
+     "Banque",
+     "Fraude",
+     "DORA"
+    ],
+    "title": "Crédit Mutuel Arkéa reconnaît une cyberattaque ayant permis des opérations frauduleuses, estimées à 118 millions d'euros par la presse",
+    "url": "https://www.lemondeinformatique.fr/actualites/lire-credit-mutuel-arkea-victime-d-un-piratage-de-118-meteuro-100910.html",
+    "why": "Une fraude de cette taille dans une banque française va relancer les exigences DORA sur la gestion des incidents majeurs et le contrôle des opérations sensibles chez tes clients financiers."
+   },
+   {
+    "action": "Dans tes cadrages d'agents ITOM, garde une validation humaine avant toute action de modification et utilise ces chiffres pour justifier ce garde-fou auprès du client.",
+    "category": "agents",
+    "follow_up": false,
+    "published": "2026-11-04",
+    "source": "The Decoder",
+    "summary": "Ce banc d'essai libre de l'université du Michigan mesure des agents sur des tâches DevOps réelles : Claude Fable 5.1 en réussit 60 % et GPT-6 Astra 53 %. Environ 80 % des échecs viennent d'un mauvais raisonnement (périmètre mal évalué, services oubliés, arrêt prématuré) et 20 % d'actions erronées, parfois irréversibles.",
+    "tags": [
+     "AIOps",
+     "Évaluation",
+     "Remédiation"
+    ],
+    "title": "CloudOpsBench : sur 45 tâches d'exploitation AWS, le meilleur agent IA n'en réussit que 60 %",
+    "url": "https://the-decoder.com/new-open-source-benchmark-reveals-reasoning-as-the-biggest-bottleneck-for-ai-in-cloud-operations/",
+    "why": "C'est une mesure indépendante qui montre qu'un agent de remédiation laissé seul sur l'infrastructure se trompe encore une fois sur deux ou presque, avec un risque d'action irréversible."
+   },
+   {
+    "action": "Recense les clients qui utilisent Apptio, Cloudability ou Terraform et clarifie avec eux quel outil portera la priorisation des correctifs et l'orchestration des opérations.",
+    "category": "agents",
+    "follow_up": false,
+    "published": "2026-11-03",
+    "source": "LeMagIT",
+    "summary": "IBM a présenté les nouveautés de Concert, sa suite AIOps à base d'agents, et prévoit d'héberger ses produits d'automatisation sur une même plateforme dès 2027, avec facturation, métriques et identité communes. Le graphe de connaissances Infragraph, qui priorise les correctifs selon une preuve d'exploitabilité, doit être accessible à tous en décembre.",
+    "tags": [
+     "IBM",
+     "AIOps",
+     "ITOM"
+    ],
+    "title": "IBM regroupera Concert, Apptio, Cloudability et Terraform dans une console unique d'automatisation IT à partir de 2027",
+    "url": "https://www.lemagit.fr/actualites/366653492/IBM-Automation-20-vers-une-console-unifiee-pour-lautomatisation-IT",
+    "why": "IBM se pose en plateforme unique d'opérations IT pilotée par agents, sur le même terrain que l'ITOM et la gestion des vulnérabilités de ServiceNow chez les clients déjà équipés d'Apptio ou de Terraform."
+   },
+   {
+    "action": "Demande aux équipes qui hébergent sur GitHub des outils ou applications liés à tes projets ServiceNow de vérifier avant le 2 décembre si leurs workflows utilisent pull_request_target.",
+    "category": "securite",
+    "follow_up": false,
+    "published": "2026-11-03",
+    "source": "LeMagIT",
+    "summary": "Pour contrer les attaques « Pwn Request », qui ont servi à infecter environ un millier de paquets npm via Shai-Hulud, GitHub coupera par défaut l'accès à pull_request_target le 2 décembre, sauf autorisation explicite de l'administrateur. L'éditeur ajoute des fichiers de verrouillage des dépendances de workflows et teste un pare-feu des flux sortants pour les exécuteurs Linux.",
+    "tags": [
+     "GitHub",
+     "CI/CD",
+     "ChaîneLogicielle"
+    ],
+    "title": "GitHub désactivera par défaut pull_request_target sur les dépôts publics le 2 décembre",
+    "url": "https://www.lemagit.fr/actualites/366653454/CI-CD-GitHub-decline-son-arsenal-pour-limiter-les-attaques-de-type-Pwn-Request",
+    "why": "Les pipelines publics qui reposent sur ce déclencheur casseront à cette date, et GitHub prévient que ces changements ne sont pas rétrocompatibles."
+   },
+   {
+    "action": "Garde ces chiffres pour ta prochaine discussion de staffing et pousse en interne un parcours de montée en compétence des juniors sur les agents et Now Assist.",
+    "category": "marche",
+    "follow_up": false,
+    "published": "2026-11-04T20:30",
+    "source": "InformatiqueNews",
+    "summary": "Selon le 16e Top 250 EY-Numeum, 51 % des éditeurs français prévoient d'augmenter leurs effectifs en 2026 contre 62 % un an plus tôt, 17 % veulent recruter plus de juniors et 22 % moins, alors que 96 % utilisent des assistants de génération de code. 80 % ont intégré des fonctions d'IA dans leurs offres et 64 % veulent renforcer leurs équipes data et IA.",
+    "tags": [
+     "Emploi",
+     "Numeum",
+     "Compétences"
+    ],
+    "title": "Top 250 des éditeurs : seuls 17 % prévoient de recruter davantage de juniors en 2026",
+    "url": "https://www.informatiquenews.fr/top-250-editeurs-2026-emploi-recrutement-juniors-251531",
+    "why": "Le recul du recrutement de juniors au profit de profils data et IA touche aussi le modèle des ESN, où les jeunes consultants ServiceNow apprennent sur les projets."
+   }
+  ],
+  "kind": "daily",
+  "month": "2026-11",
+  "schema": 1,
+  "seal": "0fe99e7575be3ff97e91",
+  "stats": {
+   "by_category": {
+    "agents": 2,
+    "cloud": 0,
+    "esm": 1,
+    "marche": 1,
+    "modeles": 0,
+    "securite": 2
+   },
+   "items": 6,
+   "top_sources": [
+    {
+     "count": 2,
+     "source": "LeMagIT"
+    },
+    {
+     "count": 1,
+     "source": "diginomica"
+    },
+    {
+     "count": 1,
+     "source": "InformatiqueNews"
+    },
+    {
+     "count": 1,
+     "source": "Le Monde Informatique"
+    },
+    {
+     "count": 1,
+     "source": "The Decoder"
+    }
+   ]
+  },
+  "week": "2026-W45"
+ },
+ {
+  "context": [
+   {
+    "published": "2026-11-03",
+    "source": "The Register",
+    "text": "Revolut dit avoir divisé par dix le coût de ses outils de code IA en auto-hébergeant GLM-5.3 sur 56 GPU B200 pour environ 2 000 ingénieurs, en gardant des modèles commerciaux pour la vision.",
+    "url": "https://www.theregister.com/ai-and-ml/2026/11/03/british-fintech-revolut-slashes-ai-coding-costs-10x-by-cutting-out-claude-and-going-self-hosted/5307345"
+   },
+   {
+    "published": "2026-11-03",
+    "source": "LeMagIT",
+    "text": "Divalto lance Divalto one AI, plateforme d'agents intégrée à ses ERP et CRM pour PME et ETI, dont les agents héritent des droits de l'utilisateur et demandent validation en cas de doute.",
+    "url": "https://www.lemagit.fr/actualites/366653436/Divalto-lance-sa-plateforme-dagents-IA-pour-ERP-et-CRM"
+   },
+   {
+    "published": "2026-11-02",
+    "source": "The Register",
+    "text": "SUSE supprime environ 10 % de ses effectifs, son PDG invoquant l'automatisation et l'IA dans un mémo interne.",
+    "url": "https://www.theregister.com/software/2026/11/02/suse-to-cut-one-in-ten-employees-because-of-ai/5306950"
+   }
+  ],
+  "date": "2026-11-04",
+  "generated_at": "2026-11-04T07:56:13Z",
+  "headline": "Pas d'annonce ServiceNow ce jour : Gartner prédit que les modèles ouverts porteront 90 % des étapes des agents, le NCSC crée une unité dédiée aux agents incontrôlés et Oracle passe à la facturation par tâche IA.",
+  "items": [
+   {
+    "action": "Sur ton prochain cadrage d'agent, classe les étapes en routinières ou en raisonnement et note celles qui pourraient passer sur un modèle moins cher via BYO LLM.",
+    "category": "modeles",
+    "follow_up": false,
+    "published": "2026-11-03",
+    "source": "The Register",
+    "summary": "Selon un rapport de Gartner, neuf étapes sur dix d'un workflow d'agent sont routinières et un modèle ouvert peut les traiter jusqu'à 20 fois moins cher qu'un modèle de pointe, plutôt 5 à 6 fois en pratique à cause des relances. Gartner prévoit que 90 % de ces étapes tourneront sur des modèles ouverts d'ici 2030, la maîtrise des données étant la vraie motivation.",
+    "tags": [
+     "Gartner",
+     "ModèlesOuverts",
+     "Coûts"
+    ],
+    "title": "Gartner : les modèles ouverts peuvent traiter 90 % des étapes des workflows agentiques pour une fraction du coût d'un modèle de pointe",
+    "url": "https://www.theregister.com/ai-and-ml/2026/11/03/open-models-can-do-90-of-agentic-work-at-a-twentieth-of-the-cost-of-a-frontier-llm-gartner/5307132",
+    "why": "Tes clients vont demander pourquoi chaque étape de leurs agents passe par un modèle de pointe facturé à la consommation, alors que l'essentiel du travail est répétitif."
+   },
+   {
+    "action": "Vérifie que les plans de réponse à incident de tes clients prévoient la suspension rapide d'un agent ServiceNow et la révocation de ses identifiants d'intégration.",
+    "category": "securite",
+    "follow_up": false,
+    "published": "2026-11-03",
+    "source": "The Register",
+    "summary": "Le NCSC juge très probable qu'un malware piloté par l'IA serve à un rançongiciel contre une infrastructure critique britannique d'ici 2028, et n'exclut pas un attaquant autonome hors de contrôle. Le Royaume-Uni finance une National Agentic Security Unit (40 M£) pour les agents incontrôlés et une défense agentique, Cyber Shield (60 M£).",
+    "tags": [
+     "NCSC",
+     "Rançongiciel",
+     "Agents"
+    ],
+    "title": "Le NCSC britannique prévoit des rançongiciels dopés à l'IA contre les infrastructures critiques d'ici 2028 et crée une unité dédiée aux agents incontrôlés",
+    "url": "https://www.theregister.com/security/2026/11/03/britain-on-notice-ai-powered-ransomware-attacks-to-arrive-by-2028/5307200",
+    "why": "Un régulateur européen traite désormais l'agent qui dérape comme un scénario d'incident à part entière, ce qui renforce la demande de coupe-circuit et de traçabilité sur les agents de tes clients."
+   },
+   {
+    "action": "Chez tes clients Oracle Fusion et ServiceNow, recense les processus où des agents des deux éditeurs pourraient être facturés pour la même tâche et prévois qui l'exécute.",
+    "category": "agents",
+    "follow_up": true,
+    "published": "2026-10-29",
+    "source": "The Register",
+    "summary": "Fait nouveau après l'annonce de Fusion Claw : lors de sa journée investisseurs, Oracle a annoncé des frais à l'usage, comptés en unités d'IA consommées quand les agents accomplissent le travail, en plus des abonnements, sans tarif unitaire publié. L'éditeur dit pouvoir ainsi augmenter ses revenus sans vendre de licences supplémentaires.",
+    "tags": [
+     "Oracle",
+     "Tarification",
+     "Consommation"
+    ],
+    "title": "Oracle veut facturer l'IA à la tâche accomplie, en plus des abonnements par utilisateur",
+    "url": "https://www.theregister.com/applications/2026/10/29/oracle-wants-to-bill-you-for-every-ai-task-not-just-every-seat/5306403",
+    "why": "Après ServiceNow et ses assists, un autre grand éditeur d'applications métier passe à une facturation à la consommation, ce qui complique la prévision budgétaire des agents chez les clients multi-éditeurs."
+   },
+   {
+    "action": "Demande à tes clients si des équipes utilisent Trigger.dev et, si oui, fais tourner toutes les clés et comptes d'intégration stockés dans ses variables d'environnement.",
+    "category": "securite",
+    "follow_up": false,
+    "published": "2026-11-02",
+    "source": "The Register",
+    "summary": "Trigger.dev, service hébergé et open source d'exécution d'agents et de workflows en TypeScript, a signalé le 1er novembre qu'un attaquant avait accédé aux variables d'environnement d'un sous-ensemble d'organisations clientes. L'exploit est bloqué et les clients concernés notifiés, sans nombre ni rapport détaillé publié à ce stade.",
+    "tags": [
+     "ChaîneLogicielle",
+     "Secrets",
+     "Agents"
+    ],
+    "title": "Trigger.dev, plateforme de workflows et d'agents IA, s'est fait dérober les variables d'environnement d'une partie de ses clients",
+    "url": "https://www.theregister.com/security/2026/11/02/thieves-pilfer-environment-variables-from-trigger-ai-workflow-tool/5306998",
+    "why": "Les variables d'environnement de ces plateformes contiennent souvent des clés d'API et des identifiants d'intégration, y compris vers des instances ServiceNow."
+   },
+   {
+    "action": "Pour un client sensible qui cherche un hébergement européen de modèles, note STACKIT comme piste à suivre et attends une offre concrète avant d'en parler.",
+    "category": "cloud",
+    "follow_up": false,
+    "published": "2026-11-03",
+    "source": "Silicon.fr",
+    "summary": "Bull et la branche informatique du groupe Schwarz (Lidl) ont signé un accord-cadre préliminaire, sans engagement commercial ni montant, pour proposer la plateforme d'IA BullSequana sur la place de marché de STACKIT, cloud certifié BSI C5 hébergé en Allemagne et en Autriche. Bull envisage de produire des serveurs IA dans son usine d'Angers.",
+    "tags": [
+     "Souveraineté",
+     "STACKIT",
+     "Bull"
+    ],
+    "title": "Bull et Schwarz Digits, maison mère de STACKIT, préparent une offre européenne de cloud et d'IA",
+    "url": "https://www.silicon.fr/cloud-1370/bull-et-schwarz-digits-se-rapprochent-sur-un-cloud-ia-souverain-230089",
+    "why": "Une offre européenne d'IA et de cloud se dessine pour les secteurs régulés, mais sans qualification SecNumCloud ni calendrier, elle ne répond pas encore aux exigences françaises."
+   }
+  ],
+  "kind": "daily",
+  "month": "2026-11",
+  "schema": 1,
+  "seal": "390b376f6d3140c2bdaa",
+  "stats": {
+   "by_category": {
+    "agents": 1,
+    "cloud": 1,
+    "esm": 0,
+    "marche": 0,
+    "modeles": 1,
+    "securite": 2
+   },
+   "items": 5,
+   "top_sources": [
+    {
+     "count": 4,
+     "source": "The Register"
+    },
+    {
+     "count": 1,
+     "source": "Silicon.fr"
+    }
+   ]
+  },
+  "week": "2026-W45"
+ },
+ {
+  "context": [
+   {
     "published": "2026-11-02",
     "source": "The Decoder",
     "text": "Anthropic repasse en perte avant son introduction en Bourse : environ 17 milliards de dollars de revenus sur le trimestre, mais une perte nette de 23,3 milliards et 895 milliards d'engagements de calcul et de data centers.",
